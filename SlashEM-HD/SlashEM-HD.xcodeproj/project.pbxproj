@@ -134,16 +134,19 @@
 		4326DF3D15933122005D7B4D /* KeyEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF2B15933122005D7B4D /* KeyEvent.m */; };
 		4326DF3E15933122005D7B4D /* PosKeyEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF2D15933122005D7B4D /* PosKeyEvent.m */; };
 		4326DF3F15933122005D7B4D /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF2F15933122005D7B4D /* Queue.m */; };
-		4326DF4015933122005D7B4D /* MapWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3215933122005D7B4D /* MapWindow.m */; };
-		4326DF4115933122005D7B4D /* MenuWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3415933122005D7B4D /* MenuWindow.m */; };
-		4326DF4215933122005D7B4D /* NhWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3615933122005D7B4D /* NhWindow.m */; };
-		4326DF4315933122005D7B4D /* StatusWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3815933122005D7B4D /* StatusWindow.m */; };
+		4326DF4015933122005D7B4D /* NHMapWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3215933122005D7B4D /* NHMapWindow.m */; };
+		4326DF4115933122005D7B4D /* NHMenuWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3415933122005D7B4D /* NHMenuWindow.m */; };
+		4326DF4215933122005D7B4D /* NHHWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3615933122005D7B4D /* NHHWindow.m */; };
+		4326DF4315933122005D7B4D /* NHStatusWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3815933122005D7B4D /* NHStatusWindow.m */; };
 		4326DF4415933122005D7B4D /* WiniOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3A15933122005D7B4D /* WiniOS.m */; };
 		4326DF4515933122005D7B4D /* YNQuestionData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF3C15933122005D7B4D /* YNQuestionData.m */; };
 		4326DF47159331B8005D7B4D /* monstr.c in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF46159331B6005D7B4D /* monstr.c */; };
 		4326DF5A159340D6005D7B4D /* LoggerClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF4B159332C5005D7B4D /* LoggerClient.m */; };
 		4326DF5C159340FA005D7B4D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326DF5B159340F9005D7B4D /* CFNetwork.framework */; };
 		4326DF5E15934106005D7B4D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326DF5D15934105005D7B4D /* SystemConfiguration.framework */; };
+		4326DF611593541D005D7B4D /* NHMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF601593541D005D7B4D /* NHMenuItem.m */; };
+		4326DF641593611A005D7B4D /* MenuFinishedEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF631593611A005D7B4D /* MenuFinishedEvent.m */; };
+		4326DF68159361F0005D7B4D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF67159361F0005D7B4D /* MenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -400,14 +403,14 @@
 		4326DF2D15933122005D7B4D /* PosKeyEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PosKeyEvent.m; sourceTree = "<group>"; };
 		4326DF2E15933122005D7B4D /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		4326DF2F15933122005D7B4D /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
-		4326DF3115933122005D7B4D /* MapWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapWindow.h; sourceTree = "<group>"; };
-		4326DF3215933122005D7B4D /* MapWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapWindow.m; sourceTree = "<group>"; };
-		4326DF3315933122005D7B4D /* MenuWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuWindow.h; sourceTree = "<group>"; };
-		4326DF3415933122005D7B4D /* MenuWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuWindow.m; sourceTree = "<group>"; };
-		4326DF3515933122005D7B4D /* NhWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NhWindow.h; sourceTree = "<group>"; };
-		4326DF3615933122005D7B4D /* NhWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NhWindow.m; sourceTree = "<group>"; };
-		4326DF3715933122005D7B4D /* StatusWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatusWindow.h; sourceTree = "<group>"; };
-		4326DF3815933122005D7B4D /* StatusWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatusWindow.m; sourceTree = "<group>"; };
+		4326DF3115933122005D7B4D /* NHMapWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHMapWindow.h; sourceTree = "<group>"; };
+		4326DF3215933122005D7B4D /* NHMapWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHMapWindow.m; sourceTree = "<group>"; };
+		4326DF3315933122005D7B4D /* NHMenuWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHMenuWindow.h; sourceTree = "<group>"; };
+		4326DF3415933122005D7B4D /* NHMenuWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHMenuWindow.m; sourceTree = "<group>"; };
+		4326DF3515933122005D7B4D /* NHWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHWindow.h; sourceTree = "<group>"; };
+		4326DF3615933122005D7B4D /* NHHWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHHWindow.m; sourceTree = "<group>"; };
+		4326DF3715933122005D7B4D /* NHStatusWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHStatusWindow.h; sourceTree = "<group>"; };
+		4326DF3815933122005D7B4D /* NHStatusWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHStatusWindow.m; sourceTree = "<group>"; };
 		4326DF3915933122005D7B4D /* WiniOS.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WiniOS.h; sourceTree = "<group>"; };
 		4326DF3A15933122005D7B4D /* WiniOS.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WiniOS.m; sourceTree = "<group>"; };
 		4326DF3B15933122005D7B4D /* YNQuestionData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YNQuestionData.h; sourceTree = "<group>"; };
@@ -419,6 +422,12 @@
 		4326DF4C159332C5005D7B4D /* LoggerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LoggerCommon.h; path = "../NSLogger/Client Logger/iOS/LoggerCommon.h"; sourceTree = "<group>"; };
 		4326DF5B159340F9005D7B4D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		4326DF5D15934105005D7B4D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		4326DF5F1593541C005D7B4D /* NHMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHMenuItem.h; sourceTree = "<group>"; };
+		4326DF601593541D005D7B4D /* NHMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHMenuItem.m; sourceTree = "<group>"; };
+		4326DF621593611A005D7B4D /* MenuFinishedEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuFinishedEvent.h; sourceTree = "<group>"; };
+		4326DF631593611A005D7B4D /* MenuFinishedEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuFinishedEvent.m; sourceTree = "<group>"; };
+		4326DF66159361F0005D7B4D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		4326DF67159361F0005D7B4D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -484,6 +493,7 @@
 			children = (
 				4326D88C15932DD7005D7B4D /* nethack */,
 				4326DF2815933122005D7B4D /* Windows */,
+				4326DF65159361CD005D7B4D /* Views */,
 				4326DF49159332A5005D7B4D /* NSLogger */,
 				4326D86615932C91005D7B4D /* SlashEMAppDelegate.h */,
 				4326D86715932C91005D7B4D /* SlashEMAppDelegate.m */,
@@ -822,6 +832,8 @@
 				4326DF2B15933122005D7B4D /* KeyEvent.m */,
 				4326DF2C15933122005D7B4D /* PosKeyEvent.h */,
 				4326DF2D15933122005D7B4D /* PosKeyEvent.m */,
+				4326DF621593611A005D7B4D /* MenuFinishedEvent.h */,
+				4326DF631593611A005D7B4D /* MenuFinishedEvent.m */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -829,14 +841,16 @@
 		4326DF3015933122005D7B4D /* Windows */ = {
 			isa = PBXGroup;
 			children = (
-				4326DF3115933122005D7B4D /* MapWindow.h */,
-				4326DF3215933122005D7B4D /* MapWindow.m */,
-				4326DF3315933122005D7B4D /* MenuWindow.h */,
-				4326DF3415933122005D7B4D /* MenuWindow.m */,
-				4326DF3515933122005D7B4D /* NhWindow.h */,
-				4326DF3615933122005D7B4D /* NhWindow.m */,
-				4326DF3715933122005D7B4D /* StatusWindow.h */,
-				4326DF3815933122005D7B4D /* StatusWindow.m */,
+				4326DF3115933122005D7B4D /* NHMapWindow.h */,
+				4326DF3215933122005D7B4D /* NHMapWindow.m */,
+				4326DF3315933122005D7B4D /* NHMenuWindow.h */,
+				4326DF3415933122005D7B4D /* NHMenuWindow.m */,
+				4326DF3515933122005D7B4D /* NHWindow.h */,
+				4326DF3615933122005D7B4D /* NHHWindow.m */,
+				4326DF3715933122005D7B4D /* NHStatusWindow.h */,
+				4326DF3815933122005D7B4D /* NHStatusWindow.m */,
+				4326DF5F1593541C005D7B4D /* NHMenuItem.h */,
+				4326DF601593541D005D7B4D /* NHMenuItem.m */,
 			);
 			path = Windows;
 			sourceTree = "<group>";
@@ -852,6 +866,15 @@
 			name = NSLogger;
 			path = ..;
 			sourceTree = "<group>";
+		};
+		4326DF65159361CD005D7B4D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4326DF66159361F0005D7B4D /* MenuViewController.h */,
+				4326DF67159361F0005D7B4D /* MenuViewController.m */,
+			);
+			path = Views;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -1078,14 +1101,17 @@
 				4326DF3D15933122005D7B4D /* KeyEvent.m in Sources */,
 				4326DF3E15933122005D7B4D /* PosKeyEvent.m in Sources */,
 				4326DF3F15933122005D7B4D /* Queue.m in Sources */,
-				4326DF4015933122005D7B4D /* MapWindow.m in Sources */,
-				4326DF4115933122005D7B4D /* MenuWindow.m in Sources */,
-				4326DF4215933122005D7B4D /* NhWindow.m in Sources */,
-				4326DF4315933122005D7B4D /* StatusWindow.m in Sources */,
+				4326DF4015933122005D7B4D /* NHMapWindow.m in Sources */,
+				4326DF4115933122005D7B4D /* NHMenuWindow.m in Sources */,
+				4326DF4215933122005D7B4D /* NHHWindow.m in Sources */,
+				4326DF4315933122005D7B4D /* NHStatusWindow.m in Sources */,
 				4326DF4415933122005D7B4D /* WiniOS.m in Sources */,
 				4326DF4515933122005D7B4D /* YNQuestionData.m in Sources */,
 				4326DF47159331B8005D7B4D /* monstr.c in Sources */,
 				4326DF5A159340D6005D7B4D /* LoggerClient.m in Sources */,
+				4326DF611593541D005D7B4D /* NHMenuItem.m in Sources */,
+				4326DF641593611A005D7B4D /* MenuFinishedEvent.m in Sources */,
+				4326DF68159361F0005D7B4D /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1255,6 +1281,7 @@
 				4326D88815932C91005D7B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4326D88915932C91005D7B4D /* Build configuration list for PBXNativeTarget "SlashEM-HDTests" */ = {
 			isa = XCConfigurationList;
@@ -1263,6 +1290,7 @@
 				4326D88B15932C91005D7B4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

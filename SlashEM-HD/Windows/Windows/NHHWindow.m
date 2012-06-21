@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Dirk Zimmermann. All rights reserved.
 //
 
-#import "NhWindow.h"
+#import "NHWindow.h"
 
-@implementation NhWindow
+@implementation NHWindow
 
 @synthesize type;
 
@@ -35,6 +35,13 @@
 - (NSString *)description
 {
     return [NSString stringWithFormat:@"<%@ 0x%x>", self.typeName, self];
+}
+
+#pragma mark - Properties
+
+- (int)identifier
+{
+    return (int) self;
 }
 
 @end

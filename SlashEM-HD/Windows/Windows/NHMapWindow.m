@@ -1,16 +1,16 @@
 //
-//  MapWindow.m
+//  NHMapWindow.m
 //  UnNetHack
 //
 //  Created by Dirk Zimmermann on 5/18/12.
 //  Copyright (c) 2012 Dirk Zimmermann. All rights reserved.
 //
 
-#import "MapWindow.h"
+#import "NHMapWindow.h"
 
 #import "hack.h" // NHW_MAP, ROWNO, COLNO
 
-@implementation MapWindow
+@implementation NHMapWindow
 {
     int glyphs[ROWNO][COLNO];
 }

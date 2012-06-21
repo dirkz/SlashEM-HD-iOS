@@ -10,7 +10,8 @@
 
 #include "hack.h"
 
-#import "MapWindow.h"
+#import "NHMapWindow.h"
+#import "NHMenuWindow.h"
 
 void ios_init_nhwindows(int* argc, char** argv);
 void ios_askname(void);
@@ -67,23 +68,21 @@ extern int ios_getpos;
 - (void)handlePutstr:(NSString *)message attribute:(int)attr;
 - (void)handlePoskey;
 - (void)handleClearMessages;
+- (void)handleMenuWindow:(NHMenuWindow *)window;
 
 @end
 
-@class MapWindow;
-@class NhWindow;
-@class StatusWindow;
+@class NHMapWindow;
+@class NHWindow;
+@class NHStatusWindow;
 
 @interface WiniOS : NSObject
 
 @property (nonatomic, strong) Queue *eventQueue;
 @property (nonatomic, weak) id<WiniOSDelegate> delegate;
-@property (nonatomic, strong) MapWindow *mapWindow;
-@property (nonatomic, strong) NhWindow *messageWindow;
-@property (nonatomic, strong) StatusWindow *statusWindow;
-
-/** Purely for ARC, holds refs to all text and menu windows */
-@property (nonatomic, strong) NSMutableArray *windows;
+@property (nonatomic, strong) NHMapWindow *mapWindow;
+@property (nonatomic, strong) NHWindow *messageWindow;
+@property (nonatomic, strong) NHStatusWindow *statusWindow;
 
 + (const char *)baseFilePath;
 + (void)expandFilename:(const char *)filename intoPath:(char *)path;

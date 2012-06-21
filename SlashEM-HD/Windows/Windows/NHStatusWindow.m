@@ -6,11 +6,11 @@
 //  Copyright (c) 2012 Dirk Zimmermann. All rights reserved.
 //
 
-#import "StatusWindow.h"
+#import "NHStatusWindow.h"
 
 #import "hack.h" // NHW_STATUS
 
-@implementation StatusWindow
+@implementation NHStatusWindow
 {
     int cursorX;
     int cursorY;
@@ -31,7 +31,7 @@
 
 - (void)putString:(NSString *)string withAttribute:(int)attr
 {
-    
+
 }
 
 @end

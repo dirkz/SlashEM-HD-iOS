@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Dirk Zimmermann. All rights reserved.
 //
 
-#import "NhWindow.h"
+#import "NHWindow.h"
 
-@interface StatusWindow : NhWindow
+@interface NHStatusWindow : NHWindow
 
 - (void)setCursorX:(int)x y:(int)y;
 - (void)putString:(NSString *)string withAttribute:(int)attr;

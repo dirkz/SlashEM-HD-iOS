@@ -1,5 +1,5 @@
 //
-//  MapWindow.h
+//  NHMapWindow.h
 //  UnNetHack
 //
 //  Created by Dirk Zimmermann on 5/18/12.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NhWindow.h"
+#import "NHWindow.h"
 
-@interface MapWindow : NhWindow
+@interface NHMapWindow : NHWindow
 
 @property (nonatomic, assign) int clipX;
 @property (nonatomic, assign) int clipY;

@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NhWindow : NSObject
+@interface NHWindow : NSObject
 
+@property (nonatomic, readonly) int identifier;
 @property (nonatomic, readonly) int type;
 @property (nonatomic, readonly) NSString *typeName;
 
