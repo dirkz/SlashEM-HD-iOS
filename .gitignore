@@ -15,9 +15,17 @@ project.xcworkspace
 # vi
 *.swp
 
+# some artifacts
+*.o
+*.lev
+
+# some results of applying diff
+*.rej
+*.orig
+
 #	
-#	src/tile.c
-#	util/tilemap
+# src/tile.c
+# util/tilemap
 
 # /
 /Makefile
