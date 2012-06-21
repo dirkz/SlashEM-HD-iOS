@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SlashEMViewController : UIViewController
+#import "WiniOS.h"
+
+@interface SlashEMViewController : UIViewController <WiniOSDelegate, UITextFieldDelegate>
+
+@property (weak, nonatomic) IBOutlet UITextView *messageTextView;
+@property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 
 @end

@@ -1,3 +1,6 @@
 [submodule "nethack"]
 	path = nethack
 	url = git@github.com:dirkz/SlashEM.git
+[submodule "NSLogger"]
+	path = NSLogger
+	url = https://github.com/fpillet/NSLogger.git
