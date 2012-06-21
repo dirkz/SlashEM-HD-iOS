@@ -3,7 +3,7 @@
 //  SlashEM-HDTests
 //
 //  Created by Dirk Zimmermann on 6/21/12.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Dirk Zimmermann. All rights reserved.
 //
 
 #import "SlashEM_HDTests.h"
