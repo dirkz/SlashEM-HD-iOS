@@ -15,22 +15,22 @@
 #import "KeyEvent.h"
 #import "PosKeyEvent.h"
 #import "NHMenuWindow.h"
-#import "MenuFinishedEvent.h"
-#import "MenuFinishedEvent.h"
 #import "NHMenuItem.h"
 
 typedef enum {
     UIStateUndefined,
     UIStateYNQuestion,
     UIStatePoskey,
-    UIStateMenu,
-} UIState;
+} UITextInputState;
+
+NSString * const NetHackMessageMenuWindowSegue = @"NetHackMessageMenuWindowSegue";
+NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 
 @interface SlashEMViewController ()
 
 @property (nonatomic, strong) YNQuestionData *ynQuestionData;
 @property (nonatomic, strong) NHMenuWindow *menuWindow;
-@property (nonatomic, assign) UIState state;
+@property (nonatomic, assign) UITextInputState state;
 
 @end
 
@@ -129,9 +129,14 @@ typedef enum {
 
 - (void)handleMenuWindow:(NHMenuWindow *)window
 {
-    self.state = UIStateMenu;
     self.menuWindow = window;
-    [self performSegueWithIdentifier:@"MenuViewSegue" sender:nil];
+    [self performSegueWithIdentifier:NetHackMenuViewSegue sender:nil];
+}
+
+- (void)handleMessageMenuWindow:(NHMenuWindow *)window
+{
+    self.menuWindow = window;
+    [self performSegueWithIdentifier:NetHackMessageMenuWindowSegue sender:nil];
 }
 
 - (void)setStatusString:(NSString *)string line:(NSUInteger)i
@@ -147,8 +152,7 @@ typedef enum {
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     LOG_VIEW(1, @"segue %@", segue.identifier);
-    if ([@"MenuViewSegue" isEqualToString:segue.identifier]) {
-        LOG_VIEW(1, @"segue %@ %@", segue.identifier, segue.destinationViewController);
+    if ([segue.identifier isEqualToString:NetHackMenuViewSegue]) {
         displayedViewController = segue.destinationViewController;
         MenuViewController *menuViewController = nil;
         if ([displayedViewController isKindOfClass:[UINavigationController class]]) {
@@ -162,6 +166,10 @@ typedef enum {
         if (self.menuWindow.prompt) {
             menuViewController.title = self.menuWindow.prompt;
         }
+    } else if ([segue.identifier isEqualToString:NetHackMessageMenuWindowSegue]) {
+        MessageViewController *vc = segue.destinationViewController;
+        vc.menuWindow = self.menuWindow;
+        vc.delegate = self;
     }
 }
 
@@ -212,8 +220,7 @@ replacementString:(NSString *)string
 {
     [displayedViewController dismissModalViewControllerAnimated:NO];
     displayedViewController = nil;
-    MenuFinishedEvent *event = [MenuFinishedEvent event];
-    [events enterObject:event];
+    [events enterObject:WiniOSMenuFinishedEvent];
 }
 
 #pragma mark - MenuViewControllerDelegate
@@ -238,6 +245,14 @@ replacementString:(NSString *)string
     (*self.menuWindow.selected)->item.a_int = item.identifier.a_int;
     self.menuWindow.numberOfItemsSelected = 1;
     [self dismissDisplayedViewController];
+}
+
+#pragma mark - MessageViewControllerDelegate
+
+- (void)menuViewController:(MessageViewController *)viewController doneButtonForMenuWindow:(NHMenuWindow *)window
+{
+    [viewController dismissModalViewControllerAnimated:NO];
+    [events enterObject:WiniOSMessageDisplayFinishedEvent];
 }
 
 #pragma mark - show/hide Keyboard

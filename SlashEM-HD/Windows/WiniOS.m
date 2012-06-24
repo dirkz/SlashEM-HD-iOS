@@ -21,10 +21,9 @@
 #import "NHStatusWindow.h"
 #import "NSLogger.h"
 #import "NHMenuWindow.h"
-#import "MenuFinishedEvent.h"
 
-// not used anymore
-#define WID_TO(wid, type)(__bridge type *) (void *) wid;
+NSString * const WiniOSMenuFinishedEvent = @"WiniOSMenuFinishedEvent";
+NSString * const WiniOSMessageDisplayFinishedEvent = @"WiniOSMessageDisplayFinishedEvent";
 
 extern int unix_main(int, char *[]);
 
@@ -323,6 +322,14 @@ void ios_clear_nhwindow(winid wid)
 void ios_display_nhwindow(winid wid, BOOLEAN_P block)
 {
     LOG_WINIOS(1, @"display_nhwindow %@ block %i", wid, block);
+    NHWindow *w = [sharedInstance windowForIdentifier:wid];
+    if (w.type == NHW_MENU) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [sharedInstance.delegate handleMessageMenuWindow:(NHMenuWindow *) w];
+        });
+        NSString *eventName = [sharedInstance.eventQueue leaveObject];
+        LOG_WINIOS(1, @"%s got event %@", __PRETTY_FUNCTION__, eventName);
+    }
 }
 
 void ios_destroy_nhwindow(winid wid)
@@ -360,7 +367,8 @@ void ios_putstr(winid wid, int attr, const char *text)
                 [sharedInstance.delegate setStatusString:string line:line];
             });
         } else {
-            LOG_WINIOS(1, @"unhandled putstr %@ %s", wid, text);
+            NHMenuWindow *w = (NHMenuWindow *) [sharedInstance windowForIdentifier:wid];
+            [w putString:[NSString stringWithCString:text encoding:NSASCIIStringEncoding]];
         }
     }
 }
@@ -423,8 +431,8 @@ int ios_select_menu(winid wid, int how, menu_item **selected)
         [sharedInstance.delegate handleMenuWindow:w];
     });
 
-    MenuFinishedEvent *event = [sharedInstance.eventQueue leaveObject];
-    event = nil;
+    NSString *eventName = [sharedInstance.eventQueue leaveObject];
+    LOG_WINIOS(1, @"%s got event %@", __PRETTY_FUNCTION__, eventName);
 
     selected = w.selected;
 
@@ -520,9 +528,14 @@ char ios_yn_function(const char *question, const char *choices, CHAR_P def)
     LOG_WINIOS(1, @"yn_function %s", question);
     ios_putstr(BASE_WINDOW, ATR_NONE, question);
 
+    NSString *choiceString = nil;
+    if (choices) {
+        choiceString = [NSString stringWithCString:choices encoding:NSASCIIStringEncoding];
+    }
     dispatch_async(dispatch_get_main_queue(), ^{
-        YNQuestionData *data = [YNQuestionData dataWithPrompt:[NSString stringWithCString:question encoding:NSASCIIStringEncoding]
-                                                      choices:[NSString stringWithCString:choices encoding:NSASCIIStringEncoding]
+        YNQuestionData *data = [YNQuestionData dataWithPrompt:[NSString stringWithCString:question
+                                                                                 encoding:NSASCIIStringEncoding]
+                                                      choices:choiceString
                                                 defaultChoice:def];
         [sharedInstance.delegate handleYNQuestion:data];
     });

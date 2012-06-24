@@ -10,6 +10,12 @@
 
 #import "NHMenuItem.h"
 
+@interface NHMenuWindow ()
+
+@property (nonatomic, readonly) NSMutableArray *lines;
+
+@end
+
 @implementation NHMenuWindow
 {
 
@@ -23,6 +29,7 @@
 @synthesize numberOfItemsSelected;
 @synthesize menuStyle = _menuStyle;
 @synthesize selected = _selected;
+@synthesize lines = _lines;
 
 - (id)init
 {
@@ -75,11 +82,31 @@
     return [[self itemsAtIndex:indexPath.section] objectAtIndex:indexPath.row];
 }
 
+#pragma mark - Menu Window uses for text display
+
+- (void)putString:(NSString *)string
+{
+    [self.lines addObject:string];
+}
+
 #pragma mark - Properties
 
 - (NSUInteger)groupCount
 {
     return groups.count;
+}
+
+- (NSMutableArray *)lines
+{
+    if (!_lines) {
+        _lines = [[NSMutableArray alloc] init];
+    }
+    return _lines;
+}
+
+- (NSString *)text
+{
+    return [self.lines componentsJoinedByString:@"\n"];
 }
 
 @end

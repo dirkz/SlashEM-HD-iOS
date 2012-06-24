@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		43059FDB15976F5500C7DB58 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43059FDA15976F5500C7DB58 /* MessageViewController.m */; };
 		4326D85815932C91005D7B4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326D85715932C91005D7B4D /* UIKit.framework */; };
 		4326D85A15932C91005D7B4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326D85915932C91005D7B4D /* Foundation.framework */; };
 		4326D85C15932C91005D7B4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326D85B15932C91005D7B4D /* CoreGraphics.framework */; };
@@ -145,7 +146,6 @@
 		4326DF5C159340FA005D7B4D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326DF5B159340F9005D7B4D /* CFNetwork.framework */; };
 		4326DF5E15934106005D7B4D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326DF5D15934105005D7B4D /* SystemConfiguration.framework */; };
 		4326DF611593541D005D7B4D /* NHMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF601593541D005D7B4D /* NHMenuItem.m */; };
-		4326DF641593611A005D7B4D /* MenuFinishedEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF631593611A005D7B4D /* MenuFinishedEvent.m */; };
 		4326DF68159361F0005D7B4D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF67159361F0005D7B4D /* MenuViewController.m */; };
 		438E853915971BD9006D0FF8 /* air.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852B15971BD9006D0FF8 /* air.lev */; };
 		438E853A15971BD9006D0FF8 /* Arc-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852C15971BD9006D0FF8 /* Arc-fila.lev */; };
@@ -363,6 +363,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43059FD915976F5500C7DB58 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
+		43059FDA15976F5500C7DB58 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
 		4326D85315932C91005D7B4D /* SlashEM-HD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SlashEM-HD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4326D85715932C91005D7B4D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4326D85915932C91005D7B4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -627,8 +629,6 @@
 		4326DF5D15934105005D7B4D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		4326DF5F1593541C005D7B4D /* NHMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHMenuItem.h; sourceTree = "<group>"; };
 		4326DF601593541D005D7B4D /* NHMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHMenuItem.m; sourceTree = "<group>"; };
-		4326DF621593611A005D7B4D /* MenuFinishedEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuFinishedEvent.h; sourceTree = "<group>"; };
-		4326DF631593611A005D7B4D /* MenuFinishedEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuFinishedEvent.m; sourceTree = "<group>"; };
 		4326DF66159361F0005D7B4D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		4326DF67159361F0005D7B4D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		438E852B15971BD9006D0FF8 /* air.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = air.lev; sourceTree = "<group>"; };
@@ -1441,8 +1441,6 @@
 				4326DF2B15933122005D7B4D /* KeyEvent.m */,
 				4326DF2C15933122005D7B4D /* PosKeyEvent.h */,
 				4326DF2D15933122005D7B4D /* PosKeyEvent.m */,
-				4326DF621593611A005D7B4D /* MenuFinishedEvent.h */,
-				4326DF631593611A005D7B4D /* MenuFinishedEvent.m */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -1483,6 +1481,8 @@
 				4326DF67159361F0005D7B4D /* MenuViewController.m */,
 				438E86C8159746C3006D0FF8 /* DebugView.h */,
 				438E86C9159746C3006D0FF8 /* DebugView.m */,
+				43059FD915976F5500C7DB58 /* MessageViewController.h */,
+				43059FDA15976F5500C7DB58 /* MessageViewController.m */,
 			);
 			path = Views;
 			sourceTree = SOURCE_ROOT;
@@ -1923,9 +1923,9 @@
 				4326DF47159331B8005D7B4D /* monstr.c in Sources */,
 				4326DF5A159340D6005D7B4D /* LoggerClient.m in Sources */,
 				4326DF611593541D005D7B4D /* NHMenuItem.m in Sources */,
-				4326DF641593611A005D7B4D /* MenuFinishedEvent.m in Sources */,
 				4326DF68159361F0005D7B4D /* MenuViewController.m in Sources */,
 				438E86CA159746C3006D0FF8 /* DebugView.m in Sources */,
+				43059FDB15976F5500C7DB58 /* MessageViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

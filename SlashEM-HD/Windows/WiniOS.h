@@ -58,6 +58,12 @@ extern int ios_getpos;
 
 #if __OBJC__ /* Is this a bug? If you include this in a C file the section it protects it gets processed anyway */
 
+/** Used for event queue for menu event */
+extern NSString * const WiniOSMenuFinishedEvent;
+
+/** Used for event queue for message display event */
+extern NSString * const WiniOSMessageDisplayFinishedEvent;
+
 @class Queue;
 @class YNQuestionData;
 
@@ -69,6 +75,7 @@ extern int ios_getpos;
 - (void)handlePoskey;
 - (void)handleClearMessages;
 - (void)handleMenuWindow:(NHMenuWindow *)window;
+- (void)handleMessageMenuWindow:(NHMenuWindow *)window;
 - (void)setStatusString:(NSString *)string line:(NSUInteger)i;
 
 @end
