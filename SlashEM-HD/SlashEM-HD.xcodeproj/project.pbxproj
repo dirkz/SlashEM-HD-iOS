@@ -349,6 +349,7 @@
 		438E86BD15971CCA006D0FF8 /* rumors in Resources */ = {isa = PBXBuildFile; fileRef = 438E86AF15971CCA006D0FF8 /* rumors */; };
 		438E86BE15971CCA006D0FF8 /* rumors.fal in Resources */ = {isa = PBXBuildFile; fileRef = 438E86B015971CCA006D0FF8 /* rumors.fal */; };
 		438E86BF15971CCA006D0FF8 /* rumors.tru in Resources */ = {isa = PBXBuildFile; fileRef = 438E86B115971CCA006D0FF8 /* rumors.tru */; };
+		438E86CA159746C3006D0FF8 /* DebugView.m in Sources */ = {isa = PBXBuildFile; fileRef = 438E86C9159746C3006D0FF8 /* DebugView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -832,6 +833,8 @@
 		438E86AF15971CCA006D0FF8 /* rumors */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rumors; sourceTree = "<group>"; };
 		438E86B015971CCA006D0FF8 /* rumors.fal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rumors.fal; sourceTree = "<group>"; };
 		438E86B115971CCA006D0FF8 /* rumors.tru */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rumors.tru; sourceTree = "<group>"; };
+		438E86C8159746C3006D0FF8 /* DebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugView.h; sourceTree = "<group>"; };
+		438E86C9159746C3006D0FF8 /* DebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1478,6 +1481,8 @@
 			children = (
 				4326DF66159361F0005D7B4D /* MenuViewController.h */,
 				4326DF67159361F0005D7B4D /* MenuViewController.m */,
+				438E86C8159746C3006D0FF8 /* DebugView.h */,
+				438E86C9159746C3006D0FF8 /* DebugView.m */,
 			);
 			path = Views;
 			sourceTree = SOURCE_ROOT;
@@ -1920,6 +1925,7 @@
 				4326DF611593541D005D7B4D /* NHMenuItem.m in Sources */,
 				4326DF641593611A005D7B4D /* MenuFinishedEvent.m in Sources */,
 				4326DF68159361F0005D7B4D /* MenuViewController.m in Sources */,
+				438E86CA159746C3006D0FF8 /* DebugView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

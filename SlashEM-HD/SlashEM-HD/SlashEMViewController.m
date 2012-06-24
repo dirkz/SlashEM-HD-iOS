@@ -54,7 +54,7 @@ typedef enum {
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    inputTextField.frame = CGRectZero;    
+    inputTextField.frame = CGRectZero;
     winios = [[WiniOS alloc] init];
 }
 
@@ -70,8 +70,20 @@ typedef enum {
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidShow:)
+                                                 name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:)
+                                                 name:UIKeyboardDidHideNotification object:nil];
+
     winios.delegate = self;
     [winios start];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidShowNotification object:nil];
+    [[NSNotificationCenter defaultCenter] removeObserver:self name:UIKeyboardDidHideNotification object:nil];
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -173,7 +185,7 @@ replacementString:(NSString *)string
                 self.state = UIStateUndefined;
             }
                 break;
-                
+
             default:
                 break;
         }
@@ -226,6 +238,38 @@ replacementString:(NSString *)string
     (*self.menuWindow.selected)->item.a_int = item.identifier.a_int;
     self.menuWindow.numberOfItemsSelected = 1;
     [self dismissDisplayedViewController];
+}
+
+#pragma mark - show/hide Keyboard
+
+- (void)keyboardDidShow:(NSNotification *)aNotification
+{
+    CGRect keyboardFrame = [[aNotification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    keyboardFrame = [self.view convertRect:keyboardFrame fromView:nil];
+    CGSize keyboardSize = keyboardFrame.size;
+
+    CGRect statusFrame = self.statusLabel1.frame;
+    statusFrame.origin.y -= keyboardSize.height;
+    self.statusLabel1.frame = statusFrame;
+
+    statusFrame = self.statusLabel2.frame;
+    statusFrame.origin.y -= keyboardSize.height;
+    self.statusLabel2.frame = statusFrame;
+}
+
+- (void)keyboardDidHide:(NSNotification *)aNotification
+{
+    CGRect keyboardFrame = [[aNotification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
+    keyboardFrame = [self.view convertRect:keyboardFrame fromView:nil];
+    CGSize keyboardSize = keyboardFrame.size;
+
+    CGRect statusFrame = self.statusLabel1.frame;
+    statusFrame.origin.y += keyboardSize.height;
+    self.statusLabel1.frame = statusFrame;
+
+    statusFrame = self.statusLabel2.frame;
+    statusFrame.origin.y += keyboardSize.height;
+    self.statusLabel2.frame = statusFrame;
 }
 
 @end
