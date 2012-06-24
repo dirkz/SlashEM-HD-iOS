@@ -866,8 +866,6 @@
 		4326D84815932C90005D7B4D = {
 			isa = PBXGroup;
 			children = (
-				4326DF5D15934105005D7B4D /* SystemConfiguration.framework */,
-				4326DF5B159340F9005D7B4D /* CFNetwork.framework */,
 				4326D85D15932C91005D7B4D /* SlashEM-HD */,
 				4326D87B15932C91005D7B4D /* SlashEM-HDTests */,
 				4326D85615932C91005D7B4D /* Frameworks */,
@@ -887,6 +885,8 @@
 		4326D85615932C91005D7B4D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4326DF5D15934105005D7B4D /* SystemConfiguration.framework */,
+				4326DF5B159340F9005D7B4D /* CFNetwork.framework */,
 				4326D85715932C91005D7B4D /* UIKit.framework */,
 				4326D85915932C91005D7B4D /* Foundation.framework */,
 				4326D85B15932C91005D7B4D /* CoreGraphics.framework */,
