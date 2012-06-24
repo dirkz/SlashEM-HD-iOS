@@ -17,11 +17,13 @@
 #define LOG_WINIOS(level, ...)     LogMessageF(__FILE__,__LINE__,__FUNCTION__,@"winios",level,__VA_ARGS__)
 #define LOG_VIEW(level, ...)       LogMessageF(__FILE__,__LINE__,__FUNCTION__,@"view",level,__VA_ARGS__)
 #define LOG_UTIL(level, ...)       LogMessageF(__FILE__,__LINE__,__FUNCTION__,@"util",level,__VA_ARGS__)
+#define LOG_FLUSH LoggerFlush(NULL,YES)
 #else
 #define LOG(...)            do{}while(0)
 #define LOG_WINIOS(...)     do{}while(0)
-#define LOG_VIEW(...)     do{}while(0)
+#define LOG_VIEW(...)       do{}while(0)
 #define LOG_UTIL(...)       do{}while(0)
+#define LOG_FLUSH           do{}while(0)
 #endif
 
 #endif

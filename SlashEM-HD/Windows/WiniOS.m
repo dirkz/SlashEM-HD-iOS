@@ -230,6 +230,7 @@ void error(const char *s, ...)
     va_end(ap);
     ios_raw_print(message);
     // todo (button to wait for user?)
+    LOG_FLUSH;
     exit(0);
 }
 
@@ -258,6 +259,7 @@ void ios_get_nh_event()
 void ios_exit_nhwindows(const char *str)
 {
     LOG_WINIOS(1, @"exit_nhwindows %s", str);
+    LOG_FLUSH;
 }
 
 void ios_suspend_nhwindows(const char *str)
@@ -469,14 +471,12 @@ void ios_print_glyph(winid wid, XCHAR_P x, XCHAR_P y, int glyph)
 
 void ios_raw_print(const char *str)
 {
-    LOG_WINIOS(1, @"raw_print %s", str);
-    ios_putstr(BASE_WINDOW, ATR_BOLD, str);
+    ios_putstr(BASE_WINDOW, ATR_NONE, str);
 }
 
 void ios_raw_print_bold(const char *str)
 {
-    LOG_WINIOS(1, @"raw_print_bold %s", str);
-    ios_raw_print(str);
+    ios_putstr(BASE_WINDOW, ATR_BOLD, str);
 }
 
 int ios_nhgetch()
