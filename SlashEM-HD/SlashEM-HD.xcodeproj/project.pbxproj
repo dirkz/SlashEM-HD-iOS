@@ -147,6 +147,208 @@
 		4326DF611593541D005D7B4D /* NHMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF601593541D005D7B4D /* NHMenuItem.m */; };
 		4326DF641593611A005D7B4D /* MenuFinishedEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF631593611A005D7B4D /* MenuFinishedEvent.m */; };
 		4326DF68159361F0005D7B4D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF67159361F0005D7B4D /* MenuViewController.m */; };
+		438E853915971BD9006D0FF8 /* air.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852B15971BD9006D0FF8 /* air.lev */; };
+		438E853A15971BD9006D0FF8 /* Arc-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852C15971BD9006D0FF8 /* Arc-fila.lev */; };
+		438E853B15971BD9006D0FF8 /* Arc-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852D15971BD9006D0FF8 /* Arc-filb.lev */; };
+		438E853C15971BD9006D0FF8 /* Arc-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852E15971BD9006D0FF8 /* Arc-goal.lev */; };
+		438E853D15971BD9006D0FF8 /* Arc-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852F15971BD9006D0FF8 /* Arc-loca.lev */; };
+		438E853E15971BD9006D0FF8 /* Arc-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E853015971BD9006D0FF8 /* Arc-strt.lev */; };
+		438E853F15971BD9006D0FF8 /* asmodeus.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E853115971BD9006D0FF8 /* asmodeus.lev */; };
+		438E854015971BD9006D0FF8 /* astral.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E853215971BD9006D0FF8 /* astral.lev */; };
+		438E854115971BD9006D0FF8 /* baalz.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E853315971BD9006D0FF8 /* baalz.lev */; };
+		438E854215971BD9006D0FF8 /* Bar-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E853415971BD9006D0FF8 /* Bar-fila.lev */; };
+		438E854315971BD9006D0FF8 /* Bar-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E853515971BD9006D0FF8 /* Bar-filb.lev */; };
+		438E854415971BD9006D0FF8 /* Bar-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E853615971BD9006D0FF8 /* Bar-goal.lev */; };
+		438E854515971BD9006D0FF8 /* Bar-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E853715971BD9006D0FF8 /* Bar-loca.lev */; };
+		438E854615971BD9006D0FF8 /* Bar-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E853815971BD9006D0FF8 /* Bar-strt.lev */; };
+		438E854E15971BEE006D0FF8 /* beholder.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E854815971BEE006D0FF8 /* beholder.lev */; };
+		438E854F15971BEE006D0FF8 /* bigrm-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E854915971BEE006D0FF8 /* bigrm-1.lev */; };
+		438E855015971BEE006D0FF8 /* bigrm-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E854A15971BEE006D0FF8 /* bigrm-2.lev */; };
+		438E855115971BEE006D0FF8 /* bigrm-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E854B15971BEE006D0FF8 /* bigrm-3.lev */; };
+		438E855215971BEE006D0FF8 /* bigrm-4.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E854C15971BEE006D0FF8 /* bigrm-4.lev */; };
+		438E855315971BEE006D0FF8 /* bigrm-5.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E854D15971BEE006D0FF8 /* bigrm-5.lev */; };
+		438E85F915971C1F006D0FF8 /* blkmar.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855415971C1E006D0FF8 /* blkmar.lev */; };
+		438E85FA15971C1F006D0FF8 /* castle.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855515971C1E006D0FF8 /* castle.lev */; };
+		438E85FB15971C1F006D0FF8 /* Cav-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855615971C1E006D0FF8 /* Cav-fila.lev */; };
+		438E85FC15971C1F006D0FF8 /* Cav-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855715971C1E006D0FF8 /* Cav-filb.lev */; };
+		438E85FD15971C1F006D0FF8 /* Cav-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855815971C1E006D0FF8 /* Cav-goal.lev */; };
+		438E85FE15971C1F006D0FF8 /* Cav-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855915971C1E006D0FF8 /* Cav-loca.lev */; };
+		438E85FF15971C1F006D0FF8 /* Cav-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855A15971C1E006D0FF8 /* Cav-strt.lev */; };
+		438E860015971C1F006D0FF8 /* cav2fill.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855B15971C1E006D0FF8 /* cav2fill.lev */; };
+		438E860115971C1F006D0FF8 /* demogorg.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855C15971C1E006D0FF8 /* demogorg.lev */; };
+		438E860215971C1F006D0FF8 /* dispater.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855D15971C1E006D0FF8 /* dispater.lev */; };
+		438E860315971C1F006D0FF8 /* dragons.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855E15971C1E006D0FF8 /* dragons.lev */; };
+		438E860415971C1F006D0FF8 /* earth.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E855F15971C1E006D0FF8 /* earth.lev */; };
+		438E860515971C1F006D0FF8 /* fakewiz1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856015971C1E006D0FF8 /* fakewiz1.lev */; };
+		438E860615971C1F006D0FF8 /* fakewiz2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856115971C1E006D0FF8 /* fakewiz2.lev */; };
+		438E860715971C1F006D0FF8 /* fire.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856215971C1E006D0FF8 /* fire.lev */; };
+		438E860815971C1F006D0FF8 /* Fla-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856315971C1E006D0FF8 /* Fla-fila.lev */; };
+		438E860915971C1F006D0FF8 /* Fla-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856415971C1E006D0FF8 /* Fla-filb.lev */; };
+		438E860A15971C1F006D0FF8 /* Fla-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856515971C1E006D0FF8 /* Fla-goal.lev */; };
+		438E860B15971C1F006D0FF8 /* Fla-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856615971C1E006D0FF8 /* Fla-loca.lev */; };
+		438E860C15971C1F006D0FF8 /* Fla-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856715971C1E006D0FF8 /* Fla-strt.lev */; };
+		438E860D15971C1F006D0FF8 /* frnknstn.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856815971C1E006D0FF8 /* frnknstn.lev */; };
+		438E860E15971C1F006D0FF8 /* geryon.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856915971C1E006D0FF8 /* geryon.lev */; };
+		438E860F15971C1F006D0FF8 /* grund-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856A15971C1E006D0FF8 /* grund-1.lev */; };
+		438E861015971C1F006D0FF8 /* grund-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856B15971C1E006D0FF8 /* grund-2.lev */; };
+		438E861115971C1F006D0FF8 /* grund-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856C15971C1E006D0FF8 /* grund-3.lev */; };
+		438E861215971C1F006D0FF8 /* guild.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856D15971C1E006D0FF8 /* guild.lev */; };
+		438E861315971C1F006D0FF8 /* Hea-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856E15971C1E006D0FF8 /* Hea-fila.lev */; };
+		438E861415971C1F006D0FF8 /* Hea-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E856F15971C1E006D0FF8 /* Hea-filb.lev */; };
+		438E861515971C1F006D0FF8 /* Hea-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857015971C1E006D0FF8 /* Hea-goal.lev */; };
+		438E861615971C1F006D0FF8 /* Hea-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857115971C1E006D0FF8 /* Hea-loca.lev */; };
+		438E861715971C1F006D0FF8 /* Hea-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857215971C1E006D0FF8 /* Hea-strt.lev */; };
+		438E861815971C1F006D0FF8 /* Ice-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857315971C1E006D0FF8 /* Ice-fila.lev */; };
+		438E861915971C1F006D0FF8 /* Ice-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857415971C1E006D0FF8 /* Ice-filb.lev */; };
+		438E861A15971C1F006D0FF8 /* Ice-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857515971C1E006D0FF8 /* Ice-goal.lev */; };
+		438E861B15971C1F006D0FF8 /* Ice-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857615971C1E006D0FF8 /* Ice-loca.lev */; };
+		438E861C15971C1F006D0FF8 /* Ice-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857715971C1E006D0FF8 /* Ice-strt.lev */; };
+		438E861D15971C1F006D0FF8 /* juiblex.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857815971C1E006D0FF8 /* juiblex.lev */; };
+		438E861E15971C1F006D0FF8 /* Kni-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857915971C1E006D0FF8 /* Kni-fila.lev */; };
+		438E861F15971C1F006D0FF8 /* Kni-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857A15971C1E006D0FF8 /* Kni-filb.lev */; };
+		438E862015971C1F006D0FF8 /* Kni-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857B15971C1E006D0FF8 /* Kni-goal.lev */; };
+		438E862115971C1F006D0FF8 /* Kni-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857C15971C1E006D0FF8 /* Kni-loca.lev */; };
+		438E862215971C1F006D0FF8 /* Kni-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857D15971C1E006D0FF8 /* Kni-strt.lev */; };
+		438E862315971C1F006D0FF8 /* knox.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857E15971C1E006D0FF8 /* knox.lev */; };
+		438E862415971C1F006D0FF8 /* kobold-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E857F15971C1E006D0FF8 /* kobold-1.lev */; };
+		438E862515971C1F006D0FF8 /* kobold-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858015971C1E006D0FF8 /* kobold-2.lev */; };
+		438E862615971C1F006D0FF8 /* lich.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858115971C1E006D0FF8 /* lich.lev */; };
+		438E862715971C1F006D0FF8 /* mall-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858215971C1E006D0FF8 /* mall-1.lev */; };
+		438E862815971C1F006D0FF8 /* mall-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858315971C1E006D0FF8 /* mall-2.lev */; };
+		438E862915971C1F006D0FF8 /* mall.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858415971C1E006D0FF8 /* mall.lev */; };
+		438E862A15971C1F006D0FF8 /* medusa-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858515971C1E006D0FF8 /* medusa-1.lev */; };
+		438E862B15971C1F006D0FF8 /* medusa-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858615971C1E006D0FF8 /* medusa-2.lev */; };
+		438E862C15971C1F006D0FF8 /* medusa-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858715971C1E006D0FF8 /* medusa-3.lev */; };
+		438E862D15971C1F006D0FF8 /* medusa-4.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858815971C1E006D0FF8 /* medusa-4.lev */; };
+		438E862E15971C1F006D0FF8 /* minefill.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858915971C1E006D0FF8 /* minefill.lev */; };
+		438E862F15971C1F006D0FF8 /* mineking.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858A15971C1E006D0FF8 /* mineking.lev */; };
+		438E863015971C1F006D0FF8 /* minend-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858B15971C1E006D0FF8 /* minend-1.lev */; };
+		438E863115971C1F006D0FF8 /* minend-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858C15971C1E006D0FF8 /* minend-2.lev */; };
+		438E863215971C1F006D0FF8 /* minend-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858D15971C1E006D0FF8 /* minend-3.lev */; };
+		438E863315971C1F006D0FF8 /* minetn-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858E15971C1E006D0FF8 /* minetn-1.lev */; };
+		438E863415971C1F006D0FF8 /* minetn-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E858F15971C1E006D0FF8 /* minetn-2.lev */; };
+		438E863515971C1F006D0FF8 /* minetn-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859015971C1E006D0FF8 /* minetn-3.lev */; };
+		438E863615971C1F006D0FF8 /* minetn-4.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859115971C1E006D0FF8 /* minetn-4.lev */; };
+		438E863715971C1F006D0FF8 /* minetn-5.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859215971C1E006D0FF8 /* minetn-5.lev */; };
+		438E863815971C1F006D0FF8 /* minetn-6.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859315971C1E006D0FF8 /* minetn-6.lev */; };
+		438E863915971C1F006D0FF8 /* minetn-7.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859415971C1E006D0FF8 /* minetn-7.lev */; };
+		438E863A15971C1F006D0FF8 /* Mon-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859515971C1E006D0FF8 /* Mon-fila.lev */; };
+		438E863B15971C1F006D0FF8 /* Mon-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859615971C1E006D0FF8 /* Mon-filb.lev */; };
+		438E863C15971C1F006D0FF8 /* Mon-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859715971C1E006D0FF8 /* Mon-goal.lev */; };
+		438E863D15971C1F006D0FF8 /* Mon-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859815971C1E006D0FF8 /* Mon-loca.lev */; };
+		438E863E15971C1F006D0FF8 /* Mon-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859915971C1E006D0FF8 /* Mon-strt.lev */; };
+		438E863F15971C1F006D0FF8 /* mtemple.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859A15971C1E006D0FF8 /* mtemple.lev */; };
+		438E864015971C1F006D0FF8 /* Nec-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859B15971C1E006D0FF8 /* Nec-fila.lev */; };
+		438E864115971C1F006D0FF8 /* Nec-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859C15971C1E006D0FF8 /* Nec-filb.lev */; };
+		438E864215971C1F006D0FF8 /* Nec-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859D15971C1E006D0FF8 /* Nec-goal.lev */; };
+		438E864315971C1F006D0FF8 /* Nec-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859E15971C1E006D0FF8 /* Nec-loca.lev */; };
+		438E864415971C1F006D0FF8 /* Nec-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E859F15971C1E006D0FF8 /* Nec-strt.lev */; };
+		438E864515971C1F006D0FF8 /* nightmar.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A015971C1E006D0FF8 /* nightmar.lev */; };
+		438E864615971C1F006D0FF8 /* nymph.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A115971C1E006D0FF8 /* nymph.lev */; };
+		438E864715971C1F006D0FF8 /* oracle.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A215971C1E006D0FF8 /* oracle.lev */; };
+		438E864815971C1F006D0FF8 /* orcus.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A315971C1E006D0FF8 /* orcus.lev */; };
+		438E864915971C1F006D0FF8 /* Pri-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A415971C1E006D0FF8 /* Pri-fila.lev */; };
+		438E864A15971C1F006D0FF8 /* Pri-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A515971C1E006D0FF8 /* Pri-filb.lev */; };
+		438E864B15971C1F006D0FF8 /* Pri-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A615971C1E006D0FF8 /* Pri-goal.lev */; };
+		438E864C15971C1F006D0FF8 /* Pri-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A715971C1E006D0FF8 /* Pri-loca.lev */; };
+		438E864D15971C1F006D0FF8 /* Pri-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A815971C1E006D0FF8 /* Pri-strt.lev */; };
+		438E864E15971C1F006D0FF8 /* Ran-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85A915971C1E006D0FF8 /* Ran-fila.lev */; };
+		438E864F15971C1F006D0FF8 /* Ran-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85AA15971C1E006D0FF8 /* Ran-filb.lev */; };
+		438E865015971C1F006D0FF8 /* Ran-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85AB15971C1E006D0FF8 /* Ran-goal.lev */; };
+		438E865115971C1F006D0FF8 /* Ran-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85AC15971C1E006D0FF8 /* Ran-loca.lev */; };
+		438E865215971C1F006D0FF8 /* Ran-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85AD15971C1E006D0FF8 /* Ran-strt.lev */; };
+		438E865315971C1F006D0FF8 /* rats.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85AE15971C1E006D0FF8 /* rats.lev */; };
+		438E865415971C1F006D0FF8 /* Rog-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85AF15971C1E006D0FF8 /* Rog-fila.lev */; };
+		438E865515971C1F006D0FF8 /* Rog-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B015971C1E006D0FF8 /* Rog-filb.lev */; };
+		438E865615971C1F006D0FF8 /* Rog-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B115971C1E006D0FF8 /* Rog-goal.lev */; };
+		438E865715971C1F006D0FF8 /* Rog-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B215971C1E006D0FF8 /* Rog-loca.lev */; };
+		438E865815971C1F006D0FF8 /* Rog-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B315971C1E006D0FF8 /* Rog-strt.lev */; };
+		438E865915971C1F006D0FF8 /* Sam-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B415971C1E006D0FF8 /* Sam-fila.lev */; };
+		438E865A15971C1F006D0FF8 /* Sam-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B515971C1E006D0FF8 /* Sam-filb.lev */; };
+		438E865B15971C1F006D0FF8 /* Sam-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B615971C1E006D0FF8 /* Sam-goal.lev */; };
+		438E865C15971C1F006D0FF8 /* Sam-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B715971C1E006D0FF8 /* Sam-loca.lev */; };
+		438E865D15971C1F006D0FF8 /* Sam-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B815971C1E006D0FF8 /* Sam-strt.lev */; };
+		438E865E15971C1F006D0FF8 /* sanctum.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85B915971C1E006D0FF8 /* sanctum.lev */; };
+		438E865F15971C1F006D0FF8 /* sea.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85BA15971C1E006D0FF8 /* sea.lev */; };
+		438E866015971C1F006D0FF8 /* soko1-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85BB15971C1E006D0FF8 /* soko1-1.lev */; };
+		438E866115971C1F006D0FF8 /* soko1-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85BC15971C1E006D0FF8 /* soko1-2.lev */; };
+		438E866215971C1F006D0FF8 /* soko1-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85BD15971C1E006D0FF8 /* soko1-3.lev */; };
+		438E866315971C1F006D0FF8 /* soko1-4.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85BE15971C1E006D0FF8 /* soko1-4.lev */; };
+		438E866415971C1F006D0FF8 /* soko2-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85BF15971C1E006D0FF8 /* soko2-1.lev */; };
+		438E866515971C1F006D0FF8 /* soko2-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C015971C1E006D0FF8 /* soko2-2.lev */; };
+		438E866615971C1F006D0FF8 /* soko2-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C115971C1E006D0FF8 /* soko2-3.lev */; };
+		438E866715971C1F006D0FF8 /* soko2-4.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C215971C1E006D0FF8 /* soko2-4.lev */; };
+		438E866815971C1F006D0FF8 /* soko2-5.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C315971C1E006D0FF8 /* soko2-5.lev */; };
+		438E866915971C1F006D0FF8 /* soko2-6.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C415971C1E006D0FF8 /* soko2-6.lev */; };
+		438E866A15971C1F006D0FF8 /* soko2-7.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C515971C1E006D0FF8 /* soko2-7.lev */; };
+		438E866B15971C1F006D0FF8 /* soko3-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C615971C1E006D0FF8 /* soko3-1.lev */; };
+		438E866C15971C1F006D0FF8 /* soko3-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C715971C1E006D0FF8 /* soko3-2.lev */; };
+		438E866D15971C1F006D0FF8 /* soko3-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C815971C1E006D0FF8 /* soko3-3.lev */; };
+		438E866E15971C1F006D0FF8 /* soko3-4.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85C915971C1E006D0FF8 /* soko3-4.lev */; };
+		438E866F15971C1F006D0FF8 /* soko3-5.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85CA15971C1E006D0FF8 /* soko3-5.lev */; };
+		438E867015971C1F006D0FF8 /* soko3-6.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85CB15971C1E006D0FF8 /* soko3-6.lev */; };
+		438E867115971C1F006D0FF8 /* soko3-7.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85CC15971C1E006D0FF8 /* soko3-7.lev */; };
+		438E867215971C1F006D0FF8 /* soko4-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85CD15971C1E006D0FF8 /* soko4-1.lev */; };
+		438E867315971C1F006D0FF8 /* soko4-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85CE15971C1E006D0FF8 /* soko4-2.lev */; };
+		438E867415971C1F006D0FF8 /* soko4-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85CF15971C1E006D0FF8 /* soko4-3.lev */; };
+		438E867515971C1F006D0FF8 /* soko4-4.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D015971C1E006D0FF8 /* soko4-4.lev */; };
+		438E867615971C1F006D0FF8 /* soko4-5.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D115971C1E006D0FF8 /* soko4-5.lev */; };
+		438E867715971C1F006D0FF8 /* spiders.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D215971C1E006D0FF8 /* spiders.lev */; };
+		438E867815971C1F006D0FF8 /* stor-1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D315971C1E006D0FF8 /* stor-1.lev */; };
+		438E867915971C1F006D0FF8 /* stor-2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D415971C1E006D0FF8 /* stor-2.lev */; };
+		438E867A15971C1F006D0FF8 /* stor-3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D515971C1E006D0FF8 /* stor-3.lev */; };
+		438E867B15971C1F006D0FF8 /* tomb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D615971C1E006D0FF8 /* tomb.lev */; };
+		438E867C15971C1F006D0FF8 /* Tou-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D715971C1E006D0FF8 /* Tou-fila.lev */; };
+		438E867D15971C1F006D0FF8 /* Tou-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D815971C1E006D0FF8 /* Tou-filb.lev */; };
+		438E867E15971C1F006D0FF8 /* Tou-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85D915971C1E006D0FF8 /* Tou-goal.lev */; };
+		438E867F15971C1F006D0FF8 /* Tou-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85DA15971C1E006D0FF8 /* Tou-loca.lev */; };
+		438E868015971C1F006D0FF8 /* Tou-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85DB15971C1E006D0FF8 /* Tou-strt.lev */; };
+		438E868115971C1F006D0FF8 /* tower1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85DC15971C1E006D0FF8 /* tower1.lev */; };
+		438E868215971C1F006D0FF8 /* tower2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85DD15971C1E006D0FF8 /* tower2.lev */; };
+		438E868315971C1F006D0FF8 /* tower3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85DE15971C1E006D0FF8 /* tower3.lev */; };
+		438E868415971C1F006D0FF8 /* Und-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85DF15971C1E006D0FF8 /* Und-fila.lev */; };
+		438E868515971C1F006D0FF8 /* Und-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E015971C1E006D0FF8 /* Und-filb.lev */; };
+		438E868615971C1F006D0FF8 /* Und-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E115971C1E006D0FF8 /* Und-goal.lev */; };
+		438E868715971C1F006D0FF8 /* Und-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E215971C1E006D0FF8 /* Und-loca.lev */; };
+		438E868815971C1F006D0FF8 /* Und-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E315971C1E006D0FF8 /* Und-strt.lev */; };
+		438E868915971C1F006D0FF8 /* Val-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E415971C1E006D0FF8 /* Val-fila.lev */; };
+		438E868A15971C1F006D0FF8 /* Val-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E515971C1E006D0FF8 /* Val-filb.lev */; };
+		438E868B15971C1F006D0FF8 /* Val-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E615971C1E006D0FF8 /* Val-goal.lev */; };
+		438E868C15971C1F006D0FF8 /* Val-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E715971C1E006D0FF8 /* Val-loca.lev */; };
+		438E868D15971C1F006D0FF8 /* Val-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E815971C1E006D0FF8 /* Val-strt.lev */; };
+		438E868E15971C1F006D0FF8 /* valley.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85E915971C1E006D0FF8 /* valley.lev */; };
+		438E868F15971C1F006D0FF8 /* water.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85EA15971C1E006D0FF8 /* water.lev */; };
+		438E869015971C1F006D0FF8 /* Wiz-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85EB15971C1E006D0FF8 /* Wiz-fila.lev */; };
+		438E869115971C1F006D0FF8 /* Wiz-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85EC15971C1E006D0FF8 /* Wiz-filb.lev */; };
+		438E869215971C1F006D0FF8 /* Wiz-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85ED15971C1E006D0FF8 /* Wiz-goal.lev */; };
+		438E869315971C1F006D0FF8 /* Wiz-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85EE15971C1E006D0FF8 /* Wiz-loca.lev */; };
+		438E869415971C1F006D0FF8 /* Wiz-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85EF15971C1E006D0FF8 /* Wiz-strt.lev */; };
+		438E869515971C1F006D0FF8 /* wizard1.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85F015971C1E006D0FF8 /* wizard1.lev */; };
+		438E869615971C1F006D0FF8 /* wizard2.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85F115971C1E006D0FF8 /* wizard2.lev */; };
+		438E869715971C1F006D0FF8 /* wizard3.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85F215971C1E006D0FF8 /* wizard3.lev */; };
+		438E869815971C1F006D0FF8 /* yeenoghu.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85F315971C1E006D0FF8 /* yeenoghu.lev */; };
+		438E869915971C1F006D0FF8 /* Yeo-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85F415971C1E006D0FF8 /* Yeo-fila.lev */; };
+		438E869A15971C1F006D0FF8 /* Yeo-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85F515971C1E006D0FF8 /* Yeo-filb.lev */; };
+		438E869B15971C1F006D0FF8 /* Yeo-goal.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85F615971C1E006D0FF8 /* Yeo-goal.lev */; };
+		438E869C15971C1F006D0FF8 /* Yeo-loca.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85F715971C1E006D0FF8 /* Yeo-loca.lev */; };
+		438E869D15971C1F006D0FF8 /* Yeo-strt.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E85F815971C1E006D0FF8 /* Yeo-strt.lev */; };
+		438E86A115971C7C006D0FF8 /* data in Resources */ = {isa = PBXBuildFile; fileRef = 438E869E15971C7C006D0FF8 /* data */; };
+		438E86A215971C7C006D0FF8 /* dungeon in Resources */ = {isa = PBXBuildFile; fileRef = 438E869F15971C7C006D0FF8 /* dungeon */; };
+		438E86A315971C7C006D0FF8 /* dungeon.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 438E86A015971C7C006D0FF8 /* dungeon.pdf */; };
+		438E86B215971CCA006D0FF8 /* gypsy.txt in Resources */ = {isa = PBXBuildFile; fileRef = 438E86A415971CCA006D0FF8 /* gypsy.txt */; };
+		438E86B315971CCA006D0FF8 /* help in Resources */ = {isa = PBXBuildFile; fileRef = 438E86A515971CCA006D0FF8 /* help */; };
+		438E86B415971CCA006D0FF8 /* hh in Resources */ = {isa = PBXBuildFile; fileRef = 438E86A615971CCA006D0FF8 /* hh */; };
+		438E86B515971CCA006D0FF8 /* history in Resources */ = {isa = PBXBuildFile; fileRef = 438E86A715971CCA006D0FF8 /* history */; };
+		438E86B615971CCA006D0FF8 /* license in Resources */ = {isa = PBXBuildFile; fileRef = 438E86A815971CCA006D0FF8 /* license */; };
+		438E86B715971CCA006D0FF8 /* opthelp in Resources */ = {isa = PBXBuildFile; fileRef = 438E86A915971CCA006D0FF8 /* opthelp */; };
+		438E86B815971CCA006D0FF8 /* options in Resources */ = {isa = PBXBuildFile; fileRef = 438E86AA15971CCA006D0FF8 /* options */; };
+		438E86B915971CCA006D0FF8 /* oracles in Resources */ = {isa = PBXBuildFile; fileRef = 438E86AB15971CCA006D0FF8 /* oracles */; };
+		438E86BA15971CCA006D0FF8 /* oracles.txt in Resources */ = {isa = PBXBuildFile; fileRef = 438E86AC15971CCA006D0FF8 /* oracles.txt */; };
+		438E86BB15971CCA006D0FF8 /* quest.dat in Resources */ = {isa = PBXBuildFile; fileRef = 438E86AD15971CCA006D0FF8 /* quest.dat */; };
+		438E86BC15971CCA006D0FF8 /* quest.txt in Resources */ = {isa = PBXBuildFile; fileRef = 438E86AE15971CCA006D0FF8 /* quest.txt */; };
+		438E86BD15971CCA006D0FF8 /* rumors in Resources */ = {isa = PBXBuildFile; fileRef = 438E86AF15971CCA006D0FF8 /* rumors */; };
+		438E86BE15971CCA006D0FF8 /* rumors.fal in Resources */ = {isa = PBXBuildFile; fileRef = 438E86B015971CCA006D0FF8 /* rumors.fal */; };
+		438E86BF15971CCA006D0FF8 /* rumors.tru in Resources */ = {isa = PBXBuildFile; fileRef = 438E86B115971CCA006D0FF8 /* rumors.tru */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -428,6 +630,208 @@
 		4326DF631593611A005D7B4D /* MenuFinishedEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuFinishedEvent.m; sourceTree = "<group>"; };
 		4326DF66159361F0005D7B4D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		4326DF67159361F0005D7B4D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		438E852B15971BD9006D0FF8 /* air.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = air.lev; sourceTree = "<group>"; };
+		438E852C15971BD9006D0FF8 /* Arc-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arc-fila.lev"; sourceTree = "<group>"; };
+		438E852D15971BD9006D0FF8 /* Arc-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arc-filb.lev"; sourceTree = "<group>"; };
+		438E852E15971BD9006D0FF8 /* Arc-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arc-goal.lev"; sourceTree = "<group>"; };
+		438E852F15971BD9006D0FF8 /* Arc-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arc-loca.lev"; sourceTree = "<group>"; };
+		438E853015971BD9006D0FF8 /* Arc-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arc-strt.lev"; sourceTree = "<group>"; };
+		438E853115971BD9006D0FF8 /* asmodeus.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = asmodeus.lev; sourceTree = "<group>"; };
+		438E853215971BD9006D0FF8 /* astral.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = astral.lev; sourceTree = "<group>"; };
+		438E853315971BD9006D0FF8 /* baalz.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = baalz.lev; sourceTree = "<group>"; };
+		438E853415971BD9006D0FF8 /* Bar-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bar-fila.lev"; sourceTree = "<group>"; };
+		438E853515971BD9006D0FF8 /* Bar-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bar-filb.lev"; sourceTree = "<group>"; };
+		438E853615971BD9006D0FF8 /* Bar-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bar-goal.lev"; sourceTree = "<group>"; };
+		438E853715971BD9006D0FF8 /* Bar-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bar-loca.lev"; sourceTree = "<group>"; };
+		438E853815971BD9006D0FF8 /* Bar-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Bar-strt.lev"; sourceTree = "<group>"; };
+		438E854815971BEE006D0FF8 /* beholder.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = beholder.lev; sourceTree = "<group>"; };
+		438E854915971BEE006D0FF8 /* bigrm-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bigrm-1.lev"; sourceTree = "<group>"; };
+		438E854A15971BEE006D0FF8 /* bigrm-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bigrm-2.lev"; sourceTree = "<group>"; };
+		438E854B15971BEE006D0FF8 /* bigrm-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bigrm-3.lev"; sourceTree = "<group>"; };
+		438E854C15971BEE006D0FF8 /* bigrm-4.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bigrm-4.lev"; sourceTree = "<group>"; };
+		438E854D15971BEE006D0FF8 /* bigrm-5.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "bigrm-5.lev"; sourceTree = "<group>"; };
+		438E855415971C1E006D0FF8 /* blkmar.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = blkmar.lev; sourceTree = "<group>"; };
+		438E855515971C1E006D0FF8 /* castle.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = castle.lev; sourceTree = "<group>"; };
+		438E855615971C1E006D0FF8 /* Cav-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cav-fila.lev"; sourceTree = "<group>"; };
+		438E855715971C1E006D0FF8 /* Cav-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cav-filb.lev"; sourceTree = "<group>"; };
+		438E855815971C1E006D0FF8 /* Cav-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cav-goal.lev"; sourceTree = "<group>"; };
+		438E855915971C1E006D0FF8 /* Cav-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cav-loca.lev"; sourceTree = "<group>"; };
+		438E855A15971C1E006D0FF8 /* Cav-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cav-strt.lev"; sourceTree = "<group>"; };
+		438E855B15971C1E006D0FF8 /* cav2fill.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = cav2fill.lev; sourceTree = "<group>"; };
+		438E855C15971C1E006D0FF8 /* demogorg.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = demogorg.lev; sourceTree = "<group>"; };
+		438E855D15971C1E006D0FF8 /* dispater.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = dispater.lev; sourceTree = "<group>"; };
+		438E855E15971C1E006D0FF8 /* dragons.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = dragons.lev; sourceTree = "<group>"; };
+		438E855F15971C1E006D0FF8 /* earth.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = earth.lev; sourceTree = "<group>"; };
+		438E856015971C1E006D0FF8 /* fakewiz1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = fakewiz1.lev; sourceTree = "<group>"; };
+		438E856115971C1E006D0FF8 /* fakewiz2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = fakewiz2.lev; sourceTree = "<group>"; };
+		438E856215971C1E006D0FF8 /* fire.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = fire.lev; sourceTree = "<group>"; };
+		438E856315971C1E006D0FF8 /* Fla-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fla-fila.lev"; sourceTree = "<group>"; };
+		438E856415971C1E006D0FF8 /* Fla-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fla-filb.lev"; sourceTree = "<group>"; };
+		438E856515971C1E006D0FF8 /* Fla-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fla-goal.lev"; sourceTree = "<group>"; };
+		438E856615971C1E006D0FF8 /* Fla-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fla-loca.lev"; sourceTree = "<group>"; };
+		438E856715971C1E006D0FF8 /* Fla-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fla-strt.lev"; sourceTree = "<group>"; };
+		438E856815971C1E006D0FF8 /* frnknstn.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = frnknstn.lev; sourceTree = "<group>"; };
+		438E856915971C1E006D0FF8 /* geryon.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = geryon.lev; sourceTree = "<group>"; };
+		438E856A15971C1E006D0FF8 /* grund-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "grund-1.lev"; sourceTree = "<group>"; };
+		438E856B15971C1E006D0FF8 /* grund-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "grund-2.lev"; sourceTree = "<group>"; };
+		438E856C15971C1E006D0FF8 /* grund-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "grund-3.lev"; sourceTree = "<group>"; };
+		438E856D15971C1E006D0FF8 /* guild.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = guild.lev; sourceTree = "<group>"; };
+		438E856E15971C1E006D0FF8 /* Hea-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hea-fila.lev"; sourceTree = "<group>"; };
+		438E856F15971C1E006D0FF8 /* Hea-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hea-filb.lev"; sourceTree = "<group>"; };
+		438E857015971C1E006D0FF8 /* Hea-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hea-goal.lev"; sourceTree = "<group>"; };
+		438E857115971C1E006D0FF8 /* Hea-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hea-loca.lev"; sourceTree = "<group>"; };
+		438E857215971C1E006D0FF8 /* Hea-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hea-strt.lev"; sourceTree = "<group>"; };
+		438E857315971C1E006D0FF8 /* Ice-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ice-fila.lev"; sourceTree = "<group>"; };
+		438E857415971C1E006D0FF8 /* Ice-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ice-filb.lev"; sourceTree = "<group>"; };
+		438E857515971C1E006D0FF8 /* Ice-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ice-goal.lev"; sourceTree = "<group>"; };
+		438E857615971C1E006D0FF8 /* Ice-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ice-loca.lev"; sourceTree = "<group>"; };
+		438E857715971C1E006D0FF8 /* Ice-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ice-strt.lev"; sourceTree = "<group>"; };
+		438E857815971C1E006D0FF8 /* juiblex.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = juiblex.lev; sourceTree = "<group>"; };
+		438E857915971C1E006D0FF8 /* Kni-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kni-fila.lev"; sourceTree = "<group>"; };
+		438E857A15971C1E006D0FF8 /* Kni-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kni-filb.lev"; sourceTree = "<group>"; };
+		438E857B15971C1E006D0FF8 /* Kni-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kni-goal.lev"; sourceTree = "<group>"; };
+		438E857C15971C1E006D0FF8 /* Kni-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kni-loca.lev"; sourceTree = "<group>"; };
+		438E857D15971C1E006D0FF8 /* Kni-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kni-strt.lev"; sourceTree = "<group>"; };
+		438E857E15971C1E006D0FF8 /* knox.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = knox.lev; sourceTree = "<group>"; };
+		438E857F15971C1E006D0FF8 /* kobold-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kobold-1.lev"; sourceTree = "<group>"; };
+		438E858015971C1E006D0FF8 /* kobold-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "kobold-2.lev"; sourceTree = "<group>"; };
+		438E858115971C1E006D0FF8 /* lich.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = lich.lev; sourceTree = "<group>"; };
+		438E858215971C1E006D0FF8 /* mall-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mall-1.lev"; sourceTree = "<group>"; };
+		438E858315971C1E006D0FF8 /* mall-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "mall-2.lev"; sourceTree = "<group>"; };
+		438E858415971C1E006D0FF8 /* mall.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = mall.lev; sourceTree = "<group>"; };
+		438E858515971C1E006D0FF8 /* medusa-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "medusa-1.lev"; sourceTree = "<group>"; };
+		438E858615971C1E006D0FF8 /* medusa-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "medusa-2.lev"; sourceTree = "<group>"; };
+		438E858715971C1E006D0FF8 /* medusa-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "medusa-3.lev"; sourceTree = "<group>"; };
+		438E858815971C1E006D0FF8 /* medusa-4.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "medusa-4.lev"; sourceTree = "<group>"; };
+		438E858915971C1E006D0FF8 /* minefill.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = minefill.lev; sourceTree = "<group>"; };
+		438E858A15971C1E006D0FF8 /* mineking.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = mineking.lev; sourceTree = "<group>"; };
+		438E858B15971C1E006D0FF8 /* minend-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minend-1.lev"; sourceTree = "<group>"; };
+		438E858C15971C1E006D0FF8 /* minend-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minend-2.lev"; sourceTree = "<group>"; };
+		438E858D15971C1E006D0FF8 /* minend-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minend-3.lev"; sourceTree = "<group>"; };
+		438E858E15971C1E006D0FF8 /* minetn-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minetn-1.lev"; sourceTree = "<group>"; };
+		438E858F15971C1E006D0FF8 /* minetn-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minetn-2.lev"; sourceTree = "<group>"; };
+		438E859015971C1E006D0FF8 /* minetn-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minetn-3.lev"; sourceTree = "<group>"; };
+		438E859115971C1E006D0FF8 /* minetn-4.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minetn-4.lev"; sourceTree = "<group>"; };
+		438E859215971C1E006D0FF8 /* minetn-5.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minetn-5.lev"; sourceTree = "<group>"; };
+		438E859315971C1E006D0FF8 /* minetn-6.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minetn-6.lev"; sourceTree = "<group>"; };
+		438E859415971C1E006D0FF8 /* minetn-7.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "minetn-7.lev"; sourceTree = "<group>"; };
+		438E859515971C1E006D0FF8 /* Mon-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mon-fila.lev"; sourceTree = "<group>"; };
+		438E859615971C1E006D0FF8 /* Mon-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mon-filb.lev"; sourceTree = "<group>"; };
+		438E859715971C1E006D0FF8 /* Mon-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mon-goal.lev"; sourceTree = "<group>"; };
+		438E859815971C1E006D0FF8 /* Mon-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mon-loca.lev"; sourceTree = "<group>"; };
+		438E859915971C1E006D0FF8 /* Mon-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mon-strt.lev"; sourceTree = "<group>"; };
+		438E859A15971C1E006D0FF8 /* mtemple.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = mtemple.lev; sourceTree = "<group>"; };
+		438E859B15971C1E006D0FF8 /* Nec-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nec-fila.lev"; sourceTree = "<group>"; };
+		438E859C15971C1E006D0FF8 /* Nec-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nec-filb.lev"; sourceTree = "<group>"; };
+		438E859D15971C1E006D0FF8 /* Nec-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nec-goal.lev"; sourceTree = "<group>"; };
+		438E859E15971C1E006D0FF8 /* Nec-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nec-loca.lev"; sourceTree = "<group>"; };
+		438E859F15971C1E006D0FF8 /* Nec-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nec-strt.lev"; sourceTree = "<group>"; };
+		438E85A015971C1E006D0FF8 /* nightmar.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = nightmar.lev; sourceTree = "<group>"; };
+		438E85A115971C1E006D0FF8 /* nymph.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = nymph.lev; sourceTree = "<group>"; };
+		438E85A215971C1E006D0FF8 /* oracle.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = oracle.lev; sourceTree = "<group>"; };
+		438E85A315971C1E006D0FF8 /* orcus.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = orcus.lev; sourceTree = "<group>"; };
+		438E85A415971C1E006D0FF8 /* Pri-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pri-fila.lev"; sourceTree = "<group>"; };
+		438E85A515971C1E006D0FF8 /* Pri-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pri-filb.lev"; sourceTree = "<group>"; };
+		438E85A615971C1E006D0FF8 /* Pri-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pri-goal.lev"; sourceTree = "<group>"; };
+		438E85A715971C1E006D0FF8 /* Pri-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pri-loca.lev"; sourceTree = "<group>"; };
+		438E85A815971C1E006D0FF8 /* Pri-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pri-strt.lev"; sourceTree = "<group>"; };
+		438E85A915971C1E006D0FF8 /* Ran-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ran-fila.lev"; sourceTree = "<group>"; };
+		438E85AA15971C1E006D0FF8 /* Ran-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ran-filb.lev"; sourceTree = "<group>"; };
+		438E85AB15971C1E006D0FF8 /* Ran-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ran-goal.lev"; sourceTree = "<group>"; };
+		438E85AC15971C1E006D0FF8 /* Ran-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ran-loca.lev"; sourceTree = "<group>"; };
+		438E85AD15971C1E006D0FF8 /* Ran-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Ran-strt.lev"; sourceTree = "<group>"; };
+		438E85AE15971C1E006D0FF8 /* rats.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = rats.lev; sourceTree = "<group>"; };
+		438E85AF15971C1E006D0FF8 /* Rog-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rog-fila.lev"; sourceTree = "<group>"; };
+		438E85B015971C1E006D0FF8 /* Rog-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rog-filb.lev"; sourceTree = "<group>"; };
+		438E85B115971C1E006D0FF8 /* Rog-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rog-goal.lev"; sourceTree = "<group>"; };
+		438E85B215971C1E006D0FF8 /* Rog-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rog-loca.lev"; sourceTree = "<group>"; };
+		438E85B315971C1E006D0FF8 /* Rog-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Rog-strt.lev"; sourceTree = "<group>"; };
+		438E85B415971C1E006D0FF8 /* Sam-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sam-fila.lev"; sourceTree = "<group>"; };
+		438E85B515971C1E006D0FF8 /* Sam-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sam-filb.lev"; sourceTree = "<group>"; };
+		438E85B615971C1E006D0FF8 /* Sam-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sam-goal.lev"; sourceTree = "<group>"; };
+		438E85B715971C1E006D0FF8 /* Sam-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sam-loca.lev"; sourceTree = "<group>"; };
+		438E85B815971C1E006D0FF8 /* Sam-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sam-strt.lev"; sourceTree = "<group>"; };
+		438E85B915971C1E006D0FF8 /* sanctum.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = sanctum.lev; sourceTree = "<group>"; };
+		438E85BA15971C1E006D0FF8 /* sea.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = sea.lev; sourceTree = "<group>"; };
+		438E85BB15971C1E006D0FF8 /* soko1-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko1-1.lev"; sourceTree = "<group>"; };
+		438E85BC15971C1E006D0FF8 /* soko1-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko1-2.lev"; sourceTree = "<group>"; };
+		438E85BD15971C1E006D0FF8 /* soko1-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko1-3.lev"; sourceTree = "<group>"; };
+		438E85BE15971C1E006D0FF8 /* soko1-4.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko1-4.lev"; sourceTree = "<group>"; };
+		438E85BF15971C1E006D0FF8 /* soko2-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko2-1.lev"; sourceTree = "<group>"; };
+		438E85C015971C1E006D0FF8 /* soko2-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko2-2.lev"; sourceTree = "<group>"; };
+		438E85C115971C1E006D0FF8 /* soko2-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko2-3.lev"; sourceTree = "<group>"; };
+		438E85C215971C1E006D0FF8 /* soko2-4.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko2-4.lev"; sourceTree = "<group>"; };
+		438E85C315971C1E006D0FF8 /* soko2-5.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko2-5.lev"; sourceTree = "<group>"; };
+		438E85C415971C1E006D0FF8 /* soko2-6.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko2-6.lev"; sourceTree = "<group>"; };
+		438E85C515971C1E006D0FF8 /* soko2-7.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko2-7.lev"; sourceTree = "<group>"; };
+		438E85C615971C1E006D0FF8 /* soko3-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko3-1.lev"; sourceTree = "<group>"; };
+		438E85C715971C1E006D0FF8 /* soko3-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko3-2.lev"; sourceTree = "<group>"; };
+		438E85C815971C1E006D0FF8 /* soko3-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko3-3.lev"; sourceTree = "<group>"; };
+		438E85C915971C1E006D0FF8 /* soko3-4.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko3-4.lev"; sourceTree = "<group>"; };
+		438E85CA15971C1E006D0FF8 /* soko3-5.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko3-5.lev"; sourceTree = "<group>"; };
+		438E85CB15971C1E006D0FF8 /* soko3-6.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko3-6.lev"; sourceTree = "<group>"; };
+		438E85CC15971C1E006D0FF8 /* soko3-7.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko3-7.lev"; sourceTree = "<group>"; };
+		438E85CD15971C1E006D0FF8 /* soko4-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko4-1.lev"; sourceTree = "<group>"; };
+		438E85CE15971C1E006D0FF8 /* soko4-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko4-2.lev"; sourceTree = "<group>"; };
+		438E85CF15971C1E006D0FF8 /* soko4-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko4-3.lev"; sourceTree = "<group>"; };
+		438E85D015971C1E006D0FF8 /* soko4-4.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko4-4.lev"; sourceTree = "<group>"; };
+		438E85D115971C1E006D0FF8 /* soko4-5.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "soko4-5.lev"; sourceTree = "<group>"; };
+		438E85D215971C1E006D0FF8 /* spiders.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = spiders.lev; sourceTree = "<group>"; };
+		438E85D315971C1E006D0FF8 /* stor-1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stor-1.lev"; sourceTree = "<group>"; };
+		438E85D415971C1E006D0FF8 /* stor-2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stor-2.lev"; sourceTree = "<group>"; };
+		438E85D515971C1E006D0FF8 /* stor-3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "stor-3.lev"; sourceTree = "<group>"; };
+		438E85D615971C1E006D0FF8 /* tomb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = tomb.lev; sourceTree = "<group>"; };
+		438E85D715971C1E006D0FF8 /* Tou-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tou-fila.lev"; sourceTree = "<group>"; };
+		438E85D815971C1E006D0FF8 /* Tou-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tou-filb.lev"; sourceTree = "<group>"; };
+		438E85D915971C1E006D0FF8 /* Tou-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tou-goal.lev"; sourceTree = "<group>"; };
+		438E85DA15971C1E006D0FF8 /* Tou-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tou-loca.lev"; sourceTree = "<group>"; };
+		438E85DB15971C1E006D0FF8 /* Tou-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tou-strt.lev"; sourceTree = "<group>"; };
+		438E85DC15971C1E006D0FF8 /* tower1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = tower1.lev; sourceTree = "<group>"; };
+		438E85DD15971C1E006D0FF8 /* tower2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = tower2.lev; sourceTree = "<group>"; };
+		438E85DE15971C1E006D0FF8 /* tower3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = tower3.lev; sourceTree = "<group>"; };
+		438E85DF15971C1E006D0FF8 /* Und-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Und-fila.lev"; sourceTree = "<group>"; };
+		438E85E015971C1E006D0FF8 /* Und-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Und-filb.lev"; sourceTree = "<group>"; };
+		438E85E115971C1E006D0FF8 /* Und-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Und-goal.lev"; sourceTree = "<group>"; };
+		438E85E215971C1E006D0FF8 /* Und-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Und-loca.lev"; sourceTree = "<group>"; };
+		438E85E315971C1E006D0FF8 /* Und-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Und-strt.lev"; sourceTree = "<group>"; };
+		438E85E415971C1E006D0FF8 /* Val-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Val-fila.lev"; sourceTree = "<group>"; };
+		438E85E515971C1E006D0FF8 /* Val-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Val-filb.lev"; sourceTree = "<group>"; };
+		438E85E615971C1E006D0FF8 /* Val-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Val-goal.lev"; sourceTree = "<group>"; };
+		438E85E715971C1E006D0FF8 /* Val-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Val-loca.lev"; sourceTree = "<group>"; };
+		438E85E815971C1E006D0FF8 /* Val-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Val-strt.lev"; sourceTree = "<group>"; };
+		438E85E915971C1E006D0FF8 /* valley.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = valley.lev; sourceTree = "<group>"; };
+		438E85EA15971C1E006D0FF8 /* water.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = water.lev; sourceTree = "<group>"; };
+		438E85EB15971C1E006D0FF8 /* Wiz-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wiz-fila.lev"; sourceTree = "<group>"; };
+		438E85EC15971C1E006D0FF8 /* Wiz-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wiz-filb.lev"; sourceTree = "<group>"; };
+		438E85ED15971C1E006D0FF8 /* Wiz-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wiz-goal.lev"; sourceTree = "<group>"; };
+		438E85EE15971C1E006D0FF8 /* Wiz-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wiz-loca.lev"; sourceTree = "<group>"; };
+		438E85EF15971C1E006D0FF8 /* Wiz-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Wiz-strt.lev"; sourceTree = "<group>"; };
+		438E85F015971C1E006D0FF8 /* wizard1.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = wizard1.lev; sourceTree = "<group>"; };
+		438E85F115971C1E006D0FF8 /* wizard2.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = wizard2.lev; sourceTree = "<group>"; };
+		438E85F215971C1E006D0FF8 /* wizard3.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = wizard3.lev; sourceTree = "<group>"; };
+		438E85F315971C1E006D0FF8 /* yeenoghu.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = yeenoghu.lev; sourceTree = "<group>"; };
+		438E85F415971C1E006D0FF8 /* Yeo-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yeo-fila.lev"; sourceTree = "<group>"; };
+		438E85F515971C1E006D0FF8 /* Yeo-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yeo-filb.lev"; sourceTree = "<group>"; };
+		438E85F615971C1E006D0FF8 /* Yeo-goal.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yeo-goal.lev"; sourceTree = "<group>"; };
+		438E85F715971C1E006D0FF8 /* Yeo-loca.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yeo-loca.lev"; sourceTree = "<group>"; };
+		438E85F815971C1E006D0FF8 /* Yeo-strt.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Yeo-strt.lev"; sourceTree = "<group>"; };
+		438E869E15971C7C006D0FF8 /* data */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data; sourceTree = "<group>"; };
+		438E869F15971C7C006D0FF8 /* dungeon */ = {isa = PBXFileReference; lastKnownFileType = file; path = dungeon; sourceTree = "<group>"; };
+		438E86A015971C7C006D0FF8 /* dungeon.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = dungeon.pdf; sourceTree = "<group>"; };
+		438E86A415971CCA006D0FF8 /* gypsy.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = gypsy.txt; sourceTree = "<group>"; };
+		438E86A515971CCA006D0FF8 /* help */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = help; sourceTree = "<group>"; };
+		438E86A615971CCA006D0FF8 /* hh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hh; sourceTree = "<group>"; };
+		438E86A715971CCA006D0FF8 /* history */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = history; sourceTree = "<group>"; };
+		438E86A815971CCA006D0FF8 /* license */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license; sourceTree = "<group>"; };
+		438E86A915971CCA006D0FF8 /* opthelp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = opthelp; sourceTree = "<group>"; };
+		438E86AA15971CCA006D0FF8 /* options */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = options; sourceTree = "<group>"; };
+		438E86AB15971CCA006D0FF8 /* oracles */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oracles; sourceTree = "<group>"; };
+		438E86AC15971CCA006D0FF8 /* oracles.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = oracles.txt; sourceTree = "<group>"; };
+		438E86AD15971CCA006D0FF8 /* quest.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = quest.dat; sourceTree = "<group>"; };
+		438E86AE15971CCA006D0FF8 /* quest.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = quest.txt; sourceTree = "<group>"; };
+		438E86AF15971CCA006D0FF8 /* rumors */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rumors; sourceTree = "<group>"; };
+		438E86B015971CCA006D0FF8 /* rumors.fal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rumors.fal; sourceTree = "<group>"; };
+		438E86B115971CCA006D0FF8 /* rumors.tru */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rumors.tru; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -551,6 +955,208 @@
 		4326D88E15932DD7005D7B4D /* dat */ = {
 			isa = PBXGroup;
 			children = (
+				438E86A415971CCA006D0FF8 /* gypsy.txt */,
+				438E86A515971CCA006D0FF8 /* help */,
+				438E86A615971CCA006D0FF8 /* hh */,
+				438E86A715971CCA006D0FF8 /* history */,
+				438E86A815971CCA006D0FF8 /* license */,
+				438E86A915971CCA006D0FF8 /* opthelp */,
+				438E86AA15971CCA006D0FF8 /* options */,
+				438E86AB15971CCA006D0FF8 /* oracles */,
+				438E86AC15971CCA006D0FF8 /* oracles.txt */,
+				438E86AD15971CCA006D0FF8 /* quest.dat */,
+				438E86AE15971CCA006D0FF8 /* quest.txt */,
+				438E86AF15971CCA006D0FF8 /* rumors */,
+				438E86B015971CCA006D0FF8 /* rumors.fal */,
+				438E86B115971CCA006D0FF8 /* rumors.tru */,
+				438E869E15971C7C006D0FF8 /* data */,
+				438E869F15971C7C006D0FF8 /* dungeon */,
+				438E86A015971C7C006D0FF8 /* dungeon.pdf */,
+				438E852B15971BD9006D0FF8 /* air.lev */,
+				438E852C15971BD9006D0FF8 /* Arc-fila.lev */,
+				438E852D15971BD9006D0FF8 /* Arc-filb.lev */,
+				438E852E15971BD9006D0FF8 /* Arc-goal.lev */,
+				438E852F15971BD9006D0FF8 /* Arc-loca.lev */,
+				438E853015971BD9006D0FF8 /* Arc-strt.lev */,
+				438E853115971BD9006D0FF8 /* asmodeus.lev */,
+				438E853215971BD9006D0FF8 /* astral.lev */,
+				438E853315971BD9006D0FF8 /* baalz.lev */,
+				438E853415971BD9006D0FF8 /* Bar-fila.lev */,
+				438E853515971BD9006D0FF8 /* Bar-filb.lev */,
+				438E853615971BD9006D0FF8 /* Bar-goal.lev */,
+				438E853715971BD9006D0FF8 /* Bar-loca.lev */,
+				438E853815971BD9006D0FF8 /* Bar-strt.lev */,
+				438E854815971BEE006D0FF8 /* beholder.lev */,
+				438E854915971BEE006D0FF8 /* bigrm-1.lev */,
+				438E854A15971BEE006D0FF8 /* bigrm-2.lev */,
+				438E854B15971BEE006D0FF8 /* bigrm-3.lev */,
+				438E854C15971BEE006D0FF8 /* bigrm-4.lev */,
+				438E854D15971BEE006D0FF8 /* bigrm-5.lev */,
+				438E855415971C1E006D0FF8 /* blkmar.lev */,
+				438E855515971C1E006D0FF8 /* castle.lev */,
+				438E855615971C1E006D0FF8 /* Cav-fila.lev */,
+				438E855715971C1E006D0FF8 /* Cav-filb.lev */,
+				438E855815971C1E006D0FF8 /* Cav-goal.lev */,
+				438E855915971C1E006D0FF8 /* Cav-loca.lev */,
+				438E855A15971C1E006D0FF8 /* Cav-strt.lev */,
+				438E855B15971C1E006D0FF8 /* cav2fill.lev */,
+				438E855C15971C1E006D0FF8 /* demogorg.lev */,
+				438E855D15971C1E006D0FF8 /* dispater.lev */,
+				438E855E15971C1E006D0FF8 /* dragons.lev */,
+				438E855F15971C1E006D0FF8 /* earth.lev */,
+				438E856015971C1E006D0FF8 /* fakewiz1.lev */,
+				438E856115971C1E006D0FF8 /* fakewiz2.lev */,
+				438E856215971C1E006D0FF8 /* fire.lev */,
+				438E856315971C1E006D0FF8 /* Fla-fila.lev */,
+				438E856415971C1E006D0FF8 /* Fla-filb.lev */,
+				438E856515971C1E006D0FF8 /* Fla-goal.lev */,
+				438E856615971C1E006D0FF8 /* Fla-loca.lev */,
+				438E856715971C1E006D0FF8 /* Fla-strt.lev */,
+				438E856815971C1E006D0FF8 /* frnknstn.lev */,
+				438E856915971C1E006D0FF8 /* geryon.lev */,
+				438E856A15971C1E006D0FF8 /* grund-1.lev */,
+				438E856B15971C1E006D0FF8 /* grund-2.lev */,
+				438E856C15971C1E006D0FF8 /* grund-3.lev */,
+				438E856D15971C1E006D0FF8 /* guild.lev */,
+				438E856E15971C1E006D0FF8 /* Hea-fila.lev */,
+				438E856F15971C1E006D0FF8 /* Hea-filb.lev */,
+				438E857015971C1E006D0FF8 /* Hea-goal.lev */,
+				438E857115971C1E006D0FF8 /* Hea-loca.lev */,
+				438E857215971C1E006D0FF8 /* Hea-strt.lev */,
+				438E857315971C1E006D0FF8 /* Ice-fila.lev */,
+				438E857415971C1E006D0FF8 /* Ice-filb.lev */,
+				438E857515971C1E006D0FF8 /* Ice-goal.lev */,
+				438E857615971C1E006D0FF8 /* Ice-loca.lev */,
+				438E857715971C1E006D0FF8 /* Ice-strt.lev */,
+				438E857815971C1E006D0FF8 /* juiblex.lev */,
+				438E857915971C1E006D0FF8 /* Kni-fila.lev */,
+				438E857A15971C1E006D0FF8 /* Kni-filb.lev */,
+				438E857B15971C1E006D0FF8 /* Kni-goal.lev */,
+				438E857C15971C1E006D0FF8 /* Kni-loca.lev */,
+				438E857D15971C1E006D0FF8 /* Kni-strt.lev */,
+				438E857E15971C1E006D0FF8 /* knox.lev */,
+				438E857F15971C1E006D0FF8 /* kobold-1.lev */,
+				438E858015971C1E006D0FF8 /* kobold-2.lev */,
+				438E858115971C1E006D0FF8 /* lich.lev */,
+				438E858215971C1E006D0FF8 /* mall-1.lev */,
+				438E858315971C1E006D0FF8 /* mall-2.lev */,
+				438E858415971C1E006D0FF8 /* mall.lev */,
+				438E858515971C1E006D0FF8 /* medusa-1.lev */,
+				438E858615971C1E006D0FF8 /* medusa-2.lev */,
+				438E858715971C1E006D0FF8 /* medusa-3.lev */,
+				438E858815971C1E006D0FF8 /* medusa-4.lev */,
+				438E858915971C1E006D0FF8 /* minefill.lev */,
+				438E858A15971C1E006D0FF8 /* mineking.lev */,
+				438E858B15971C1E006D0FF8 /* minend-1.lev */,
+				438E858C15971C1E006D0FF8 /* minend-2.lev */,
+				438E858D15971C1E006D0FF8 /* minend-3.lev */,
+				438E858E15971C1E006D0FF8 /* minetn-1.lev */,
+				438E858F15971C1E006D0FF8 /* minetn-2.lev */,
+				438E859015971C1E006D0FF8 /* minetn-3.lev */,
+				438E859115971C1E006D0FF8 /* minetn-4.lev */,
+				438E859215971C1E006D0FF8 /* minetn-5.lev */,
+				438E859315971C1E006D0FF8 /* minetn-6.lev */,
+				438E859415971C1E006D0FF8 /* minetn-7.lev */,
+				438E859515971C1E006D0FF8 /* Mon-fila.lev */,
+				438E859615971C1E006D0FF8 /* Mon-filb.lev */,
+				438E859715971C1E006D0FF8 /* Mon-goal.lev */,
+				438E859815971C1E006D0FF8 /* Mon-loca.lev */,
+				438E859915971C1E006D0FF8 /* Mon-strt.lev */,
+				438E859A15971C1E006D0FF8 /* mtemple.lev */,
+				438E859B15971C1E006D0FF8 /* Nec-fila.lev */,
+				438E859C15971C1E006D0FF8 /* Nec-filb.lev */,
+				438E859D15971C1E006D0FF8 /* Nec-goal.lev */,
+				438E859E15971C1E006D0FF8 /* Nec-loca.lev */,
+				438E859F15971C1E006D0FF8 /* Nec-strt.lev */,
+				438E85A015971C1E006D0FF8 /* nightmar.lev */,
+				438E85A115971C1E006D0FF8 /* nymph.lev */,
+				438E85A215971C1E006D0FF8 /* oracle.lev */,
+				438E85A315971C1E006D0FF8 /* orcus.lev */,
+				438E85A415971C1E006D0FF8 /* Pri-fila.lev */,
+				438E85A515971C1E006D0FF8 /* Pri-filb.lev */,
+				438E85A615971C1E006D0FF8 /* Pri-goal.lev */,
+				438E85A715971C1E006D0FF8 /* Pri-loca.lev */,
+				438E85A815971C1E006D0FF8 /* Pri-strt.lev */,
+				438E85A915971C1E006D0FF8 /* Ran-fila.lev */,
+				438E85AA15971C1E006D0FF8 /* Ran-filb.lev */,
+				438E85AB15971C1E006D0FF8 /* Ran-goal.lev */,
+				438E85AC15971C1E006D0FF8 /* Ran-loca.lev */,
+				438E85AD15971C1E006D0FF8 /* Ran-strt.lev */,
+				438E85AE15971C1E006D0FF8 /* rats.lev */,
+				438E85AF15971C1E006D0FF8 /* Rog-fila.lev */,
+				438E85B015971C1E006D0FF8 /* Rog-filb.lev */,
+				438E85B115971C1E006D0FF8 /* Rog-goal.lev */,
+				438E85B215971C1E006D0FF8 /* Rog-loca.lev */,
+				438E85B315971C1E006D0FF8 /* Rog-strt.lev */,
+				438E85B415971C1E006D0FF8 /* Sam-fila.lev */,
+				438E85B515971C1E006D0FF8 /* Sam-filb.lev */,
+				438E85B615971C1E006D0FF8 /* Sam-goal.lev */,
+				438E85B715971C1E006D0FF8 /* Sam-loca.lev */,
+				438E85B815971C1E006D0FF8 /* Sam-strt.lev */,
+				438E85B915971C1E006D0FF8 /* sanctum.lev */,
+				438E85BA15971C1E006D0FF8 /* sea.lev */,
+				438E85BB15971C1E006D0FF8 /* soko1-1.lev */,
+				438E85BC15971C1E006D0FF8 /* soko1-2.lev */,
+				438E85BD15971C1E006D0FF8 /* soko1-3.lev */,
+				438E85BE15971C1E006D0FF8 /* soko1-4.lev */,
+				438E85BF15971C1E006D0FF8 /* soko2-1.lev */,
+				438E85C015971C1E006D0FF8 /* soko2-2.lev */,
+				438E85C115971C1E006D0FF8 /* soko2-3.lev */,
+				438E85C215971C1E006D0FF8 /* soko2-4.lev */,
+				438E85C315971C1E006D0FF8 /* soko2-5.lev */,
+				438E85C415971C1E006D0FF8 /* soko2-6.lev */,
+				438E85C515971C1E006D0FF8 /* soko2-7.lev */,
+				438E85C615971C1E006D0FF8 /* soko3-1.lev */,
+				438E85C715971C1E006D0FF8 /* soko3-2.lev */,
+				438E85C815971C1E006D0FF8 /* soko3-3.lev */,
+				438E85C915971C1E006D0FF8 /* soko3-4.lev */,
+				438E85CA15971C1E006D0FF8 /* soko3-5.lev */,
+				438E85CB15971C1E006D0FF8 /* soko3-6.lev */,
+				438E85CC15971C1E006D0FF8 /* soko3-7.lev */,
+				438E85CD15971C1E006D0FF8 /* soko4-1.lev */,
+				438E85CE15971C1E006D0FF8 /* soko4-2.lev */,
+				438E85CF15971C1E006D0FF8 /* soko4-3.lev */,
+				438E85D015971C1E006D0FF8 /* soko4-4.lev */,
+				438E85D115971C1E006D0FF8 /* soko4-5.lev */,
+				438E85D215971C1E006D0FF8 /* spiders.lev */,
+				438E85D315971C1E006D0FF8 /* stor-1.lev */,
+				438E85D415971C1E006D0FF8 /* stor-2.lev */,
+				438E85D515971C1E006D0FF8 /* stor-3.lev */,
+				438E85D615971C1E006D0FF8 /* tomb.lev */,
+				438E85D715971C1E006D0FF8 /* Tou-fila.lev */,
+				438E85D815971C1E006D0FF8 /* Tou-filb.lev */,
+				438E85D915971C1E006D0FF8 /* Tou-goal.lev */,
+				438E85DA15971C1E006D0FF8 /* Tou-loca.lev */,
+				438E85DB15971C1E006D0FF8 /* Tou-strt.lev */,
+				438E85DC15971C1E006D0FF8 /* tower1.lev */,
+				438E85DD15971C1E006D0FF8 /* tower2.lev */,
+				438E85DE15971C1E006D0FF8 /* tower3.lev */,
+				438E85DF15971C1E006D0FF8 /* Und-fila.lev */,
+				438E85E015971C1E006D0FF8 /* Und-filb.lev */,
+				438E85E115971C1E006D0FF8 /* Und-goal.lev */,
+				438E85E215971C1E006D0FF8 /* Und-loca.lev */,
+				438E85E315971C1E006D0FF8 /* Und-strt.lev */,
+				438E85E415971C1E006D0FF8 /* Val-fila.lev */,
+				438E85E515971C1E006D0FF8 /* Val-filb.lev */,
+				438E85E615971C1E006D0FF8 /* Val-goal.lev */,
+				438E85E715971C1E006D0FF8 /* Val-loca.lev */,
+				438E85E815971C1E006D0FF8 /* Val-strt.lev */,
+				438E85E915971C1E006D0FF8 /* valley.lev */,
+				438E85EA15971C1E006D0FF8 /* water.lev */,
+				438E85EB15971C1E006D0FF8 /* Wiz-fila.lev */,
+				438E85EC15971C1E006D0FF8 /* Wiz-filb.lev */,
+				438E85ED15971C1E006D0FF8 /* Wiz-goal.lev */,
+				438E85EE15971C1E006D0FF8 /* Wiz-loca.lev */,
+				438E85EF15971C1E006D0FF8 /* Wiz-strt.lev */,
+				438E85F015971C1E006D0FF8 /* wizard1.lev */,
+				438E85F115971C1E006D0FF8 /* wizard2.lev */,
+				438E85F215971C1E006D0FF8 /* wizard3.lev */,
+				438E85F315971C1E006D0FF8 /* yeenoghu.lev */,
+				438E85F415971C1E006D0FF8 /* Yeo-fila.lev */,
+				438E85F515971C1E006D0FF8 /* Yeo-filb.lev */,
+				438E85F615971C1E006D0FF8 /* Yeo-goal.lev */,
+				438E85F715971C1E006D0FF8 /* Yeo-loca.lev */,
+				438E85F815971C1E006D0FF8 /* Yeo-strt.lev */,
 			);
 			path = dat;
 			sourceTree = "<group>";
@@ -950,6 +1556,208 @@
 			files = (
 				4326D86215932C91005D7B4D /* InfoPlist.strings in Resources */,
 				4326D86B15932C91005D7B4D /* MainStoryboard.storyboard in Resources */,
+				438E853915971BD9006D0FF8 /* air.lev in Resources */,
+				438E853A15971BD9006D0FF8 /* Arc-fila.lev in Resources */,
+				438E853B15971BD9006D0FF8 /* Arc-filb.lev in Resources */,
+				438E853C15971BD9006D0FF8 /* Arc-goal.lev in Resources */,
+				438E853D15971BD9006D0FF8 /* Arc-loca.lev in Resources */,
+				438E853E15971BD9006D0FF8 /* Arc-strt.lev in Resources */,
+				438E853F15971BD9006D0FF8 /* asmodeus.lev in Resources */,
+				438E854015971BD9006D0FF8 /* astral.lev in Resources */,
+				438E854115971BD9006D0FF8 /* baalz.lev in Resources */,
+				438E854215971BD9006D0FF8 /* Bar-fila.lev in Resources */,
+				438E854315971BD9006D0FF8 /* Bar-filb.lev in Resources */,
+				438E854415971BD9006D0FF8 /* Bar-goal.lev in Resources */,
+				438E854515971BD9006D0FF8 /* Bar-loca.lev in Resources */,
+				438E854615971BD9006D0FF8 /* Bar-strt.lev in Resources */,
+				438E854E15971BEE006D0FF8 /* beholder.lev in Resources */,
+				438E854F15971BEE006D0FF8 /* bigrm-1.lev in Resources */,
+				438E855015971BEE006D0FF8 /* bigrm-2.lev in Resources */,
+				438E855115971BEE006D0FF8 /* bigrm-3.lev in Resources */,
+				438E855215971BEE006D0FF8 /* bigrm-4.lev in Resources */,
+				438E855315971BEE006D0FF8 /* bigrm-5.lev in Resources */,
+				438E85F915971C1F006D0FF8 /* blkmar.lev in Resources */,
+				438E85FA15971C1F006D0FF8 /* castle.lev in Resources */,
+				438E85FB15971C1F006D0FF8 /* Cav-fila.lev in Resources */,
+				438E85FC15971C1F006D0FF8 /* Cav-filb.lev in Resources */,
+				438E85FD15971C1F006D0FF8 /* Cav-goal.lev in Resources */,
+				438E85FE15971C1F006D0FF8 /* Cav-loca.lev in Resources */,
+				438E85FF15971C1F006D0FF8 /* Cav-strt.lev in Resources */,
+				438E860015971C1F006D0FF8 /* cav2fill.lev in Resources */,
+				438E860115971C1F006D0FF8 /* demogorg.lev in Resources */,
+				438E860215971C1F006D0FF8 /* dispater.lev in Resources */,
+				438E860315971C1F006D0FF8 /* dragons.lev in Resources */,
+				438E860415971C1F006D0FF8 /* earth.lev in Resources */,
+				438E860515971C1F006D0FF8 /* fakewiz1.lev in Resources */,
+				438E860615971C1F006D0FF8 /* fakewiz2.lev in Resources */,
+				438E860715971C1F006D0FF8 /* fire.lev in Resources */,
+				438E860815971C1F006D0FF8 /* Fla-fila.lev in Resources */,
+				438E860915971C1F006D0FF8 /* Fla-filb.lev in Resources */,
+				438E860A15971C1F006D0FF8 /* Fla-goal.lev in Resources */,
+				438E860B15971C1F006D0FF8 /* Fla-loca.lev in Resources */,
+				438E860C15971C1F006D0FF8 /* Fla-strt.lev in Resources */,
+				438E860D15971C1F006D0FF8 /* frnknstn.lev in Resources */,
+				438E860E15971C1F006D0FF8 /* geryon.lev in Resources */,
+				438E860F15971C1F006D0FF8 /* grund-1.lev in Resources */,
+				438E861015971C1F006D0FF8 /* grund-2.lev in Resources */,
+				438E861115971C1F006D0FF8 /* grund-3.lev in Resources */,
+				438E861215971C1F006D0FF8 /* guild.lev in Resources */,
+				438E861315971C1F006D0FF8 /* Hea-fila.lev in Resources */,
+				438E861415971C1F006D0FF8 /* Hea-filb.lev in Resources */,
+				438E861515971C1F006D0FF8 /* Hea-goal.lev in Resources */,
+				438E861615971C1F006D0FF8 /* Hea-loca.lev in Resources */,
+				438E861715971C1F006D0FF8 /* Hea-strt.lev in Resources */,
+				438E861815971C1F006D0FF8 /* Ice-fila.lev in Resources */,
+				438E861915971C1F006D0FF8 /* Ice-filb.lev in Resources */,
+				438E861A15971C1F006D0FF8 /* Ice-goal.lev in Resources */,
+				438E861B15971C1F006D0FF8 /* Ice-loca.lev in Resources */,
+				438E861C15971C1F006D0FF8 /* Ice-strt.lev in Resources */,
+				438E861D15971C1F006D0FF8 /* juiblex.lev in Resources */,
+				438E861E15971C1F006D0FF8 /* Kni-fila.lev in Resources */,
+				438E861F15971C1F006D0FF8 /* Kni-filb.lev in Resources */,
+				438E862015971C1F006D0FF8 /* Kni-goal.lev in Resources */,
+				438E862115971C1F006D0FF8 /* Kni-loca.lev in Resources */,
+				438E862215971C1F006D0FF8 /* Kni-strt.lev in Resources */,
+				438E862315971C1F006D0FF8 /* knox.lev in Resources */,
+				438E862415971C1F006D0FF8 /* kobold-1.lev in Resources */,
+				438E862515971C1F006D0FF8 /* kobold-2.lev in Resources */,
+				438E862615971C1F006D0FF8 /* lich.lev in Resources */,
+				438E862715971C1F006D0FF8 /* mall-1.lev in Resources */,
+				438E862815971C1F006D0FF8 /* mall-2.lev in Resources */,
+				438E862915971C1F006D0FF8 /* mall.lev in Resources */,
+				438E862A15971C1F006D0FF8 /* medusa-1.lev in Resources */,
+				438E862B15971C1F006D0FF8 /* medusa-2.lev in Resources */,
+				438E862C15971C1F006D0FF8 /* medusa-3.lev in Resources */,
+				438E862D15971C1F006D0FF8 /* medusa-4.lev in Resources */,
+				438E862E15971C1F006D0FF8 /* minefill.lev in Resources */,
+				438E862F15971C1F006D0FF8 /* mineking.lev in Resources */,
+				438E863015971C1F006D0FF8 /* minend-1.lev in Resources */,
+				438E863115971C1F006D0FF8 /* minend-2.lev in Resources */,
+				438E863215971C1F006D0FF8 /* minend-3.lev in Resources */,
+				438E863315971C1F006D0FF8 /* minetn-1.lev in Resources */,
+				438E863415971C1F006D0FF8 /* minetn-2.lev in Resources */,
+				438E863515971C1F006D0FF8 /* minetn-3.lev in Resources */,
+				438E863615971C1F006D0FF8 /* minetn-4.lev in Resources */,
+				438E863715971C1F006D0FF8 /* minetn-5.lev in Resources */,
+				438E863815971C1F006D0FF8 /* minetn-6.lev in Resources */,
+				438E863915971C1F006D0FF8 /* minetn-7.lev in Resources */,
+				438E863A15971C1F006D0FF8 /* Mon-fila.lev in Resources */,
+				438E863B15971C1F006D0FF8 /* Mon-filb.lev in Resources */,
+				438E863C15971C1F006D0FF8 /* Mon-goal.lev in Resources */,
+				438E863D15971C1F006D0FF8 /* Mon-loca.lev in Resources */,
+				438E863E15971C1F006D0FF8 /* Mon-strt.lev in Resources */,
+				438E863F15971C1F006D0FF8 /* mtemple.lev in Resources */,
+				438E864015971C1F006D0FF8 /* Nec-fila.lev in Resources */,
+				438E864115971C1F006D0FF8 /* Nec-filb.lev in Resources */,
+				438E864215971C1F006D0FF8 /* Nec-goal.lev in Resources */,
+				438E864315971C1F006D0FF8 /* Nec-loca.lev in Resources */,
+				438E864415971C1F006D0FF8 /* Nec-strt.lev in Resources */,
+				438E864515971C1F006D0FF8 /* nightmar.lev in Resources */,
+				438E864615971C1F006D0FF8 /* nymph.lev in Resources */,
+				438E864715971C1F006D0FF8 /* oracle.lev in Resources */,
+				438E864815971C1F006D0FF8 /* orcus.lev in Resources */,
+				438E864915971C1F006D0FF8 /* Pri-fila.lev in Resources */,
+				438E864A15971C1F006D0FF8 /* Pri-filb.lev in Resources */,
+				438E864B15971C1F006D0FF8 /* Pri-goal.lev in Resources */,
+				438E864C15971C1F006D0FF8 /* Pri-loca.lev in Resources */,
+				438E864D15971C1F006D0FF8 /* Pri-strt.lev in Resources */,
+				438E864E15971C1F006D0FF8 /* Ran-fila.lev in Resources */,
+				438E864F15971C1F006D0FF8 /* Ran-filb.lev in Resources */,
+				438E865015971C1F006D0FF8 /* Ran-goal.lev in Resources */,
+				438E865115971C1F006D0FF8 /* Ran-loca.lev in Resources */,
+				438E865215971C1F006D0FF8 /* Ran-strt.lev in Resources */,
+				438E865315971C1F006D0FF8 /* rats.lev in Resources */,
+				438E865415971C1F006D0FF8 /* Rog-fila.lev in Resources */,
+				438E865515971C1F006D0FF8 /* Rog-filb.lev in Resources */,
+				438E865615971C1F006D0FF8 /* Rog-goal.lev in Resources */,
+				438E865715971C1F006D0FF8 /* Rog-loca.lev in Resources */,
+				438E865815971C1F006D0FF8 /* Rog-strt.lev in Resources */,
+				438E865915971C1F006D0FF8 /* Sam-fila.lev in Resources */,
+				438E865A15971C1F006D0FF8 /* Sam-filb.lev in Resources */,
+				438E865B15971C1F006D0FF8 /* Sam-goal.lev in Resources */,
+				438E865C15971C1F006D0FF8 /* Sam-loca.lev in Resources */,
+				438E865D15971C1F006D0FF8 /* Sam-strt.lev in Resources */,
+				438E865E15971C1F006D0FF8 /* sanctum.lev in Resources */,
+				438E865F15971C1F006D0FF8 /* sea.lev in Resources */,
+				438E866015971C1F006D0FF8 /* soko1-1.lev in Resources */,
+				438E866115971C1F006D0FF8 /* soko1-2.lev in Resources */,
+				438E866215971C1F006D0FF8 /* soko1-3.lev in Resources */,
+				438E866315971C1F006D0FF8 /* soko1-4.lev in Resources */,
+				438E866415971C1F006D0FF8 /* soko2-1.lev in Resources */,
+				438E866515971C1F006D0FF8 /* soko2-2.lev in Resources */,
+				438E866615971C1F006D0FF8 /* soko2-3.lev in Resources */,
+				438E866715971C1F006D0FF8 /* soko2-4.lev in Resources */,
+				438E866815971C1F006D0FF8 /* soko2-5.lev in Resources */,
+				438E866915971C1F006D0FF8 /* soko2-6.lev in Resources */,
+				438E866A15971C1F006D0FF8 /* soko2-7.lev in Resources */,
+				438E866B15971C1F006D0FF8 /* soko3-1.lev in Resources */,
+				438E866C15971C1F006D0FF8 /* soko3-2.lev in Resources */,
+				438E866D15971C1F006D0FF8 /* soko3-3.lev in Resources */,
+				438E866E15971C1F006D0FF8 /* soko3-4.lev in Resources */,
+				438E866F15971C1F006D0FF8 /* soko3-5.lev in Resources */,
+				438E867015971C1F006D0FF8 /* soko3-6.lev in Resources */,
+				438E867115971C1F006D0FF8 /* soko3-7.lev in Resources */,
+				438E867215971C1F006D0FF8 /* soko4-1.lev in Resources */,
+				438E867315971C1F006D0FF8 /* soko4-2.lev in Resources */,
+				438E867415971C1F006D0FF8 /* soko4-3.lev in Resources */,
+				438E867515971C1F006D0FF8 /* soko4-4.lev in Resources */,
+				438E867615971C1F006D0FF8 /* soko4-5.lev in Resources */,
+				438E867715971C1F006D0FF8 /* spiders.lev in Resources */,
+				438E867815971C1F006D0FF8 /* stor-1.lev in Resources */,
+				438E867915971C1F006D0FF8 /* stor-2.lev in Resources */,
+				438E867A15971C1F006D0FF8 /* stor-3.lev in Resources */,
+				438E867B15971C1F006D0FF8 /* tomb.lev in Resources */,
+				438E867C15971C1F006D0FF8 /* Tou-fila.lev in Resources */,
+				438E867D15971C1F006D0FF8 /* Tou-filb.lev in Resources */,
+				438E867E15971C1F006D0FF8 /* Tou-goal.lev in Resources */,
+				438E867F15971C1F006D0FF8 /* Tou-loca.lev in Resources */,
+				438E868015971C1F006D0FF8 /* Tou-strt.lev in Resources */,
+				438E868115971C1F006D0FF8 /* tower1.lev in Resources */,
+				438E868215971C1F006D0FF8 /* tower2.lev in Resources */,
+				438E868315971C1F006D0FF8 /* tower3.lev in Resources */,
+				438E868415971C1F006D0FF8 /* Und-fila.lev in Resources */,
+				438E868515971C1F006D0FF8 /* Und-filb.lev in Resources */,
+				438E868615971C1F006D0FF8 /* Und-goal.lev in Resources */,
+				438E868715971C1F006D0FF8 /* Und-loca.lev in Resources */,
+				438E868815971C1F006D0FF8 /* Und-strt.lev in Resources */,
+				438E868915971C1F006D0FF8 /* Val-fila.lev in Resources */,
+				438E868A15971C1F006D0FF8 /* Val-filb.lev in Resources */,
+				438E868B15971C1F006D0FF8 /* Val-goal.lev in Resources */,
+				438E868C15971C1F006D0FF8 /* Val-loca.lev in Resources */,
+				438E868D15971C1F006D0FF8 /* Val-strt.lev in Resources */,
+				438E868E15971C1F006D0FF8 /* valley.lev in Resources */,
+				438E868F15971C1F006D0FF8 /* water.lev in Resources */,
+				438E869015971C1F006D0FF8 /* Wiz-fila.lev in Resources */,
+				438E869115971C1F006D0FF8 /* Wiz-filb.lev in Resources */,
+				438E869215971C1F006D0FF8 /* Wiz-goal.lev in Resources */,
+				438E869315971C1F006D0FF8 /* Wiz-loca.lev in Resources */,
+				438E869415971C1F006D0FF8 /* Wiz-strt.lev in Resources */,
+				438E869515971C1F006D0FF8 /* wizard1.lev in Resources */,
+				438E869615971C1F006D0FF8 /* wizard2.lev in Resources */,
+				438E869715971C1F006D0FF8 /* wizard3.lev in Resources */,
+				438E869815971C1F006D0FF8 /* yeenoghu.lev in Resources */,
+				438E869915971C1F006D0FF8 /* Yeo-fila.lev in Resources */,
+				438E869A15971C1F006D0FF8 /* Yeo-filb.lev in Resources */,
+				438E869B15971C1F006D0FF8 /* Yeo-goal.lev in Resources */,
+				438E869C15971C1F006D0FF8 /* Yeo-loca.lev in Resources */,
+				438E869D15971C1F006D0FF8 /* Yeo-strt.lev in Resources */,
+				438E86A115971C7C006D0FF8 /* data in Resources */,
+				438E86A215971C7C006D0FF8 /* dungeon in Resources */,
+				438E86A315971C7C006D0FF8 /* dungeon.pdf in Resources */,
+				438E86B215971CCA006D0FF8 /* gypsy.txt in Resources */,
+				438E86B315971CCA006D0FF8 /* help in Resources */,
+				438E86B415971CCA006D0FF8 /* hh in Resources */,
+				438E86B515971CCA006D0FF8 /* history in Resources */,
+				438E86B615971CCA006D0FF8 /* license in Resources */,
+				438E86B715971CCA006D0FF8 /* opthelp in Resources */,
+				438E86B815971CCA006D0FF8 /* options in Resources */,
+				438E86B915971CCA006D0FF8 /* oracles in Resources */,
+				438E86BA15971CCA006D0FF8 /* oracles.txt in Resources */,
+				438E86BB15971CCA006D0FF8 /* quest.dat in Resources */,
+				438E86BC15971CCA006D0FF8 /* quest.txt in Resources */,
+				438E86BD15971CCA006D0FF8 /* rumors in Resources */,
+				438E86BE15971CCA006D0FF8 /* rumors.fal in Resources */,
+				438E86BF15971CCA006D0FF8 /* rumors.tru in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
