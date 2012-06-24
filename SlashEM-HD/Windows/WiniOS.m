@@ -354,8 +354,11 @@ void ios_putstr(winid wid, int attr, const char *text)
                 [sharedInstance.delegate handlePutstr:string attribute:attr];
             });
         } else if (wid == (winid) sharedInstance.statusWindow) {
-            [sharedInstance.statusWindow putString:[NSString stringWithCString:text encoding:NSASCIIStringEncoding]
-                                     withAttribute:attr];
+            NSString *string = [NSString stringWithCString:text encoding:NSASCIIStringEncoding];
+            NSUInteger line = sharedInstance.statusWindow.cursorY - 1;
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [sharedInstance.delegate setStatusString:string line:line];
+            });
         } else {
             LOG_WINIOS(1, @"unhandled putstr %@ %s", wid, text);
         }

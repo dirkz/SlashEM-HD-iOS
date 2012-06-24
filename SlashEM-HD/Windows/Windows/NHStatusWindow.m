@@ -10,11 +10,12 @@
 
 #import "hack.h" // NHW_STATUS
 
+#import "NSLogger.h"
+
 @implementation NHStatusWindow
-{
-    int cursorX;
-    int cursorY;
-}
+
+@synthesize cursorX = _cursorX;
+@synthesize cursorY = _cursorY;
 
 - (id)init
 {
@@ -25,13 +26,8 @@
 
 - (void)setCursorX:(int)x y:(int)y
 {
-    cursorX = x;
-    cursorY = y;
-}
-
-- (void)putString:(NSString *)string withAttribute:(int)attr
-{
-
+    self.cursorX = x;
+    self.cursorY = y;
 }
 
 @end

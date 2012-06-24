@@ -45,6 +45,8 @@ typedef enum {
 
 @synthesize messageTextView;
 @synthesize inputTextField;
+@synthesize statusLabel1;
+@synthesize statusLabel2;
 @synthesize ynQuestionData = _ynQuestionData;
 @synthesize menuWindow = _menuWindow;
 @synthesize state = _state;
@@ -60,6 +62,8 @@ typedef enum {
 {
     [self setMessageTextView:nil];
     [self setInputTextField:nil];
+    [self setStatusLabel1:nil];
+    [self setStatusLabel2:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -116,6 +120,15 @@ typedef enum {
     self.state = UIStateMenu;
     self.menuWindow = window;
     [self performSegueWithIdentifier:@"MenuViewSegue" sender:nil];
+}
+
+- (void)setStatusString:(NSString *)string line:(NSUInteger)i
+{
+    if (i == 0) {
+        [statusLabel1 setText:string];
+    } else {
+        [statusLabel2 setText:string];
+    }
 }
 
 #pragma mark - Segues

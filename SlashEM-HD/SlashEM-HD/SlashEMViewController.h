@@ -16,5 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UITextView *messageTextView;
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel2;
 
 @end

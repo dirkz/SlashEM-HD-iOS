@@ -96,12 +96,28 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="Bqs-u0-TWm">
+                                <rect key="frame" x="0.0" y="983" width="768" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="6KG-gt-dZb">
+                                <rect key="frame" x="0.0" y="963" width="768" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="inputTextField" destination="aAp-5B-xF3" id="MjZ-LB-zdT"/>
                         <outlet property="messageTextView" destination="61K-i4-Not" id="MtP-Hs-WRp"/>
+                        <outlet property="statusLabel1" destination="6KG-gt-dZb" id="62x-8Z-nTR"/>
+                        <outlet property="statusLabel2" destination="Bqs-u0-TWm" id="Drb-1N-aOL"/>
                         <segue destination="V5B-sc-dyh" kind="modal" identifier="MenuViewSegue" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="LzV-cX-Z17"/>
                     </connections>
                 </viewController>
@@ -127,21 +143,6 @@
             <point key="canvasLocation" x="-1318" y="196"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelAction:"/>
-            </relationships>
-        </class>
-        <class className="SlashEMViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SlashEMViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="messageTextView" candidateClass="UITextView"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

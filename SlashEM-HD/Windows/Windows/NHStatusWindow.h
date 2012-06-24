@@ -10,7 +10,9 @@
 
 @interface NHStatusWindow : NHWindow
 
+@property (nonatomic, assign) int cursorX;
+@property (nonatomic, assign) int cursorY;
+
 - (void)setCursorX:(int)x y:(int)y;
-- (void)putString:(NSString *)string withAttribute:(int)attr;
 
 @end

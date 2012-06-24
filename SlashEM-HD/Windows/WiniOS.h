@@ -69,6 +69,7 @@ extern int ios_getpos;
 - (void)handlePoskey;
 - (void)handleClearMessages;
 - (void)handleMenuWindow:(NHMenuWindow *)window;
+- (void)setStatusString:(NSString *)string line:(NSUInteger)i;
 
 @end
 
