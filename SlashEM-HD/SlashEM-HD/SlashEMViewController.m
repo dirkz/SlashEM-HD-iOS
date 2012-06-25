@@ -16,6 +16,7 @@
 #import "PosKeyEvent.h"
 #import "NHMenuWindow.h"
 #import "NHMenuItem.h"
+#import "MapView.h"
 
 typedef enum {
     UIStateUndefined,
@@ -47,6 +48,7 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 @synthesize inputTextField;
 @synthesize statusLabel1;
 @synthesize statusLabel2;
+@synthesize mapView;
 @synthesize ynQuestionData = _ynQuestionData;
 @synthesize menuWindow = _menuWindow;
 @synthesize state = _state;
@@ -64,6 +66,7 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
     [self setInputTextField:nil];
     [self setStatusLabel1:nil];
     [self setStatusLabel2:nil];
+    [self setMapView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
 }
@@ -133,18 +136,26 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
     [self performSegueWithIdentifier:NetHackMenuViewSegue sender:nil];
 }
 
-- (void)handleMessageMenuWindow:(NHMenuWindow *)window
-{
-    self.menuWindow = window;
-    [self performSegueWithIdentifier:NetHackMessageMenuWindowSegue sender:nil];
-}
-
 - (void)setStatusString:(NSString *)string line:(NSUInteger)i
 {
     if (i == 0) {
         [statusLabel1 setText:string];
     } else {
         [statusLabel2 setText:string];
+    }
+}
+
+- (void)handleMessageMenuWindow:(NHMenuWindow *)window
+{
+    self.menuWindow = window;
+    [self performSegueWithIdentifier:NetHackMessageMenuWindowSegue sender:nil];
+}
+
+- (void)handleMapDisplay:(NHMapWindow *)window block:(BOOL)block
+{
+    [self.mapView displayMapWindow:window];
+    if (block) {
+        LOG_VIEW(1, @"should block map display");
     }
 }
 
@@ -263,6 +274,10 @@ replacementString:(NSString *)string
     keyboardFrame = [self.view convertRect:keyboardFrame fromView:nil];
     CGSize keyboardSize = keyboardFrame.size;
 
+    CGRect mapFrame = mapView.frame;
+    mapFrame.size.height -= keyboardSize.height;
+    mapView.frame = mapFrame;
+
     CGRect statusFrame = self.statusLabel1.frame;
     statusFrame.origin.y -= keyboardSize.height;
     self.statusLabel1.frame = statusFrame;
@@ -277,6 +292,10 @@ replacementString:(NSString *)string
     CGRect keyboardFrame = [[aNotification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     keyboardFrame = [self.view convertRect:keyboardFrame fromView:nil];
     CGSize keyboardSize = keyboardFrame.size;
+
+    CGRect mapFrame = mapView.frame;
+    mapFrame.size.height += keyboardSize.height;
+    mapView.frame = mapFrame;
 
     CGRect statusFrame = self.statusLabel1.frame;
     statusFrame.origin.y += keyboardSize.height;

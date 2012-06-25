@@ -10,35 +10,47 @@
 
 #import "hack.h" // NHW_MAP, ROWNO, COLNO
 
+const int NHMapWindowNoGlyph = -1;
+
 @implementation NHMapWindow
 {
-    int glyphs[ROWNO][COLNO];
+    int _glyphs[ROWNO][COLNO];
 }
 
-@synthesize clipX;
-@synthesize clipY;
+@synthesize rows = _rows;
+@synthesize cols = _cols;
+@synthesize clipX = _clipX;
+@synthesize clipY = _clipY;
 
 - (id)init
 {
     if ((self = [super initWithType:NHW_MAP])) {
+        _rows = ROWNO;
+        _cols = COLNO;
+        [self clear];
     }
     return self;
 }
 
 - (void)cliparoundX:(int)x y:(int)y
 {
-    clipX = x;
-    clipY = y;
+    _clipX = x;
+    _clipY = y;
 }
 
 - (void)setGlyph:(int)glyph atX:(int)x y:(int)y
 {
-    glyphs[y][x] = glyph;
+    _glyphs[y][x] = glyph;
 }
 
 - (void)clear
 {
-    memset(glyphs, ROWNO * COLNO, sizeof(int));
+    memset(_glyphs, NHMapWindowNoGlyph, sizeof(int) * _rows * _cols);
+}
+
+- (int)glyphAtX:(int)x y:(int)y
+{
+    return _glyphs[y][x];
 }
 
 @end

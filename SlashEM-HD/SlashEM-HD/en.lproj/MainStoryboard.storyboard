@@ -110,11 +110,17 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="redraw" id="Xuv-3c-1hZ" customClass="MapView">
+                                <rect key="frame" x="0.0" y="103" width="768" height="878"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="inputTextField" destination="aAp-5B-xF3" id="MjZ-LB-zdT"/>
+                        <outlet property="mapView" destination="Xuv-3c-1hZ" id="rt8-YZ-tjg"/>
                         <outlet property="messageTextView" destination="61K-i4-Not" id="MtP-Hs-WRp"/>
                         <outlet property="statusLabel1" destination="6KG-gt-dZb" id="62x-8Z-nTR"/>
                         <outlet property="statusLabel2" destination="Bqs-u0-TWm" id="Drb-1N-aOL"/>
@@ -183,26 +189,6 @@
             <point key="canvasLocation" x="-1318" y="196"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="MenuViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelAction:"/>
-            </relationships>
-        </class>
-        <class className="MessageViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/MessageViewController.h"/>
-        </class>
-        <class className="SlashEMViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SlashEMViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="messageTextView" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="statusLabel1" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="statusLabel2" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

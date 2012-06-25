@@ -75,8 +75,9 @@ extern NSString * const WiniOSMessageDisplayFinishedEvent;
 - (void)handlePoskey;
 - (void)handleClearMessages;
 - (void)handleMenuWindow:(NHMenuWindow *)window;
-- (void)handleMessageMenuWindow:(NHMenuWindow *)window;
 - (void)setStatusString:(NSString *)string line:(NSUInteger)i;
+- (void)handleMessageMenuWindow:(NHMenuWindow *)window;
+- (void)handleMapDisplay:(NHMapWindow *)window block:(BOOL)block;
 
 @end
 

@@ -13,6 +13,8 @@
 #import "MenuViewController.h"
 #import "MessageViewController.h"
 
+@class MapView;
+
 @interface SlashEMViewController : UIViewController <WiniOSDelegate, UITextFieldDelegate,MenuViewControllerDelegate,
 MessageViewControllerDelegate>
 
@@ -20,5 +22,6 @@ MessageViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *inputTextField;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel1;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel2;
+@property (weak, nonatomic) IBOutlet MapView *mapView;
 
 @end

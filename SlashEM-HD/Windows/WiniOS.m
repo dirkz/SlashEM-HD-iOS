@@ -290,17 +290,16 @@ winid ios_create_nhwindow(int type)
             break;
         case NHW_MENU:
             window = [[NHMenuWindow alloc] init];
-            [sharedInstance addWindow:window];
             break;
         case NHW_TEXT:
             window = [[NHWindow alloc] initWithType:type];
-            [sharedInstance addWindow:window];
             break;
         default:
             window = [[NHWindow alloc] initWithType:type];
             break;
     }
 
+    [sharedInstance addWindow:window];
     LOG_WINIOS(1, @"create_nhwindow(%x) %@", type, window.description);
     return (int) window;
 }
@@ -329,6 +328,14 @@ void ios_display_nhwindow(winid wid, BOOLEAN_P block)
         });
         NSString *eventName = [sharedInstance.eventQueue leaveObject];
         LOG_WINIOS(1, @"%s got event %@", __PRETTY_FUNCTION__, eventName);
+    } else if (w.type == NHW_MAP) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [sharedInstance.delegate handleMapDisplay:(NHMapWindow *) w block:block];
+        });
+        if (block) {
+            NSString *eventName = [sharedInstance.eventQueue leaveObject];
+            LOG_WINIOS(1, @"%s got event %@", __PRETTY_FUNCTION__, eventName);
+        }
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		43059FDB15976F5500C7DB58 /* MessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 43059FDA15976F5500C7DB58 /* MessageViewController.m */; };
+		43059FDF15978A3800C7DB58 /* MapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 43059FDE15978A3800C7DB58 /* MapView.m */; };
 		4326D85815932C91005D7B4D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326D85715932C91005D7B4D /* UIKit.framework */; };
 		4326D85A15932C91005D7B4D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326D85915932C91005D7B4D /* Foundation.framework */; };
 		4326D85C15932C91005D7B4D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326D85B15932C91005D7B4D /* CoreGraphics.framework */; };
@@ -147,6 +148,10 @@
 		4326DF5E15934106005D7B4D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4326DF5D15934105005D7B4D /* SystemConfiguration.framework */; };
 		4326DF611593541D005D7B4D /* NHMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF601593541D005D7B4D /* NHMenuItem.m */; };
 		4326DF68159361F0005D7B4D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF67159361F0005D7B4D /* MenuViewController.m */; };
+		434925271597918C002C6CFF /* Geoduck SlashEM 10x20@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 434925261597918C002C6CFF /* Geoduck SlashEM 10x20@2x~ipad.png */; };
+		4349252915979313002C6CFF /* Geoduck SlashEM 10x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 4349252815979313002C6CFF /* Geoduck SlashEM 10x20.png */; };
+		434925311597DC4B002C6CFF /* TileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 434925301597DC4B002C6CFF /* TileCache.m */; };
+		4349253F15986AAD002C6CFF /* tile.c in Sources */ = {isa = PBXBuildFile; fileRef = 4349253E15986AAD002C6CFF /* tile.c */; };
 		438E853915971BD9006D0FF8 /* air.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852B15971BD9006D0FF8 /* air.lev */; };
 		438E853A15971BD9006D0FF8 /* Arc-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852C15971BD9006D0FF8 /* Arc-fila.lev */; };
 		438E853B15971BD9006D0FF8 /* Arc-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852D15971BD9006D0FF8 /* Arc-filb.lev */; };
@@ -365,6 +370,9 @@
 /* Begin PBXFileReference section */
 		43059FD915976F5500C7DB58 /* MessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageViewController.h; sourceTree = "<group>"; };
 		43059FDA15976F5500C7DB58 /* MessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageViewController.m; sourceTree = "<group>"; };
+		43059FDD15978A3800C7DB58 /* MapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapView.h; sourceTree = "<group>"; };
+		43059FDE15978A3800C7DB58 /* MapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapView.m; sourceTree = "<group>"; };
+		43059FE115978D3A00C7DB58 /* NHMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHMapView.h; sourceTree = "<group>"; };
 		4326D85315932C91005D7B4D /* SlashEM-HD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SlashEM-HD.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4326D85715932C91005D7B4D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4326D85915932C91005D7B4D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -631,6 +639,11 @@
 		4326DF601593541D005D7B4D /* NHMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHMenuItem.m; sourceTree = "<group>"; };
 		4326DF66159361F0005D7B4D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		4326DF67159361F0005D7B4D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		434925261597918C002C6CFF /* Geoduck SlashEM 10x20@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Geoduck SlashEM 10x20@2x~ipad.png"; path = "../../Assets/Geoduck SlashEM 10x20@2x~ipad.png"; sourceTree = "<group>"; };
+		4349252815979313002C6CFF /* Geoduck SlashEM 10x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Geoduck SlashEM 10x20.png"; path = "../../Assets/Geoduck SlashEM 10x20.png"; sourceTree = "<group>"; };
+		4349252F1597DC4B002C6CFF /* TileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCache.h; sourceTree = "<group>"; };
+		434925301597DC4B002C6CFF /* TileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileCache.m; sourceTree = "<group>"; };
+		4349253E15986AAD002C6CFF /* tile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tile.c; sourceTree = "<group>"; };
 		438E852B15971BD9006D0FF8 /* air.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = air.lev; sourceTree = "<group>"; };
 		438E852C15971BD9006D0FF8 /* Arc-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arc-fila.lev"; sourceTree = "<group>"; };
 		438E852D15971BD9006D0FF8 /* Arc-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arc-filb.lev"; sourceTree = "<group>"; };
@@ -900,6 +913,7 @@
 			children = (
 				4326D88C15932DD7005D7B4D /* nethack */,
 				4326DF2815933122005D7B4D /* Windows */,
+				4349252E1597DC2D002C6CFF /* Util */,
 				4326DF65159361CD005D7B4D /* Views */,
 				4326DF49159332A5005D7B4D /* NSLogger */,
 				4326D86615932C91005D7B4D /* SlashEMAppDelegate.h */,
@@ -907,6 +921,7 @@
 				4326D86915932C91005D7B4D /* MainStoryboard.storyboard */,
 				4326D86C15932C91005D7B4D /* SlashEMViewController.h */,
 				4326D86D15932C91005D7B4D /* SlashEMViewController.m */,
+				4349252215978FE2002C6CFF /* Resources */,
 				4326D85E15932C91005D7B4D /* Supporting Files */,
 			);
 			path = "SlashEM-HD";
@@ -1380,6 +1395,7 @@
 				4326D9B815932DD7005D7B4D /* steed.c */,
 				4326D9B915932DD7005D7B4D /* tech.c */,
 				4326D9BA15932DD7005D7B4D /* teleport.c */,
+				4349253E15986AAD002C6CFF /* tile.c */,
 				4326D9BB15932DD7005D7B4D /* timeout.c */,
 				4326D9BC15932DD7005D7B4D /* topten.c */,
 				4326D9BD15932DD7005D7B4D /* track.c */,
@@ -1483,8 +1499,29 @@
 				438E86C9159746C3006D0FF8 /* DebugView.m */,
 				43059FD915976F5500C7DB58 /* MessageViewController.h */,
 				43059FDA15976F5500C7DB58 /* MessageViewController.m */,
+				43059FDD15978A3800C7DB58 /* MapView.h */,
+				43059FDE15978A3800C7DB58 /* MapView.m */,
+				43059FE115978D3A00C7DB58 /* NHMapView.h */,
 			);
 			path = Views;
+			sourceTree = SOURCE_ROOT;
+		};
+		4349252215978FE2002C6CFF /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4349252815979313002C6CFF /* Geoduck SlashEM 10x20.png */,
+				434925261597918C002C6CFF /* Geoduck SlashEM 10x20@2x~ipad.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4349252E1597DC2D002C6CFF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				4349252F1597DC4B002C6CFF /* TileCache.h */,
+				434925301597DC4B002C6CFF /* TileCache.m */,
+			);
+			path = Util;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -1763,6 +1800,8 @@
 				438E86BD15971CCA006D0FF8 /* rumors in Resources */,
 				438E86BE15971CCA006D0FF8 /* rumors.fal in Resources */,
 				438E86BF15971CCA006D0FF8 /* rumors.tru in Resources */,
+				434925271597918C002C6CFF /* Geoduck SlashEM 10x20@2x~ipad.png in Resources */,
+				4349252915979313002C6CFF /* Geoduck SlashEM 10x20.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1926,6 +1965,9 @@
 				4326DF68159361F0005D7B4D /* MenuViewController.m in Sources */,
 				438E86CA159746C3006D0FF8 /* DebugView.m in Sources */,
 				43059FDB15976F5500C7DB58 /* MessageViewController.m in Sources */,
+				43059FDF15978A3800C7DB58 /* MapView.m in Sources */,
+				434925311597DC4B002C6CFF /* TileCache.m in Sources */,
+				4349253F15986AAD002C6CFF /* tile.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
