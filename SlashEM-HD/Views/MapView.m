@@ -15,6 +15,7 @@
 #import "hack.h" // MAX_GLYPH
 
 extern short glyph2tile[MAX_GLYPH];
+extern int total_tiles_used;
 
 @interface MapView ()
 
@@ -64,11 +65,12 @@ extern short glyph2tile[MAX_GLYPH];
     for (int j = 0; j < _mapWindow.rows; ++j) {
         for (int i = 0; i < _mapWindow.cols; ++i) {
             int glyph = [_mapWindow glyphAtX:i y:j];
-            if (glyph != NHMapWindowNoGlyph) {
-                NSUInteger tileNumber = glyph2tile[glyph];
-                CGLayerRef layer = [_tilecache layerForTileNumber:tileNumber context:context];
-                CGContextDrawLayerInRect(context, [self destinationRectForTileAtCol:i row:j], layer);
-            }
+
+            // if glyph is not defined, use the first tilenumber not used by the tileset
+            NSUInteger tileNumber = (glyph != NHMapWindowNoGlyph) ? glyph2tile[glyph] : total_tiles_used;
+
+            CGLayerRef layer = [_tilecache layerForTileNumber:tileNumber context:context];
+            CGContextDrawLayerInRect(context, [self destinationRectForTileAtCol:i row:j], layer);
         }
     }
 }
