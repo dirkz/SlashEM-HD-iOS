@@ -19,14 +19,14 @@
 @implementation NHMenuWindow
 {
 
-    NSMutableArray *groupTitles;
-    NSMutableDictionary *groups;
+    NSMutableArray *_groups;
+    NSMutableDictionary *_groupsToItems;
 
 }
 
-@synthesize prompt;
-@synthesize groupTitles;
-@synthesize numberOfItemsSelected;
+@synthesize prompt = _prompt;
+@synthesize groups = _groups;
+@synthesize numberOfItemsSelected = _numberOfItemsSelected;
 @synthesize menuStyle = _menuStyle;
 @synthesize selected = _selected;
 @synthesize lines = _lines;
@@ -34,8 +34,8 @@
 - (id)init
 {
     if ((self = [super initWithType:NHW_MENU])) {
-        groupTitles = [[NSMutableArray alloc] init];
-        groups = [[NSMutableDictionary alloc] init];
+        _groups = [[NSMutableArray alloc] init];
+        _groupsToItems = [[NSMutableDictionary alloc] init];
     }
     return self;
 }
@@ -43,43 +43,62 @@
 
 - (void)reset
 {
-    [groupTitles removeAllObjects];
-    [groups removeAllObjects];
+    [_groups removeAllObjects];
+    [_groupsToItems removeAllObjects];
 }
 
 - (void)addGroupWithTitle:(NSString *)title accelerator:(char)accelerator
 {
-    [groupTitles addObject:title];
+    [_groups addObject:title];
     NSMutableArray *items = [[NSMutableArray alloc] init];
-    [groups setObject:items forKey:title];
+    [_groupsToItems setObject:items forKey:title];
 }
 
 - (void)addTtemWithTitle:(NSString *)title glyph:(int)glyph identifier:(ANY_P)identifier
              accelerator:(char)accelerator attribute:(int)attribute preselected:(BOOL)preselected
 {
-    NHMenuItem *item = [[NHMenuItem alloc] initWithTitle:title glyph:glyph identifier:identifier
-                                             accelerator:accelerator attribute:attribute preselected:preselected];
-    if (!groupTitles.count) {
-        [self addGroupWithTitle:@"All" accelerator:0];
+    if (!identifier.a_int) {
+        [self addGroupWithTitle:title accelerator:accelerator];
+    } else {
+        NHMenuItem *item = [[NHMenuItem alloc] initWithTitle:title glyph:glyph identifier:identifier
+                                                 accelerator:accelerator attribute:attribute preselected:preselected];
+        if (!self.groups.count) {
+            [self addGroupWithTitle:@"All" accelerator:0];
+        }
+        NSString *groupTitle = [_groups lastObject];
+        NSMutableArray *items = [_groupsToItems objectForKey:groupTitle];
+        [items addObject:item];
     }
-    NSString *groupTitle = [groupTitles lastObject];
-    NSMutableArray *items = [groups objectForKey:groupTitle];
-    [items addObject:item];
 }
 
-- (NSArray *)itemsForGroupWithTitle:(NSString *)title
+- (NSArray *)itemsForGroupNamed:(NSString *)title
 {
-    return [NSArray arrayWithArray:[groups objectForKey:title]];
+    return [NSArray arrayWithArray:[_groupsToItems objectForKey:title]];
 }
 
-- (NSArray *)itemsAtIndex:(NSUInteger)i
+- (NSArray *)itemsAtGroupWithIndex:(NSUInteger)i
 {
-    return [groups objectForKey:[groupTitles objectAtIndex:i]];
+    return [_groupsToItems objectForKey:[_groups objectAtIndex:i]];
+}
+
+- (NSArray *)allItems
+{
+    NSMutableArray *allItems = [NSMutableArray array];
+    NSUInteger count = self.groups.count;
+    for (NSUInteger i = 0; i < count; ++i) {
+        [allItems addObjectsFromArray:[self itemsAtGroupWithIndex:i]];
+    }
+    return [NSArray arrayWithArray:allItems];
+}
+
+- (NSArray *)allSelectedItems
+{
+    return [[self allItems] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"selected == YES"]];
 }
 
 - (NHMenuItem *)itemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return [[self itemsAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+    return [[self itemsAtGroupWithIndex:indexPath.section] objectAtIndex:indexPath.row];
 }
 
 #pragma mark - Menu Window uses for text display
@@ -87,13 +106,6 @@
 - (void)putString:(NSString *)string
 {
     [self.lines addObject:string];
-}
-
-#pragma mark - Properties
-
-- (NSUInteger)groupCount
-{
-    return groups.count;
 }
 
 - (NSMutableArray *)lines
@@ -108,5 +120,7 @@
 {
     return [self.lines componentsJoinedByString:@"\n"];
 }
+
+#pragma mark - Properties
 
 @end

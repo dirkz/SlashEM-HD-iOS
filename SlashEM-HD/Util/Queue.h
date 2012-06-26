@@ -10,16 +10,16 @@
 
 @interface Queue : NSObject
 
-/*! Enter new event into the queue */
+/** Enter new event into the queue */
 - (void)enterObject:(id)event;
 
-/*!
+/**
  Remove and return front-most event (blocking)
  @return The front-most event that has been removed from the queue
  */
 - (id)leaveObject;
 
-/*! @return The front-most event */
+/** @return The front-most event */
 - (id)frontObject;
 
 @end

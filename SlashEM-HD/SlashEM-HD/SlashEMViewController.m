@@ -270,17 +270,33 @@ replacementString:(NSString *)string
 
 - (void)menuViewController:(MenuViewController *)viewController pickNoneMenuWindow:(NHMenuWindow *)window
 {
-    self.menuWindow.numberOfItemsSelected = -1;
-    [self dismissDisplayedViewController];
 }
 
 - (void)menuViewController:(MenuViewController *)viewController pickOneItem:(NHMenuItem *)item
                 menuWindow:(NHMenuWindow *)window
 {
-    *self.menuWindow.selected = malloc(sizeof(menu_item));
-    (*self.menuWindow.selected)->count = 1;
-    (*self.menuWindow.selected)->item.a_int = item.identifier.a_int;
     self.menuWindow.numberOfItemsSelected = 1;
+
+    *self.menuWindow.selected = malloc(sizeof(menu_item));
+    (*self.menuWindow.selected)->count = -1;
+    (*self.menuWindow.selected)->item.a_int = item.identifier.a_int;
+
+    [self dismissDisplayedViewController];
+}
+
+- (void)menuViewController:(MenuViewController *)viewController pickAnyItems:(NSArray *)items
+                menuWindow:(NHMenuWindow *)window
+{
+    self.menuWindow.numberOfItemsSelected = items.count;
+
+    *self.menuWindow.selected = malloc(sizeof(menu_item));
+    NSUInteger i = 0;
+    for (NHMenuItem *item in items) {
+        (*self.menuWindow.selected)[i].count = -1;
+        (*self.menuWindow.selected)[i].item.a_int = item.identifier.a_int;
+        i++;
+    }
+
     [self dismissDisplayedViewController];
 }
 

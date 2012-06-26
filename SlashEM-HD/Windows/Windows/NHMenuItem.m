@@ -16,6 +16,7 @@
 @synthesize accelerator = _accelerator;
 @synthesize attribute = _attribute;
 @synthesize preselected = _preselected;
+@synthesize selected = _selected;
 
 - (id)initWithTitle:(NSString *)title glyph:(int)glyph identifier:(ANY_P)identifier
         accelerator:(char)accelerator attribute:(int)attribute preselected:(BOOL)preselected
@@ -28,6 +29,9 @@
         _accelerator = accelerator;
         _attribute = attribute;
         _preselected = preselected;
+        if (_preselected) {
+            _selected = YES;
+        }
     }
     return self;
 }

@@ -17,8 +17,7 @@
 @interface NHMenuWindow : NHWindow
 
 @property (nonatomic, copy) NSString *prompt;
-@property (nonatomic, readonly) NSArray *groupTitles;
-@property (nonatomic, readonly) NSUInteger groupCount;
+@property (nonatomic, readonly) NSArray *groups;
 @property (nonatomic, assign) NSInteger numberOfItemsSelected;
 @property (nonatomic) int menuStyle; // 'how': PICK_NONE, PICK_ONE or PICK_ANY
 @property (nonatomic) menu_item **selected;
@@ -30,10 +29,19 @@
 - (void)addGroupWithTitle:(NSString *)title accelerator:(char)accelerator;
 - (void)addTtemWithTitle:(NSString *)title glyph:(int)glyph identifier:(ANY_P)identifier
              accelerator:(char)accelerator attribute:(int)attribute preselected:(BOOL)preselected;
-- (NSArray *)itemsForGroupWithTitle:(NSString *)groupTitle;
-- (NSArray *)itemsAtIndex:(NSUInteger)i;
+- (NSArray *)itemsForGroupNamed:(NSString *)groupTitle;
+- (NSArray *)itemsAtGroupWithIndex:(NSUInteger)i;
+
+/** @return Array of all items in all groups */
+- (NSArray *)allItems;
+
+/** @return Array of all selected items in all groups */
+- (NSArray *)allSelectedItems;
+
+/** @return Item # indexPath.row at group indexPath.section */
 - (NHMenuItem *)itemAtIndexPath:(NSIndexPath *)indexPath;
 
+/** Some NH routines use NHWindow for displaying text */
 - (void)putString:(NSString *)string;
 
 @end

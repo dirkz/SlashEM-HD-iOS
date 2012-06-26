@@ -18,6 +18,7 @@
 @property (nonatomic, readonly) char accelerator;
 @property (nonatomic, readonly) int attribute;
 @property (nonatomic, readonly) BOOL preselected;
+@property (nonatomic, assign) BOOL selected;
 
 - (id)initWithTitle:(NSString *)title glyph:(int)glyph identifier:(ANY_P)identifier
         accelerator:(char)accelerator attribute:(int)attribute preselected:(BOOL)preselected;

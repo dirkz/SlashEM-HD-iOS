@@ -18,6 +18,8 @@
 - (void)menuViewController:(MenuViewController *)viewController pickNoneMenuWindow:(NHMenuWindow *)window;
 - (void)menuViewController:(MenuViewController *)viewController pickOneItem:(NHMenuItem *)item
                 menuWindow:(NHMenuWindow *)window;
+- (void)menuViewController:(MenuViewController *)viewController pickAnyItems:(NSArray *)items
+                menuWindow:(NHMenuWindow *)window;
 
 @end
 
@@ -27,5 +29,6 @@
 @property (nonatomic, weak) id<MenuViewControllerDelegate> delegate;
 
 - (IBAction)cancelAction:(id)sender;
+- (IBAction)okAction:(id)sender;
 
 @end

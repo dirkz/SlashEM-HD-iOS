@@ -35,13 +35,13 @@
 
 - (id)leaveObject {
     dispatch_semaphore_wait(eventsSemaphore, DISPATCH_TIME_FOREVER);
-    
+
     id __block event;
     dispatch_sync(modifyEventsQueue, ^{
         event = [events lastObject];
         [events removeLastObject];
     });
-    
+
     return event;
 }
 

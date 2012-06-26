@@ -15,16 +15,16 @@
                         <rect key="frame" x="0.0" y="44" width="540" height="576"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="EXe-z6-LqC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="EXe-z6-LqC">
                                 <rect key="frame" x="0.0" y="0.0" width="540" height="532"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MenuViewCell" textLabel="Xp9-8G-Ya5" detailTextLabel="qhm-pl-ayI" style="IBUITableViewCellStyleSubtitle" id="ZfR-lX-jXT">
-                                        <rect key="frame" x="0.0" y="22" width="540" height="44"/>
+                                        <rect key="frame" x="0.0" y="54" width="540" height="46"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="540" height="43"/>
+                                            <rect key="frame" x="31" y="1" width="478" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xp9-8G-Ya5">
@@ -56,6 +56,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="KrG-A3-vRR"/>
+                                    <barButtonItem title="OK" id="Qj0-Kg-kDc">
+                                        <connections>
+                                            <action selector="okAction:" destination="Kng-X6-2nI" id="NvE-Od-Vpv"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem title="Cancel" id="h9c-T8-Sg9">
                                         <connections>
                                             <action selector="cancelAction:" destination="Kng-X6-2nI" id="uMy-RA-7yU"/>
@@ -67,6 +72,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="OOi-2X-Lgq"/>
+                    <connections>
+                        <outlet property="okButton" destination="Qj0-Kg-kDc" id="j8r-nu-Kut"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="-344" y="196"/>
@@ -196,6 +204,8 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
             <relationships>
                 <relationship kind="action" name="cancelAction:"/>
+                <relationship kind="action" name="okAction:"/>
+                <relationship kind="outlet" name="okButton" candidateClass="UIBarButtonItem"/>
             </relationships>
         </class>
         <class className="MessageViewController" superclassName="UIViewController">
