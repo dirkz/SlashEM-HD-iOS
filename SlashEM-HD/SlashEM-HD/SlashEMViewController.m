@@ -29,6 +29,12 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 
 @interface SlashEMViewController ()
 
+@property (weak, nonatomic) IBOutlet UITextView *messageTextView;
+@property (weak, nonatomic) IBOutlet UITextField *inputTextField;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel1;
+@property (weak, nonatomic) IBOutlet UILabel *statusLabel2;
+@property (weak, nonatomic) IBOutlet MapView *mapView;
+
 @property (nonatomic, strong) YNQuestionData *ynQuestionData;
 @property (nonatomic, strong) NHMenuWindow *menuWindow;
 @property (nonatomic, assign) UITextInputState state;
@@ -38,17 +44,17 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 @implementation SlashEMViewController
 {
 
-    WiniOS *winios;
-    Queue *events;
-    UIViewController *displayedViewController;
+    WiniOS *_winios;
+    Queue *_events;
+    UIViewController *_displayedViewController;
 
 }
 
-@synthesize messageTextView;
-@synthesize inputTextField;
-@synthesize statusLabel1;
-@synthesize statusLabel2;
-@synthesize mapView;
+@synthesize messageTextView = _messageTextView;
+@synthesize inputTextField = _inputTextField;
+@synthesize statusLabel1 = _statusLabel1;
+@synthesize statusLabel2 = _statusLabel2;
+@synthesize mapView = _mapView;
 @synthesize ynQuestionData = _ynQuestionData;
 @synthesize menuWindow = _menuWindow;
 @synthesize state = _state;
@@ -56,8 +62,8 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    inputTextField.frame = CGRectZero;
-    winios = [[WiniOS alloc] init];
+    _inputTextField.frame = CGRectZero;
+    _winios = [[WiniOS alloc] init];
 }
 
 - (void)viewDidUnload
@@ -78,8 +84,8 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardDidHide:)
                                                  name:UIKeyboardDidHideNotification object:nil];
 
-    winios.delegate = self;
-    [winios start];
+    _winios.delegate = self;
+    [_winios start];
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -98,36 +104,36 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 
 - (void)setEventQueue:(Queue *)eventQueue
 {
-    events = eventQueue;
+    _events = eventQueue;
 }
 
 - (void)handleYNQuestion:(YNQuestionData *)question
 {
     self.ynQuestionData = question;
-    [inputTextField becomeFirstResponder];
+    [_inputTextField becomeFirstResponder];
 }
 
 - (void)handlePutstr:(NSString *)message attribute:(int)attr
 {
     if (message.length > 0) {
-        if (messageTextView.hasText) {
-            messageTextView.text = [NSString stringWithFormat:@"%@ %@", messageTextView.text, message];
+        if (_messageTextView.hasText) {
+            _messageTextView.text = [NSString stringWithFormat:@"%@ %@", _messageTextView.text, message];
         } else {
-            messageTextView.text = message;
+            _messageTextView.text = message;
         }
-        [messageTextView scrollRangeToVisible:NSMakeRange(messageTextView.text.length-1, 1)];
+        [_messageTextView scrollRangeToVisible:NSMakeRange(_messageTextView.text.length-1, 1)];
     }
 }
 
 - (void)handlePoskey
 {
     self.state = UIStatePoskey;
-    [inputTextField becomeFirstResponder];
+    [_inputTextField becomeFirstResponder];
 }
 
 - (void)handleClearMessages
 {
-    messageTextView.text = @"";
+    _messageTextView.text = @"";
 }
 
 - (void)handleMenuWindow:(NHMenuWindow *)window
@@ -139,9 +145,9 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 - (void)setStatusString:(NSString *)string line:(NSUInteger)i
 {
     if (i == 0) {
-        [statusLabel1 setText:string];
+        [_statusLabel1 setText:string];
     } else {
-        [statusLabel2 setText:string];
+        [_statusLabel2 setText:string];
     }
 }
 
@@ -164,11 +170,11 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     LOG_VIEW(1, @"segue %@", segue.identifier);
     if ([segue.identifier isEqualToString:NetHackMenuViewSegue]) {
-        displayedViewController = segue.destinationViewController;
+        _displayedViewController = segue.destinationViewController;
         MenuViewController *menuViewController = nil;
-        if ([displayedViewController isKindOfClass:[UINavigationController class]]) {
-            displayedViewController = [(UINavigationController *) displayedViewController visibleViewController];
-            menuViewController = (MenuViewController *) displayedViewController;
+        if ([_displayedViewController isKindOfClass:[UINavigationController class]]) {
+            _displayedViewController = [(UINavigationController *) _displayedViewController visibleViewController];
+            menuViewController = (MenuViewController *) _displayedViewController;
         } else {
             menuViewController = segue.destinationViewController;
         }
@@ -194,13 +200,13 @@ replacementString:(NSString *)string
         switch (self.state) {
             case UIStateYNQuestion: {
                 KeyEvent *event = [KeyEvent eventWithKey:ch];
-                [events enterObject:event];
+                [_events enterObject:event];
                 self.ynQuestionData = nil;
             }
                 break;
             case UIStatePoskey: {
                 PosKeyEvent *event = [PosKeyEvent eventWithKey:ch];
-                [events enterObject:event];
+                [_events enterObject:event];
                 self.state = UIStateUndefined;
             }
                 break;
@@ -208,7 +214,7 @@ replacementString:(NSString *)string
             default:
                 break;
         }
-        [inputTextField resignFirstResponder];
+        [_inputTextField resignFirstResponder];
     }
     return NO;
 }
@@ -229,9 +235,29 @@ replacementString:(NSString *)string
 
 - (void)dismissDisplayedViewController
 {
-    [displayedViewController dismissModalViewControllerAnimated:NO];
-    displayedViewController = nil;
-    [events enterObject:WiniOSMenuFinishedEvent];
+    [_displayedViewController dismissModalViewControllerAnimated:NO];
+    _displayedViewController = nil;
+    [_events enterObject:WiniOSMenuFinishedEvent];
+}
+
+/** param keyboardFrame Keyboard frame in view coordinates */
+- (void)layoutViewsWithKeyboardFrame:(CGRect)keyboardFrame
+{
+    CGRect messageFrame = _messageTextView.frame;
+    CGRect statusFrame1 = self.statusLabel1.frame;
+    CGRect statusFrame2 = self.statusLabel2.frame;
+
+    CGRect mapFrame = _mapView.frame;
+    mapFrame.origin.y = messageFrame.origin.y + messageFrame.size.height;
+    mapFrame.size.height = self.view.bounds.size.height - keyboardFrame.size.height - messageFrame.size.height -
+    statusFrame1.size.height - statusFrame2.size.height;
+    _mapView.frame = mapFrame;
+
+    statusFrame1.origin.y = mapFrame.origin.y + mapFrame.size.height;
+    self.statusLabel1.frame = statusFrame1;
+
+    statusFrame2.origin.y = statusFrame1.origin.y + statusFrame1.size.height;
+    self.statusLabel2.frame = statusFrame2;
 }
 
 #pragma mark - MenuViewControllerDelegate
@@ -263,7 +289,7 @@ replacementString:(NSString *)string
 - (void)menuViewController:(MessageViewController *)viewController doneButtonForMenuWindow:(NHMenuWindow *)window
 {
     [viewController dismissModalViewControllerAnimated:NO];
-    [events enterObject:WiniOSMessageDisplayFinishedEvent];
+    [_events enterObject:WiniOSMessageDisplayFinishedEvent];
 }
 
 #pragma mark - show/hide Keyboard
@@ -272,38 +298,15 @@ replacementString:(NSString *)string
 {
     CGRect keyboardFrame = [[aNotification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     keyboardFrame = [self.view convertRect:keyboardFrame fromView:nil];
-    CGSize keyboardSize = keyboardFrame.size;
-
-    CGRect mapFrame = mapView.frame;
-    mapFrame.size.height -= keyboardSize.height;
-    mapView.frame = mapFrame;
-
-    CGRect statusFrame = self.statusLabel1.frame;
-    statusFrame.origin.y -= keyboardSize.height;
-    self.statusLabel1.frame = statusFrame;
-
-    statusFrame = self.statusLabel2.frame;
-    statusFrame.origin.y -= keyboardSize.height;
-    self.statusLabel2.frame = statusFrame;
+    [self layoutViewsWithKeyboardFrame:keyboardFrame];
 }
 
 - (void)keyboardDidHide:(NSNotification *)aNotification
 {
     CGRect keyboardFrame = [[aNotification.userInfo objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
     keyboardFrame = [self.view convertRect:keyboardFrame fromView:nil];
-    CGSize keyboardSize = keyboardFrame.size;
-
-    CGRect mapFrame = mapView.frame;
-    mapFrame.size.height += keyboardSize.height;
-    mapView.frame = mapFrame;
-
-    CGRect statusFrame = self.statusLabel1.frame;
-    statusFrame.origin.y += keyboardSize.height;
-    self.statusLabel1.frame = statusFrame;
-
-    statusFrame = self.statusLabel2.frame;
-    statusFrame.origin.y += keyboardSize.height;
-    self.statusLabel2.frame = statusFrame;
+    keyboardFrame.size.height = 0.f;
+    [self layoutViewsWithKeyboardFrame:keyboardFrame];
 }
 
 @end

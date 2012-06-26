@@ -18,10 +18,4 @@
 @interface SlashEMViewController : UIViewController <WiniOSDelegate, UITextFieldDelegate,MenuViewControllerDelegate,
 MessageViewControllerDelegate>
 
-@property (weak, nonatomic) IBOutlet UITextView *messageTextView;
-@property (weak, nonatomic) IBOutlet UITextField *inputTextField;
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel1;
-@property (weak, nonatomic) IBOutlet UILabel *statusLabel2;
-@property (weak, nonatomic) IBOutlet MapView *mapView;
-
 @end
