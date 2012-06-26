@@ -78,8 +78,17 @@ extern short glyph2tile[MAX_GLYPH];
 /** @return Destination rect (in points) for the given tile (quartz coordinate system!) */
 - (CGRect)destinationRectForTileAtCol:(NSInteger)col row:(NSInteger)row
 {
+    CGSize offset = CGSizeMake(-_mapWindow.clipX * self.tilesizePoints.width // move character to the very left
+                               - self.tilesizePoints.width/2 // move half tile to the left (only middle is shown)
+                               + self.bounds.size.width/2, // translate to middle of screen
+                               -(_mapWindow.rows - _mapWindow.clipY) * self.tilesizePoints.height // move to buttom and
+                               // notice how we had to convert to quartz coordinate system since NH starts row 0
+                               // at the top of the screen
+                               -self.tilesizePoints.height/2 // move half tile to buttom (only middle is shown)
+                               + self.bounds.size.height/2); // translate to middle of screen
     NSInteger rowFromButton = _mapWindow.rows - row;
-    CGRect r = CGRectMake(col * self.tilesizePoints.width, rowFromButton * self.tilesizePoints.height,
+    CGRect r = CGRectMake(col * self.tilesizePoints.width + offset.width,
+                          rowFromButton * self.tilesizePoints.height + offset.height,
                           self.tilesizePoints.width, self.tilesizePoints.height);
     return r;
 }
