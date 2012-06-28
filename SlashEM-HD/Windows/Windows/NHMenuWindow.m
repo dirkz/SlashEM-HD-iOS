@@ -40,7 +40,6 @@
     return self;
 }
 
-
 - (void)reset
 {
     [_groups removeAllObjects];
@@ -99,26 +98,6 @@
 - (NHMenuItem *)itemAtIndexPath:(NSIndexPath *)indexPath
 {
     return [[self itemsAtGroupWithIndex:indexPath.section] objectAtIndex:indexPath.row];
-}
-
-#pragma mark - Menu Window uses for text display
-
-- (void)putString:(NSString *)string
-{
-    [self.lines addObject:string];
-}
-
-- (NSMutableArray *)lines
-{
-    if (!_lines) {
-        _lines = [[NSMutableArray alloc] init];
-    }
-    return _lines;
-}
-
-- (NSString *)text
-{
-    return [self.lines componentsJoinedByString:@"\n"];
 }
 
 #pragma mark - Properties

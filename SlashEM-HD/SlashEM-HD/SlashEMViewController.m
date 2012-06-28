@@ -289,10 +289,10 @@ replacementString:(NSString *)string
 {
     self.menuWindow.numberOfItemsSelected = items.count;
 
-    *self.menuWindow.selected = malloc(sizeof(menu_item));
+    *self.menuWindow.selected = malloc(sizeof(menu_item) * items.count);
     NSUInteger i = 0;
     for (NHMenuItem *item in items) {
-        (*self.menuWindow.selected)[i].count = -1;
+        (*self.menuWindow.selected)[i].count = item.selectedAmount;
         (*self.menuWindow.selected)[i].item.a_int = item.identifier.a_int;
         i++;
     }

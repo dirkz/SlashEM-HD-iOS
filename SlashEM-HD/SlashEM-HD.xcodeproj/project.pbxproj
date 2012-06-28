@@ -148,6 +148,8 @@
 		4326DF611593541D005D7B4D /* NHMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF601593541D005D7B4D /* NHMenuItem.m */; };
 		4326DF68159361F0005D7B4D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4326DF67159361F0005D7B4D /* MenuViewController.m */; };
 		432AC62B159B10EF00FC7643 /* Queue.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AC629159A2FCC00FC7643 /* Queue.m */; };
+		432AC63A159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AC639159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.m */; };
+		432AC641159CA26F00FC7643 /* NHTextWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 432AC640159CA26F00FC7643 /* NHTextWindow.m */; };
 		434925271597918C002C6CFF /* Geoduck SlashEM 10x20@2x~ipad.png in Resources */ = {isa = PBXBuildFile; fileRef = 434925261597918C002C6CFF /* Geoduck SlashEM 10x20@2x~ipad.png */; };
 		4349252915979313002C6CFF /* Geoduck SlashEM 10x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 4349252815979313002C6CFF /* Geoduck SlashEM 10x20.png */; };
 		434925311597DC4B002C6CFF /* TileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 434925301597DC4B002C6CFF /* TileCache.m */; };
@@ -639,6 +641,10 @@
 		4326DF67159361F0005D7B4D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
 		432AC628159A2FCC00FC7643 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		432AC629159A2FCC00FC7643 /* Queue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Queue.m; sourceTree = "<group>"; };
+		432AC638159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemWithAmountTableViewCellCell.h; sourceTree = "<group>"; };
+		432AC639159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemWithAmountTableViewCellCell.m; sourceTree = "<group>"; };
+		432AC63F159CA26F00FC7643 /* NHTextWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHTextWindow.h; sourceTree = "<group>"; };
+		432AC640159CA26F00FC7643 /* NHTextWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHTextWindow.m; sourceTree = "<group>"; };
 		434925261597918C002C6CFF /* Geoduck SlashEM 10x20@2x~ipad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Geoduck SlashEM 10x20@2x~ipad.png"; path = "../../Assets/Geoduck SlashEM 10x20@2x~ipad.png"; sourceTree = "<group>"; };
 		4349252815979313002C6CFF /* Geoduck SlashEM 10x20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Geoduck SlashEM 10x20.png"; path = "../../Assets/Geoduck SlashEM 10x20.png"; sourceTree = "<group>"; };
 		4349252F1597DC4B002C6CFF /* TileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCache.h; sourceTree = "<group>"; };
@@ -1462,12 +1468,14 @@
 		4326DF3015933122005D7B4D /* Windows */ = {
 			isa = PBXGroup;
 			children = (
+				4326DF3515933122005D7B4D /* NHWindow.h */,
+				4326DF3615933122005D7B4D /* NHHWindow.m */,
+				432AC63F159CA26F00FC7643 /* NHTextWindow.h */,
+				432AC640159CA26F00FC7643 /* NHTextWindow.m */,
 				4326DF3115933122005D7B4D /* NHMapWindow.h */,
 				4326DF3215933122005D7B4D /* NHMapWindow.m */,
 				4326DF3315933122005D7B4D /* NHMenuWindow.h */,
 				4326DF3415933122005D7B4D /* NHMenuWindow.m */,
-				4326DF3515933122005D7B4D /* NHWindow.h */,
-				4326DF3615933122005D7B4D /* NHHWindow.m */,
 				4326DF3715933122005D7B4D /* NHStatusWindow.h */,
 				4326DF3815933122005D7B4D /* NHStatusWindow.m */,
 				4326DF5F1593541C005D7B4D /* NHMenuItem.h */,
@@ -1500,6 +1508,8 @@
 				43059FDD15978A3800C7DB58 /* MapView.h */,
 				43059FDE15978A3800C7DB58 /* MapView.m */,
 				43059FE115978D3A00C7DB58 /* NHMapView.h */,
+				432AC638159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.h */,
+				432AC639159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.m */,
 			);
 			path = Views;
 			sourceTree = SOURCE_ROOT;
@@ -1968,6 +1978,8 @@
 				434925311597DC4B002C6CFF /* TileCache.m in Sources */,
 				4349253F15986AAD002C6CFF /* tile.c in Sources */,
 				432AC62B159B10EF00FC7643 /* Queue.m in Sources */,
+				432AC63A159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.m in Sources */,
+				432AC641159CA26F00FC7643 /* NHTextWindow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

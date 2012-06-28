@@ -8,22 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
-#import "NhWindow.h"
+#import "NHTextWindow.h"
 
 #import "hack.h" // NHW_MENU, ANY_P
 
 @class NHMenuItem;
 
-@interface NHMenuWindow : NHWindow
+@interface NHMenuWindow : NHTextWindow
 
 @property (nonatomic, copy) NSString *prompt;
 @property (nonatomic, readonly) NSArray *groups;
 @property (nonatomic, assign) NSInteger numberOfItemsSelected;
 @property (nonatomic) int menuStyle; // 'how': PICK_NONE, PICK_ONE or PICK_ANY
 @property (nonatomic) menu_item **selected;
-
-/** @return If putString was used, all lines as newline-separated string */
-@property (nonatomic, readonly) NSString *text;
 
 - (void)reset;
 - (void)addGroupWithTitle:(NSString *)title accelerator:(char)accelerator;
@@ -40,8 +37,5 @@
 
 /** @return Item # indexPath.row at group indexPath.section */
 - (NHMenuItem *)itemAtIndexPath:(NSIndexPath *)indexPath;
-
-/** Some NH routines use NHWindow for displaying text */
-- (void)putString:(NSString *)string;
 
 @end

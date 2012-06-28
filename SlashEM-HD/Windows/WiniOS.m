@@ -21,6 +21,7 @@
 #import "NHStatusWindow.h"
 #import "NSLogger.h"
 #import "NHMenuWindow.h"
+#import "NHTextWindow.h"
 
 NSString * const WiniOSMenuFinishedEvent = @"WiniOSMenuFinishedEvent";
 NSString * const WiniOSMessageDisplayFinishedEvent = @"WiniOSMessageDisplayFinishedEvent";
@@ -292,7 +293,7 @@ winid ios_create_nhwindow(int type)
             window = [[NHMenuWindow alloc] init];
             break;
         case NHW_TEXT:
-            window = [[NHWindow alloc] initWithType:type];
+            window = [[NHTextWindow alloc] init];
             break;
         default:
             window = [[NHWindow alloc] initWithType:type];
@@ -374,7 +375,7 @@ void ios_putstr(winid wid, int attr, const char *text)
                 [sharedInstance.delegate setStatusString:string line:line];
             });
         } else {
-            NHMenuWindow *w = (NHMenuWindow *) [sharedInstance windowForIdentifier:wid];
+            NHTextWindow *w = (NHTextWindow *) [sharedInstance windowForIdentifier:wid];
             [w putString:[NSString stringWithCString:text encoding:NSASCIIStringEncoding]];
         }
     }

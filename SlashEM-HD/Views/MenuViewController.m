@@ -10,18 +10,33 @@
 
 #import "NHMenuItem.h"
 #import "NSLogger.h"
+#import "ItemWithAmountTableViewCellCell.h"
 
 @interface MenuViewController ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *okButton;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
 @implementation MenuViewController
+{
+    NSMutableDictionary *_sliders;
+}
 
 @synthesize okButton = _okButton;
+@synthesize tableView = _tableView;
 @synthesize menuWindow = _menuWindow;
 @synthesize delegate = _delegate;
+
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _sliders = [[NSMutableDictionary alloc] init];
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -37,6 +52,7 @@
 - (void)viewDidUnload
 {
     [self setOkButton:nil];
+    [self setTableView:nil];
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
@@ -86,12 +102,29 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MenuViewCell"];
-
     NHMenuItem *item = [self.menuWindow itemAtIndexPath:indexPath];
-    cell.textLabel.text = [self titleForMenuItem:item];
-    if (self.menuWindow.menuStyle == PICK_ANY) {
-        cell.accessoryType = item.selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+
+    UITableViewCell *cell = nil;
+    if (self.menuWindow.menuStyle == PICK_NONE) {
+        cell = [tableView dequeueReusableCellWithIdentifier:@"StandardMenuViewCell"];
+    } else {
+        if (item.amount > 1) {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"SliderMenuViewCell"];
+            UISlider *slider = [(ItemWithAmountTableViewCellCell *) cell amountSlider];
+            slider.minimumValue = 1;
+            slider.maximumValue = item.amount;
+            slider.value = item.amount;
+            slider.continuous = YES;
+            [slider addTarget:self action:@selector(sliderAmountChanged:) forControlEvents:UIControlEventValueChanged];
+            [_sliders setObject:indexPath forKey:[NSValue valueWithPointer:(__bridge void *) slider]];
+        } else {
+            cell = [tableView dequeueReusableCellWithIdentifier:@"StandardMenuViewCell"];
+        }
+
+        cell.textLabel.text = [self titleForMenuItem:item];
+        if (self.menuWindow.menuStyle == PICK_ANY) {
+            cell.accessoryType = item.selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+        }
     }
 
     return cell;
@@ -154,6 +187,20 @@
     }
 }
 
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    CGFloat static standardHeight = 45.f; // should match the actual height for the cell in storyboard
+    CGFloat static standardHeightPlusAmount = 68.f; // should match the actual height for the cell in storyboard
+    NHMenuItem *item = [self.menuWindow itemAtIndexPath:indexPath];
+    if (self.menuWindow.menuStyle == PICK_NONE) {
+        return standardHeight;
+    } else if (item.amount > 1) {
+        return standardHeightPlusAmount;
+    } else {
+        return standardHeight;
+    }
+}
+
 - (IBAction)cancelAction:(id)sender
 {
     [self.delegate menuViewController:self cancelMenuWindow:self.menuWindow];
@@ -162,6 +209,26 @@
 - (IBAction)okAction:(id)sender
 {
     [self.delegate menuViewController:self pickAnyItems:[self.menuWindow allSelectedItems] menuWindow:self.menuWindow];
+}
+
+#pragma mark - UISlider Target
+
+- (void)sliderAmountChanged:(UISlider *)slider
+{
+    NSIndexPath *indexPath = [_sliders objectForKey:[NSValue valueWithPointer:(__bridge void*) slider]];
+    LOG_VIEW(1, @"slider value %f indexPath %@", slider.value, indexPath);
+    NHMenuItem *item = [self.menuWindow itemAtIndexPath:indexPath];
+    item.selectedAmount = slider.value;
+    ItemWithAmountTableViewCellCell *cell = (ItemWithAmountTableViewCellCell *) [self.tableView
+                                                                                 cellForRowAtIndexPath:indexPath];
+    cell.textLabel.text = [self titleForMenuItem:item];
+    if (self.menuWindow.menuStyle == PICK_ANY) {
+        cell.accessoryType = item.selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
+    }
+
+    if (self.menuWindow.menuStyle == PICK_ANY) {
+        item.selected = YES;
+    }
 }
 
 @end
