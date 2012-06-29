@@ -121,11 +121,12 @@
             cell = [tableView dequeueReusableCellWithIdentifier:@"StandardMenuViewCell"];
         }
 
-        cell.textLabel.text = [self titleForMenuItem:item];
         if (self.menuWindow.menuStyle == PICK_ANY) {
             cell.accessoryType = item.selected ? UITableViewCellAccessoryCheckmark : UITableViewCellAccessoryNone;
         }
     }
+
+    cell.textLabel.text = [self titleForMenuItem:item];
 
     return cell;
 }
