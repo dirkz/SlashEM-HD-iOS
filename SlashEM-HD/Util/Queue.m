@@ -8,38 +8,41 @@
 
 #import "Queue.h"
 
+#import "NSLogger.h"
+
 @implementation Queue
 {
-    NSMutableArray *events;
-    dispatch_queue_t modifyEventsQueue;
-    dispatch_semaphore_t eventsSemaphore;
+    NSMutableArray *_events;
+    dispatch_queue_t _modifyEventsQueue;
+    dispatch_semaphore_t _eventsSemaphore;
 }
 
 - (id)init
 {
     if ((self = [super init])) {
-        events = [[NSMutableArray alloc] init];
-        modifyEventsQueue = dispatch_queue_create("com.dirkz.UnNetHack.modifyEventsQueue", DISPATCH_QUEUE_SERIAL);
-        eventsSemaphore = dispatch_semaphore_create(0);
+        _events = [[NSMutableArray alloc] init];
+        _modifyEventsQueue = dispatch_queue_create("com.dirkz.UnNetHack.modifyEventsQueue", DISPATCH_QUEUE_SERIAL);
+        _eventsSemaphore = dispatch_semaphore_create(0);
     }
     return self;
 }
 
 - (void)enterObject:(id)event
 {
-    dispatch_async(modifyEventsQueue, ^{
-        [events addObject:event];
-        dispatch_semaphore_signal(eventsSemaphore);
+    dispatch_async(_modifyEventsQueue, ^{
+        LOG_UTIL(1, @"enterObject:%@", event);
+        [_events addObject:event];
+        dispatch_semaphore_signal(_eventsSemaphore);
     });
 }
 
 - (id)leaveObject {
-    dispatch_semaphore_wait(eventsSemaphore, DISPATCH_TIME_FOREVER);
+    dispatch_semaphore_wait(_eventsSemaphore, DISPATCH_TIME_FOREVER);
 
     id __block event;
-    dispatch_sync(modifyEventsQueue, ^{
-        event = [events lastObject];
-        [events removeLastObject];
+    dispatch_sync(_modifyEventsQueue, ^{
+        event = [_events lastObject];
+        [_events removeLastObject];
     });
 
     return event;
@@ -47,16 +50,17 @@
 
 - (id)frontObject {
     id __block event;
-    dispatch_sync(modifyEventsQueue, ^{
-        event = [events lastObject];
+    dispatch_sync(_modifyEventsQueue, ^{
+        event = [_events lastObject];
     });
+    LOG_UTIL(1, @"frontObject -> %@", event);
     return event;
 }
 
 - (void)dealloc
 {
-    dispatch_release(modifyEventsQueue);
-    dispatch_release(eventsSemaphore);
+    dispatch_release(_modifyEventsQueue);
+    dispatch_release(_eventsSemaphore);
 }
 
 @end
