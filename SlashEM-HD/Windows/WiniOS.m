@@ -104,12 +104,12 @@ static WiniOS *sharedInstance;
     NSThread *netHackThread;
 }
 
-@synthesize eventQueue;
-@synthesize delegate;
-@synthesize mapWindow;
-@synthesize messageWindow;
-@synthesize statusWindow;
-@synthesize windows;
+@synthesize eventQueue = _eventQueue;
+@synthesize delegate = _delegate;
+@synthesize mapWindow = _mapWindow;
+@synthesize messageWindow = _messageWindow;
+@synthesize statusWindow = _statusWindow;
+@synthesize windows = _windows;
 
 + (void)initialize
 {
@@ -132,8 +132,8 @@ static WiniOS *sharedInstance;
 - (id)init
 {
     if ((self = [super init])) {
-        eventQueue = [[Queue alloc] init];
-        windows = [[NSMutableDictionary alloc] init];
+        _eventQueue = [[Queue alloc] init];
+        _windows = [[NSMutableDictionary alloc] init];
         sharedInstance = self;
     }
     return self;
@@ -143,27 +143,27 @@ static WiniOS *sharedInstance;
 - (void)addWindow:(NHWindow *)window
 {
     NSNumber *identifier = [NSNumber numberWithInt:[window identifier]];
-    [windows setObject:window forKey:identifier];
+    [_windows setObject:window forKey:identifier];
 }
 
 - (void)removeWindow:(NHWindow *)window
 {
-    [windows removeObjectForKey:[NSNumber numberWithInt:[window identifier]]];
+    [_windows removeObjectForKey:[NSNumber numberWithInt:[window identifier]]];
 }
 
 - (void)removeWindowWithIdentifier:(int)identifier
 {
-    [windows removeObjectForKey:[NSNumber numberWithInt:identifier]];
+    [_windows removeObjectForKey:[NSNumber numberWithInt:identifier]];
 }
 
 - (NHWindow *)windowForIdentifier:(int)identifier
 {
-    return [windows objectForKey:[NSNumber numberWithInt:identifier]];
+    return [_windows objectForKey:[NSNumber numberWithInt:identifier]];
 }
 
 - (void)start
 {
-    [delegate setEventQueue:eventQueue];
+    [_delegate setEventQueue:_eventQueue];
     netHackThread = [[NSThread alloc] initWithTarget:self selector:@selector(netHackMainLoop:) object:nil];
     [netHackThread start];
 }
