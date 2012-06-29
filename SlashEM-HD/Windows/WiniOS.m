@@ -203,6 +203,15 @@ static WiniOS *sharedInstance;
     unix_main(argc, argv);
 }
 
+#pragma mark - Properties
+
+- (BOOL)wantsPosition
+{
+    return ios_getpos == 1;
+}
+
+#pragma mark - NetHack C API
+
 FILE *ios_dlb_fopen(const char *filename, const char *mode) {
     char path[FQN_MAX_FILENAME];
     [WiniOS expandFilename:filename intoPath:path];

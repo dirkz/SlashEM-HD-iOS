@@ -12,6 +12,7 @@
 
 @protocol NHMapView  <NSObject>
 
+/** Typically called by a view controller to draw the map */
 - (void)displayMapWindow:(NHMapWindow *)w;
 
 @end

@@ -92,6 +92,7 @@ extern NSString * const WiniOSMessageDisplayFinishedEvent;
 @property (nonatomic, strong) NHMapWindow *mapWindow;
 @property (nonatomic, strong) NHWindow *messageWindow;
 @property (nonatomic, strong) NHStatusWindow *statusWindow;
+@property (nonatomic, readonly) BOOL wantsPosition;
 
 + (const char *)baseFilePath;
 + (void)expandFilename:(const char *)filename intoPath:(char *)path;

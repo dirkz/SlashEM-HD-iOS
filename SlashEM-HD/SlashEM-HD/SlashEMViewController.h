@@ -12,10 +12,9 @@
 
 #import "MenuViewController.h"
 #import "MessageViewController.h"
-
-@class MapView;
+#import "MapViewDelegate.h"
 
 @interface SlashEMViewController : UIViewController <WiniOSDelegate, UITextFieldDelegate,MenuViewControllerDelegate,
-MessageViewControllerDelegate>
+MessageViewControllerDelegate, MapViewDelegate>
 
 @end

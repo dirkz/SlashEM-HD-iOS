@@ -854,6 +854,8 @@
 		438E86B115971CCA006D0FF8 /* rumors.tru */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rumors.tru; sourceTree = "<group>"; };
 		438E86C8159746C3006D0FF8 /* DebugView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DebugView.h; sourceTree = "<group>"; };
 		438E86C9159746C3006D0FF8 /* DebugView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DebugView.m; sourceTree = "<group>"; };
+		43B503E3159DF5F2004C1A91 /* NHDirection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NHDirection.h; sourceTree = "<group>"; };
+		43B503E4159E06AD004C1A91 /* MapViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1480,6 +1482,7 @@
 				4326DF3815933122005D7B4D /* NHStatusWindow.m */,
 				4326DF5F1593541C005D7B4D /* NHMenuItem.h */,
 				4326DF601593541D005D7B4D /* NHMenuItem.m */,
+				43B503E3159DF5F2004C1A91 /* NHDirection.h */,
 			);
 			path = Windows;
 			sourceTree = "<group>";
@@ -1510,6 +1513,7 @@
 				43059FE115978D3A00C7DB58 /* NHMapView.h */,
 				432AC638159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.h */,
 				432AC639159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.m */,
+				43B503E4159E06AD004C1A91 /* MapViewDelegate.h */,
 			);
 			path = Views;
 			sourceTree = SOURCE_ROOT;

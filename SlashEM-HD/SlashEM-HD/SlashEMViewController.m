@@ -59,11 +59,19 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 @synthesize menuWindow = _menuWindow;
 @synthesize state = _state;
 
+- (id)initWithCoder:(NSCoder *)coder
+{
+    self = [super initWithCoder:coder];
+    if (self) {
+        _inputTextField.frame = CGRectZero;
+        _winios = [[WiniOS alloc] init];
+    }
+    return self;
+}
+
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-    _inputTextField.frame = CGRectZero;
-    _winios = [[WiniOS alloc] init];
+    self.mapView.delegate = self;
 }
 
 - (void)viewDidUnload
@@ -323,6 +331,14 @@ replacementString:(NSString *)string
     keyboardFrame = [self.view convertRect:keyboardFrame fromView:nil];
     keyboardFrame.size.height = 0.f;
     [self layoutViewsWithKeyboardFrame:keyboardFrame];
+}
+
+#pragma mark - MapViewDelegate
+
+- (void)mapView:(id<NHMapView>)mapView handleSingleTapLocation:(CGPoint)location
+          tileX:(NSUInteger)tileX tileY:(NSUInteger)tileY direction:(NHDirection)direction
+{
+
 }
 
 @end

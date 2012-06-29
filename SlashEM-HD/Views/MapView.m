@@ -11,6 +11,7 @@
 #import "NHMapWindow.h"
 #import "NSLogger.h"
 #import "TileCache.h"
+#import "NHDirection.h"
 
 #import "hack.h" // MAX_GLYPH
 
@@ -30,10 +31,18 @@ extern int total_tiles_used;
     TileCache *_tilecache;
 }
 
+@synthesize delegate = _delegate;
+
 - (void)setup
 {
     UIImage *image = [UIImage imageNamed:@"Geoduck SlashEM 10x20.png"];
     _tilecache = [[TileCache alloc] initWithImage:image tileSizePoints:CGSizeMake(10.f, 20.f)];
+
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]
+                                                    initWithTarget:self action:@selector(handleSingleTap:)];
+    tapGestureRecognizer.numberOfTapsRequired = 1;
+    tapGestureRecognizer.numberOfTouchesRequired = 1;
+    [self addGestureRecognizer:tapGestureRecognizer];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -113,6 +122,25 @@ extern int total_tiles_used;
 - (UIImage *)tileMapImage
 {
     return _tilecache.image;
+}
+
+#pragma mark - UIGestureRecognizer
+
+- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
+{
+    CGPoint location = [recognizer locationInView:self];
+    CGPoint characterLocation = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+    CGPoint delta = CGPointMake(location.x - characterLocation.x,
+                                -(location.y - characterLocation.y)); // Note y inversion for euclidean
+    NSInteger tileDX = (location.x - characterLocation.x) / self.tilesizePoints.width;
+    NSInteger tileDY = (location.y - characterLocation.y) / self.tilesizePoints.height;
+    NSUInteger tileX = _mapWindow.clipX + tileDX;
+    NSUInteger tileY = _mapWindow.clipY + tileDY;
+    NHDirection direction = NHDirectionFromEuclidieanUnitDelta(delta.x, delta.y);
+    LOG_VIEW(1, @"single tap %@ delta %@ direction %s tile %d,%d player (%d,%d)", NSStringFromCGPoint(location),
+             NSStringFromCGPoint(delta), NHDirectionCStringForDirection(direction), tileX, tileY,
+             _mapWindow.clipX, _mapWindow.clipY);
+    [_delegate mapView:self handleSingleTapLocation:location tileX:tileX tileY:tileY direction:direction];
 }
 
 @end
