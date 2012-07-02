@@ -71,7 +71,7 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 
 - (void)viewDidLoad
 {
-    self.mapView.delegate = self;
+    _mapView.delegate = self;
 }
 
 - (void)viewDidUnload
@@ -117,7 +117,7 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 
 - (void)handleYNQuestion:(YNQuestionData *)question
 {
-    self.ynQuestionData = question;
+    _ynQuestionData = question;
     [_inputTextField becomeFirstResponder];
 }
 
@@ -135,7 +135,7 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 
 - (void)handlePoskey
 {
-    self.state = UIStatePoskey;
+    _state = UIStatePoskey;
     [_inputTextField becomeFirstResponder];
 }
 
@@ -146,7 +146,7 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 
 - (void)handleMenuWindow:(NHMenuWindow *)window
 {
-    self.menuWindow = window;
+    _menuWindow = window;
     [self performSegueWithIdentifier:NetHackMenuViewSegue sender:nil];
 }
 
@@ -161,13 +161,13 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 
 - (void)handleMessageMenuWindow:(NHMenuWindow *)window
 {
-    self.menuWindow = window;
+    _menuWindow = window;
     [self performSegueWithIdentifier:NetHackMessageMenuWindowSegue sender:nil];
 }
 
 - (void)handleMapDisplay:(NHMapWindow *)window block:(BOOL)block
 {
-    [self.mapView displayMapWindow:window];
+    [_mapView displayMapWindow:window];
     if (block) {
         LOG_VIEW(1, @"should block map display");
     }
@@ -187,13 +187,13 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
             menuViewController = segue.destinationViewController;
         }
         menuViewController.delegate = self;
-        menuViewController.menuWindow = self.menuWindow;
-        if (self.menuWindow.prompt) {
-            menuViewController.title = self.menuWindow.prompt;
+        menuViewController.menuWindow = _menuWindow;
+        if (_menuWindow.prompt) {
+            menuViewController.title = _menuWindow.prompt;
         }
     } else if ([segue.identifier isEqualToString:NetHackMessageMenuWindowSegue]) {
         MessageViewController *vc = segue.destinationViewController;
-        vc.menuWindow = self.menuWindow;
+        vc.menuWindow = _menuWindow;
         vc.delegate = self;
     }
 }
@@ -205,17 +205,17 @@ replacementString:(NSString *)string
 {
     if (string.length > 0) {
         unichar ch = [string characterAtIndex:0];
-        switch (self.state) {
+        switch (_state) {
             case UIStateYNQuestion: {
                 KeyEvent *event = [KeyEvent eventWithKey:ch];
                 [_events enterObject:event];
-                self.ynQuestionData = nil;
+                _ynQuestionData = nil;
             }
                 break;
             case UIStatePoskey: {
                 PosKeyEvent *event = [PosKeyEvent eventWithKey:ch];
                 [_events enterObject:event];
-                self.state = UIStateUndefined;
+                _state = UIStateUndefined;
             }
                 break;
 
@@ -232,9 +232,9 @@ replacementString:(NSString *)string
 - (void)setYnQuestionData:(YNQuestionData *)yn
 {
     if (yn) {
-        self.state = UIStateYNQuestion;
+        _state = UIStateYNQuestion;
     } else {
-        self.state = UIStateUndefined;
+        _state = UIStateUndefined;
     }
     _ynQuestionData = yn;
 }
@@ -252,8 +252,8 @@ replacementString:(NSString *)string
 - (void)layoutViewsWithKeyboardFrame:(CGRect)keyboardFrame
 {
     CGRect messageFrame = _messageTextView.frame;
-    CGRect statusFrame1 = self.statusLabel1.frame;
-    CGRect statusFrame2 = self.statusLabel2.frame;
+    CGRect statusFrame1 = _statusLabel1.frame;
+    CGRect statusFrame2 = _statusLabel2.frame;
 
     CGRect mapFrame = _mapView.frame;
     mapFrame.origin.y = messageFrame.origin.y + messageFrame.size.height;
@@ -262,17 +262,17 @@ replacementString:(NSString *)string
     _mapView.frame = mapFrame;
 
     statusFrame1.origin.y = mapFrame.origin.y + mapFrame.size.height;
-    self.statusLabel1.frame = statusFrame1;
+    _statusLabel1.frame = statusFrame1;
 
     statusFrame2.origin.y = statusFrame1.origin.y + statusFrame1.size.height;
-    self.statusLabel2.frame = statusFrame2;
+    _statusLabel2.frame = statusFrame2;
 }
 
 #pragma mark - MenuViewControllerDelegate
 
 - (void)menuViewController:(MenuViewController *)viewController cancelMenuWindow:(NHMenuWindow *)window
 {
-    self.menuWindow.numberOfItemsSelected = -1;
+    _menuWindow.numberOfItemsSelected = -1;
     [self dismissDisplayedViewController];
 }
 
@@ -283,11 +283,11 @@ replacementString:(NSString *)string
 - (void)menuViewController:(MenuViewController *)viewController pickOneItem:(NHMenuItem *)item
                 menuWindow:(NHMenuWindow *)window
 {
-    self.menuWindow.numberOfItemsSelected = 1;
+    _menuWindow.numberOfItemsSelected = 1;
 
-    *self.menuWindow.selected = malloc(sizeof(menu_item));
-    (*self.menuWindow.selected)->count = -1;
-    (*self.menuWindow.selected)->item.a_int = item.identifier.a_int;
+    *_menuWindow.selected = malloc(sizeof(menu_item));
+    (*_menuWindow.selected)->count = -1;
+    (*_menuWindow.selected)->item.a_int = item.identifier.a_int;
 
     [self dismissDisplayedViewController];
 }
@@ -295,13 +295,13 @@ replacementString:(NSString *)string
 - (void)menuViewController:(MenuViewController *)viewController pickAnyItems:(NSArray *)items
                 menuWindow:(NHMenuWindow *)window
 {
-    self.menuWindow.numberOfItemsSelected = items.count;
+    _menuWindow.numberOfItemsSelected = items.count;
 
-    *self.menuWindow.selected = malloc(sizeof(menu_item) * items.count);
+    *_menuWindow.selected = malloc(sizeof(menu_item) * items.count);
     NSUInteger i = 0;
     for (NHMenuItem *item in items) {
-        (*self.menuWindow.selected)[i].count = item.selectedAmount;
-        (*self.menuWindow.selected)[i].item.a_int = item.identifier.a_int;
+        (*_menuWindow.selected)[i].count = item.selectedAmount;
+        (*_menuWindow.selected)[i].item.a_int = item.identifier.a_int;
         i++;
     }
 
@@ -335,8 +335,64 @@ replacementString:(NSString *)string
 
 #pragma mark - MapViewDelegate
 
-- (void)mapView:(id<NHMapView>)mapView handleSingleTapLocation:(CGPoint)location
-          tileX:(NSUInteger)tileX tileY:(NSUInteger)tileY direction:(NHDirection)direction
+- (void)mapView:(id<NHMapView>)mapView handleSingleTapTileX:(NSUInteger)tileX tileY:(NSUInteger)tileY
+      direction:(NHDirection)direction
+{
+    if (_state == UIStatePoskey) {
+        if (_winios.wantsPosition) {
+            PosKeyEvent *event = [PosKeyEvent eventWithKey:0 x:tileX y:tileY mod:0];
+            [_events enterObject:event];
+            _state = UIStateUndefined;
+        } else {
+            char directionKey = 0;
+            switch (direction) {
+                case NHDirectionNorth:
+                    directionKey = 'k';
+                    break;
+                case NHDirectionNorthEast:
+                    directionKey = 'u';
+                    break;
+                case NHDirectionEast:
+                    directionKey = 'l';
+                    break;
+                case NHDirectionSouthEast:
+                    directionKey = 'n';
+                    break;
+                case NHDirectionSouth:
+                    directionKey = 'j';
+                    break;
+                case NHDirectionSouthWest:
+                    directionKey = 'b';
+                    break;
+                case NHDirectionWest:
+                    directionKey = 'h';
+                    break;
+                case NHDirectionNorthWest:
+                    directionKey = 'y';
+                    break;
+                case NHDirectionError:
+                    NSAssert(NO, @"Direction Error");
+                    break;
+            }
+            PosKeyEvent *event = [PosKeyEvent eventWithKey:directionKey];
+            [_events enterObject:event];
+            _state = UIStateUndefined;
+        }
+    } else {
+        LOG_VIEW(1, @"Ignoring map tap, state is %d", _state);
+    }
+}
+
+- (void)mapView:(id<NHMapView>)mapView handleDoubleTapTileX:(NSUInteger)tileX tileY:(NSUInteger)tileY
+      direction:(NHDirection)direction
+{
+    PosKeyEvent *event = [PosKeyEvent eventWithKey:'g'];
+    [_events enterObject:event];
+    [self mapView:mapView handleSingleTapTileX:tileX tileY:tileY direction:direction];
+}
+
+- (void)mapView:(id<NHMapView>)mapView handleLongPressTileX:(NSUInteger)tileX tileY:(NSUInteger)tileY
+ locationInView:(CGPoint)location
 {
 
 }

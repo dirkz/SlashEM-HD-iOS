@@ -13,7 +13,11 @@
 
 @protocol MapViewDelegate <NSObject>
 
-- (void)mapView:(id<NHMapView>)mapView handleSingleTapLocation:(CGPoint)location
-          tileX:(NSUInteger)tileX tileY:(NSUInteger)tileY direction:(NHDirection)direction;
+- (void)mapView:(id<NHMapView>)mapView handleSingleTapTileX:(NSUInteger)tileX tileY:(NSUInteger)tileY
+      direction:(NHDirection)direction;
+- (void)mapView:(id<NHMapView>)mapView handleDoubleTapTileX:(NSUInteger)tileX tileY:(NSUInteger)tileY
+      direction:(NHDirection)direction;
+- (void)mapView:(id<NHMapView>)mapView handleLongPressTileX:(NSUInteger)tileX tileY:(NSUInteger)tileY
+      locationInView:(CGPoint)location;
 
 @end

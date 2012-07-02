@@ -29,5 +29,10 @@
     return self;
 }
 
+- (NSString *)description
+{
+    return [NSString stringWithFormat:@"<%@ 0x%x '%c' %d,%d>",
+            NSStringFromClass([self class]), self, self.key, self.x, self.y];
+}
 
 @end

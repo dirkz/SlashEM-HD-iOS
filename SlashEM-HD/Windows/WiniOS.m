@@ -517,11 +517,14 @@ int ios_nh_poskey(int *x, int *y, int *mod)
 {
     LOG_WINIOS(1, @"nh_poskey");
 
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [sharedInstance.delegate handlePoskey];
-    });
+    if (![sharedInstance.eventQueue frontObject]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [sharedInstance.delegate handlePoskey];
+        });
+    }
 
     PosKeyEvent *event = [sharedInstance.eventQueue leaveObject];
+    LOG_WINIOS(1, @"nh_poskey() event %@", event);
     *x = event.x;
     *y = event.y;
     *mod = event.mod;

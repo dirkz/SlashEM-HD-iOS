@@ -38,11 +38,21 @@ extern int total_tiles_used;
     UIImage *image = [UIImage imageNamed:@"Geoduck SlashEM 10x20.png"];
     _tilecache = [[TileCache alloc] initWithImage:image tileSizePoints:CGSizeMake(10.f, 20.f)];
 
-    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]
-                                                    initWithTarget:self action:@selector(handleSingleTap:)];
-    tapGestureRecognizer.numberOfTapsRequired = 1;
-    tapGestureRecognizer.numberOfTouchesRequired = 1;
-    [self addGestureRecognizer:tapGestureRecognizer];
+    UITapGestureRecognizer *tapGestureRecognizerSingle = [[UITapGestureRecognizer alloc]
+                                                          initWithTarget:self action:@selector(handleSingleTap:)];
+    tapGestureRecognizerSingle.numberOfTapsRequired = 1;
+    tapGestureRecognizerSingle.numberOfTouchesRequired = 1;
+    [self addGestureRecognizer:tapGestureRecognizerSingle];
+
+    UITapGestureRecognizer *tapGestureRecognizerDouble = [[UITapGestureRecognizer alloc]
+                                                          initWithTarget:self action:@selector(handleDoubleTap:)];
+    tapGestureRecognizerDouble.numberOfTapsRequired = 2;
+    tapGestureRecognizerDouble.numberOfTouchesRequired = 1;
+    [self addGestureRecognizer:tapGestureRecognizerDouble];
+
+    UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc]
+                                                                initWithTarget:self action:@selector(handleLongPress:)];
+    [self addGestureRecognizer:longPressGestureRecognizer];
 }
 
 - (id)initWithFrame:(CGRect)frame
@@ -126,21 +136,45 @@ extern int total_tiles_used;
 
 #pragma mark - UIGestureRecognizer
 
-- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
+- (void)getTileX:(NSUInteger *)tileX tileY:(NSUInteger *)tileY fromViewLocation:(CGPoint)location
 {
-    CGPoint location = [recognizer locationInView:self];
+    CGPoint characterLocation = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
+    NSInteger tileDX = (location.x - characterLocation.x) / self.tilesizePoints.width;
+    NSInteger tileDY = (location.y - characterLocation.y) / self.tilesizePoints.height;
+    *tileX = _mapWindow.clipX + tileDX;
+    *tileY = _mapWindow.clipY + tileDY;
+}
+
+- (NHDirection)getDirectionFromViewLocation:(CGPoint)location
+{
     CGPoint characterLocation = CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2);
     CGPoint delta = CGPointMake(location.x - characterLocation.x,
                                 -(location.y - characterLocation.y)); // Note y inversion for euclidean
-    NSInteger tileDX = (location.x - characterLocation.x) / self.tilesizePoints.width;
-    NSInteger tileDY = (location.y - characterLocation.y) / self.tilesizePoints.height;
-    NSUInteger tileX = _mapWindow.clipX + tileDX;
-    NSUInteger tileY = _mapWindow.clipY + tileDY;
-    NHDirection direction = NHDirectionFromEuclidieanUnitDelta(delta.x, delta.y);
-    LOG_VIEW(1, @"single tap %@ delta %@ direction %s tile %d,%d player (%d,%d)", NSStringFromCGPoint(location),
-             NSStringFromCGPoint(delta), NHDirectionCStringForDirection(direction), tileX, tileY,
-             _mapWindow.clipX, _mapWindow.clipY);
-    [_delegate mapView:self handleSingleTapLocation:location tileX:tileX tileY:tileY direction:direction];
+    return NHDirectionFromEuclidieanUnitDelta(delta.x, delta.y);
+}
+
+- (void)handleSingleTap:(UITapGestureRecognizer *)recognizer
+{
+    NSUInteger tileX, tileY;
+    [self getTileX:&tileX tileY:&tileY fromViewLocation:[recognizer locationInView:self]];
+    NHDirection direction = [self getDirectionFromViewLocation:[recognizer locationInView:self]];
+    [_delegate mapView:self handleSingleTapTileX:tileX tileY:tileY direction:direction];
+}
+
+- (void)handleDoubleTap:(UITapGestureRecognizer *)recognizer
+{
+    NSUInteger tileX, tileY;
+    [self getTileX:&tileX tileY:&tileY fromViewLocation:[recognizer locationInView:self]];
+    NHDirection direction = [self getDirectionFromViewLocation:[recognizer locationInView:self]];
+    [_delegate mapView:self handleDoubleTapTileX:tileX tileY:tileY direction:direction];
+    LOG_VIEW(1, @"double tap");
+}
+
+- (void)handleLongPress:(UILongPressGestureRecognizer *)recognizer
+{
+    NSUInteger tileX, tileY;
+    [self getTileX:&tileX tileY:&tileY fromViewLocation:[recognizer locationInView:self]];
+    [_delegate mapView:self handleLongPressTileX:tileX tileY:tileY locationInView:[recognizer locationInView:self]];
 }
 
 @end
