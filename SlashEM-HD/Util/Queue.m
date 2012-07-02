@@ -31,7 +31,7 @@
 {
     dispatch_async(_modifyEventsQueue, ^{
         LOG_UTIL(1, @"enterObject:%@", event);
-        [_events addObject:event];
+        [_events insertObject:event atIndex:0];
         dispatch_semaphore_signal(_eventsSemaphore);
     });
 }
