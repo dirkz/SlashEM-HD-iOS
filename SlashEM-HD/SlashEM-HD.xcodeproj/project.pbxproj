@@ -154,6 +154,8 @@
 		4349252915979313002C6CFF /* Geoduck SlashEM 10x20.png in Resources */ = {isa = PBXBuildFile; fileRef = 4349252815979313002C6CFF /* Geoduck SlashEM 10x20.png */; };
 		434925311597DC4B002C6CFF /* TileCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 434925301597DC4B002C6CFF /* TileCache.m */; };
 		4349253F15986AAD002C6CFF /* tile.c in Sources */ = {isa = PBXBuildFile; fileRef = 4349253E15986AAD002C6CFF /* tile.c */; };
+		437F233815A1B6C000317373 /* ContextMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F233715A1B6C000317373 /* ContextMenuViewController.m */; };
+		437F233B15A1C34D00317373 /* Action.m in Sources */ = {isa = PBXBuildFile; fileRef = 437F233A15A1C34D00317373 /* Action.m */; };
 		438E853915971BD9006D0FF8 /* air.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852B15971BD9006D0FF8 /* air.lev */; };
 		438E853A15971BD9006D0FF8 /* Arc-fila.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852C15971BD9006D0FF8 /* Arc-fila.lev */; };
 		438E853B15971BD9006D0FF8 /* Arc-filb.lev in Resources */ = {isa = PBXBuildFile; fileRef = 438E852D15971BD9006D0FF8 /* Arc-filb.lev */; };
@@ -650,6 +652,10 @@
 		4349252F1597DC4B002C6CFF /* TileCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileCache.h; sourceTree = "<group>"; };
 		434925301597DC4B002C6CFF /* TileCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileCache.m; sourceTree = "<group>"; };
 		4349253E15986AAD002C6CFF /* tile.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = tile.c; sourceTree = "<group>"; };
+		437F233615A1B6C000317373 /* ContextMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextMenuViewController.h; sourceTree = "<group>"; };
+		437F233715A1B6C000317373 /* ContextMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextMenuViewController.m; sourceTree = "<group>"; };
+		437F233915A1C34D00317373 /* Action.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Action.h; sourceTree = "<group>"; };
+		437F233A15A1C34D00317373 /* Action.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Action.m; sourceTree = "<group>"; };
 		438E852B15971BD9006D0FF8 /* air.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = air.lev; sourceTree = "<group>"; };
 		438E852C15971BD9006D0FF8 /* Arc-fila.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arc-fila.lev"; sourceTree = "<group>"; };
 		438E852D15971BD9006D0FF8 /* Arc-filb.lev */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arc-filb.lev"; sourceTree = "<group>"; };
@@ -1514,6 +1520,8 @@
 				43059FE115978D3A00C7DB58 /* NHMapView.h */,
 				432AC638159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.h */,
 				432AC639159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.m */,
+				437F233615A1B6C000317373 /* ContextMenuViewController.h */,
+				437F233715A1B6C000317373 /* ContextMenuViewController.m */,
 			);
 			path = Views;
 			sourceTree = SOURCE_ROOT;
@@ -1534,6 +1542,8 @@
 				432AC629159A2FCC00FC7643 /* Queue.m */,
 				4349252F1597DC4B002C6CFF /* TileCache.h */,
 				434925301597DC4B002C6CFF /* TileCache.m */,
+				437F233915A1C34D00317373 /* Action.h */,
+				437F233A15A1C34D00317373 /* Action.m */,
 			);
 			path = Util;
 			sourceTree = SOURCE_ROOT;
@@ -1984,6 +1994,8 @@
 				432AC62B159B10EF00FC7643 /* Queue.m in Sources */,
 				432AC63A159C6DD500FC7643 /* ItemWithAmountTableViewCellCell.m in Sources */,
 				432AC641159CA26F00FC7643 /* NHTextWindow.m in Sources */,
+				437F233815A1B6C000317373 /* ContextMenuViewController.m in Sources */,
+				437F233B15A1C34D00317373 /* Action.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

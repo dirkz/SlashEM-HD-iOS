@@ -12,6 +12,8 @@
 
 @protocol NHMapView  <NSObject>
 
+@property (nonatomic, readonly) NHMapWindow *mapWindow;
+
 /** Typically called by a view controller to draw the map */
 - (void)displayMapWindow:(NHMapWindow *)w;
 

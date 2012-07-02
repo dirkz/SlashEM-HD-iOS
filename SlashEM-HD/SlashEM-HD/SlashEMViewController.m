@@ -17,6 +17,8 @@
 #import "NHMenuWindow.h"
 #import "NHMenuItem.h"
 #import "MapView.h"
+#import "ContextMenuViewController.h"
+#import "Action.h"
 
 typedef enum {
     UIStateUndefined,
@@ -24,8 +26,11 @@ typedef enum {
     UIStatePoskey,
 } UITextInputState;
 
+NSString * const NetHackMainStoryboard = @"MainStoryboard";
 NSString * const NetHackMessageMenuWindowSegue = @"NetHackMessageMenuWindowSegue";
 NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
+NSString * const NetHackContextMenuSegue = @"ContextMenuSegue";
+NSString * const NetHackContextMenuViewController = @"NetHackContextMenuViewController"; // storyboard id
 
 @interface SlashEMViewController ()
 
@@ -43,11 +48,12 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
 
 @implementation SlashEMViewController
 {
-
     WiniOS *_winios;
     Queue *_events;
     UIViewController *_displayedViewController;
 
+    /** Current UIPopoverViewController visible */
+    UIPopoverController * _displayedPopoverController;
 }
 
 @synthesize messageTextView = _messageTextView;
@@ -195,6 +201,8 @@ NSString * const NetHackMenuViewSegue = @"NetHackMenuViewSegue";
         MessageViewController *vc = segue.destinationViewController;
         vc.menuWindow = _menuWindow;
         vc.delegate = self;
+    }  else if ([segue.identifier isEqualToString:NetHackContextMenuSegue]) {
+        LOG_VIEW(1, @"source %@ destination %@", segue.sourceViewController, segue.destinationViewController);
     }
 }
 
@@ -207,14 +215,12 @@ replacementString:(NSString *)string
         unichar ch = [string characterAtIndex:0];
         switch (_state) {
             case UIStateYNQuestion: {
-                KeyEvent *event = [KeyEvent eventWithKey:ch];
-                [_events enterObject:event];
+                [_events enterObject:[KeyEvent eventWithKey:ch]];
                 _ynQuestionData = nil;
             }
                 break;
             case UIStatePoskey: {
-                PosKeyEvent *event = [PosKeyEvent eventWithKey:ch];
-                [_events enterObject:event];
+                [_events enterObject:[PosKeyEvent eventWithKey:ch]];
                 _state = UIStateUndefined;
             }
                 break;
@@ -340,8 +346,7 @@ replacementString:(NSString *)string
 {
     if (_state == UIStatePoskey) {
         if (_winios.wantsPosition) {
-            PosKeyEvent *event = [PosKeyEvent eventWithKey:0 x:tileX y:tileY mod:0];
-            [_events enterObject:event];
+            [_events enterObject:[PosKeyEvent eventWithKey:0 x:tileX y:tileY mod:0]];
             _state = UIStateUndefined;
         } else {
             char directionKey = 0;
@@ -374,8 +379,7 @@ replacementString:(NSString *)string
                     NSAssert(NO, @"Direction Error");
                     break;
             }
-            PosKeyEvent *event = [PosKeyEvent eventWithKey:directionKey];
-            [_events enterObject:event];
+            [_events enterObject:[PosKeyEvent eventWithKey:directionKey]];
             _state = UIStateUndefined;
         }
     } else {
@@ -386,15 +390,33 @@ replacementString:(NSString *)string
 - (void)mapView:(id<NHMapView>)mapView handleDoubleTapTileX:(NSUInteger)tileX tileY:(NSUInteger)tileY
       direction:(NHDirection)direction
 {
-    PosKeyEvent *event = [PosKeyEvent eventWithKey:'g'];
-    [_events enterObject:event];
+    [_events enterObject:[PosKeyEvent eventWithKey:'g']];
     [self mapView:mapView handleSingleTapTileX:tileX tileY:tileY direction:direction];
 }
 
 - (void)mapView:(id<NHMapView>)mapView handleLongPressTileX:(NSUInteger)tileX tileY:(NSUInteger)tileY
  locationInView:(CGPoint)location
 {
-
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:NetHackMainStoryboard bundle:nil];
+    ContextMenuViewController *vc = [storyboard
+                                     instantiateViewControllerWithIdentifier:NetHackContextMenuViewController];
+    vc.actions = [NSArray arrayWithObjects:
+                  [Action actionWithTitle:@"Go to" context:nil block:^(Action *action, id context) {
+        if (_state == UIStatePoskey) {
+            int glyph = [self.mapView.mapWindow glyphAtX:tileX y:tileY];
+            if (glyph != NHMapWindowNoGlyph) {
+                [_events enterObject:[PosKeyEvent eventWithKey:0 x:tileX y:tileY mod:0]];
+                _state = UIStateUndefined;
+            }
+        }
+        [_displayedPopoverController dismissPopoverAnimated:NO];
+    }],
+                  nil];
+    _displayedPopoverController = [[UIPopoverController alloc] initWithContentViewController:vc];
+    [_displayedPopoverController presentPopoverFromRect:CGRectMake(location.x-1, location.y-1, 1.f, 1.f)
+                                                 inView:self.mapView
+                               permittedArrowDirections:UIPopoverArrowDirectionUp | UIPopoverArrowDirectionDown |
+     UIPopoverArrowDirectionLeft | UIPopoverArrowDirectionRight animated:NO];
 }
 
 @end

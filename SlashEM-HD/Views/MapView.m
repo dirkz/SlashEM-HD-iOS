@@ -32,6 +32,7 @@ extern int total_tiles_used;
 }
 
 @synthesize delegate = _delegate;
+@synthesize mapWindow = _mapWindow;
 
 - (void)setup
 {
@@ -40,14 +41,11 @@ extern int total_tiles_used;
 
     UITapGestureRecognizer *tapGestureRecognizerSingle = [[UITapGestureRecognizer alloc]
                                                           initWithTarget:self action:@selector(handleSingleTap:)];
-    tapGestureRecognizerSingle.numberOfTapsRequired = 1;
-    tapGestureRecognizerSingle.numberOfTouchesRequired = 1;
     [self addGestureRecognizer:tapGestureRecognizerSingle];
 
     UITapGestureRecognizer *tapGestureRecognizerDouble = [[UITapGestureRecognizer alloc]
                                                           initWithTarget:self action:@selector(handleDoubleTap:)];
     tapGestureRecognizerDouble.numberOfTapsRequired = 2;
-    tapGestureRecognizerDouble.numberOfTouchesRequired = 1;
     [self addGestureRecognizer:tapGestureRecognizerDouble];
 
     UILongPressGestureRecognizer *longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc]
@@ -172,9 +170,11 @@ extern int total_tiles_used;
 
 - (void)handleLongPress:(UILongPressGestureRecognizer *)recognizer
 {
-    NSUInteger tileX, tileY;
-    [self getTileX:&tileX tileY:&tileY fromViewLocation:[recognizer locationInView:self]];
-    [_delegate mapView:self handleLongPressTileX:tileX tileY:tileY locationInView:[recognizer locationInView:self]];
+    if (recognizer.state == UIGestureRecognizerStateBegan) {
+        NSUInteger tileX, tileY;
+        [self getTileX:&tileX tileY:&tileY fromViewLocation:[recognizer locationInView:self]];
+        [_delegate mapView:self handleLongPressTileX:tileX tileY:tileY locationInView:[recognizer locationInView:self]];
+    }
 }
 
 @end

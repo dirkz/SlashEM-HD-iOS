@@ -160,6 +160,9 @@
                         <outlet property="statusLabel2" destination="Bqs-u0-TWm" id="Drb-1N-aOL"/>
                         <segue destination="V5B-sc-dyh" kind="modal" identifier="NetHackMenuViewSegue" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="LzV-cX-Z17"/>
                         <segue destination="CM5-Bj-ht2" kind="modal" identifier="NetHackMessageMenuWindowSegue" modalPresentationStyle="formSheet" modalTransitionStyle="flipHorizontal" id="6xn-wT-xdF"/>
+                        <segue destination="c0c-ds-Gx3" kind="popover" identifier="ContextMenuSegue" popoverAnchorView="Xuv-3c-1hZ" id="YxT-et-g2Z">
+                            <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                        </segue>
                     </connections>
                 </viewController>
             </objects>
@@ -204,6 +207,54 @@
             </objects>
             <point key="canvasLocation" x="-1689" y="-954"/>
         </scene>
+        <!--Context Menu View Controller-->
+        <scene sceneID="QsQ-yT-zTJ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1kG-d1-1ar" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="NetHackContextMenuViewController" id="c0c-ds-Gx3" customClass="ContextMenuViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AVj-gu-C1J">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lrd-VQ-VRq">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="StandardContextViewCell" textLabel="kkA-sO-k3C" style="IBUITableViewCellStyleDefault" id="qRh-Eb-OFB">
+                                        <rect key="frame" x="0.0" y="22" width="768" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="768" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kkA-sO-k3C">
+                                                    <rect key="frame" x="10" y="0.0" width="748" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="c0c-ds-Gx3" id="grH-3f-iPs"/>
+                                    <outlet property="delegate" destination="c0c-ds-Gx3" id="ffd-3o-9wI"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="lrd-VQ-VRq" id="qp9-ge-7j0"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-2170" y="773"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BAd-SR-8De">
             <objects>
@@ -223,6 +274,46 @@
             <point key="canvasLocation" x="-1318" y="196"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="ContextMenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ContextMenuViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="ItemWithAmountTableViewCellCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ItemWithAmountTableViewCellCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="amountSlider" candidateClass="UISlider"/>
+                <relationship kind="outlet" name="textLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="MapView" superclassName="UIView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MapView.h"/>
+        </class>
+        <class className="MenuViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MenuViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="cancelAction:"/>
+                <relationship kind="action" name="okAction:"/>
+                <relationship kind="outlet" name="okButton" candidateClass="UIBarButtonItem"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="MessageViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MessageViewController.h"/>
+        </class>
+        <class className="SlashEMViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SlashEMViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="inputTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="mapView" candidateClass="MapView"/>
+                <relationship kind="outlet" name="messageTextView" candidateClass="UITextView"/>
+                <relationship kind="outlet" name="statusLabel1" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="statusLabel2" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <nil key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

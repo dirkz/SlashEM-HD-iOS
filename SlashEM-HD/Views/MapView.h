@@ -15,4 +15,7 @@
 
 @property (nonatomic, weak) id<MapViewDelegate> delegate;
 
+/** For corresponding to NHMapView */
+@property (nonatomic, readonly) NHMapWindow *mapWindow;
+
 @end
